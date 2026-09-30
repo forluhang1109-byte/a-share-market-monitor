@@ -1,0 +1,215 @@
+{
+  "meta": {
+    "generated_at": "2026-09-30T15:00:01.145657+08:00",
+    "session": "close",
+    "date": "2026-09-30",
+    "is_trading_day": true,
+    "calendar_source": "exchange_calendars:XSHG",
+    "source_status": {
+      "a_share_spot": {
+        "source": "tencent",
+        "ok": true,
+        "rows": 5572,
+        "errors": [
+          "eastmoney: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+        ]
+      },
+      "indices": {
+        "source": "sina",
+        "ok": true,
+        "rows": 4,
+        "errors": [
+          "eastmoney: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+        ]
+      },
+      "industry_flow": {
+        "source": "eastmoney",
+        "ok": false,
+        "rows": 0,
+        "errors": [
+          "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+        ]
+      },
+      "concept_flow": {
+        "source": "eastmoney",
+        "ok": false,
+        "rows": 0,
+        "errors": [
+          "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+        ]
+      },
+      "market_fund_flow": {
+        "source": "eastmoney",
+        "ok": false,
+        "errors": [
+          "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+        ]
+      },
+      "limit_pool": {
+        "source": "eastmoney",
+        "ok": true,
+        "errors": []
+      }
+    },
+    "errors": [
+      "行业资金流: JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "概念资金流: JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "大盘资金流: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    ],
+    "status": "partial"
+  },
+  "market": {
+    "indices": [
+      {
+        "code": "000001",
+        "name": "上证指数",
+        "price": 3842.1946,
+        "pct": 0.307,
+        "amount": 679398992445.0,
+        "volume": 414560247.0,
+        "high": 3851.2169,
+        "low": 3833.0863,
+        "open": 3839.2527,
+        "prev_close": 3830.4513
+      },
+      {
+        "code": "399001",
+        "name": "深证成指",
+        "price": 12887.62,
+        "pct": -0.111,
+        "amount": 758590436937.0,
+        "volume": 49438619293.0,
+        "high": 12966.45,
+        "low": 12854.777,
+        "open": 12958.085,
+        "prev_close": 12901.947
+      },
+      {
+        "code": "399006",
+        "name": "创业板指",
+        "price": 3135.277,
+        "pct": -0.232,
+        "amount": 366238724561.0,
+        "volume": 13366668354.0,
+        "high": 3173.361,
+        "low": 3125.491,
+        "open": 3164.702,
+        "prev_close": 3142.563
+      },
+      {
+        "code": "000688",
+        "name": "科创50",
+        "price": 1530.0057,
+        "pct": -2.506,
+        "amount": 71878699989.0,
+        "volume": 7317081.0,
+        "high": 1578.9555,
+        "low": 1526.7941,
+        "open": 1576.5137,
+        "prev_close": 1569.3384
+      }
+    ],
+    "breadth": {
+      "total_valid": 0,
+      "up": 0,
+      "down": 0,
+      "flat": 0,
+      "median_pct": null,
+      "avg_pct": null,
+      "up_down_ratio": null
+    },
+    "turnover": {
+      "current": 0.0,
+      "previous_same_session": null,
+      "ratio": null,
+      "change_pct": null,
+      "label": "暂无同周期基准"
+    },
+    "limit_stats": {
+      "limit_up": 52,
+      "limit_down": 9,
+      "broken": 12
+    },
+    "market_fund_flow": null
+  },
+  "sectors": {
+    "industry": {
+      "top_gain": [],
+      "bottom_gain": [],
+      "top_main_inflow": [],
+      "top_main_outflow": [],
+      "all": []
+    },
+    "concept": {
+      "top_gain": [],
+      "bottom_gain": [],
+      "top_main_inflow": [],
+      "top_main_outflow": [],
+      "all": []
+    }
+  },
+  "portfolio": [
+    {
+      "name": "东方人工智能主题混合",
+      "fund_code": "",
+      "amount": 2255.59,
+      "cost_return_pct": 8.5,
+      "themes": [
+        "半导体材料设备",
+        "半导体",
+        "人工智能"
+      ],
+      "matched_sectors": [],
+      "theme_avg_pct": null,
+      "matched_main_flow_sum": null,
+      "score": -0.4,
+      "strength": "中性",
+      "reasons": [
+        "主要指数整体偏弱"
+      ],
+      "risk_alert": null,
+      "action_reference": "以持有观察为主；等待方向、成交量和资金流进一步确认，不追涨。"
+    },
+    {
+      "name": "财通品质甄选混合C",
+      "fund_code": "024481",
+      "amount": 1044.17,
+      "cost_return_pct": -10.08,
+      "themes": [
+        "PCB",
+        "电子元件"
+      ],
+      "matched_sectors": [],
+      "theme_avg_pct": null,
+      "matched_main_flow_sum": null,
+      "score": -0.4,
+      "strength": "中性",
+      "reasons": [
+        "主要指数整体偏弱"
+      ],
+      "risk_alert": null,
+      "action_reference": "以持有观察为主；等待方向、成交量和资金流进一步确认，不追涨。"
+    },
+    {
+      "name": "易方达消费电子ETF联接C",
+      "fund_code": "018897",
+      "amount": 1973.26,
+      "cost_return_pct": -16.95,
+      "themes": [
+        "消费电子",
+        "中证消费电子",
+        "电子"
+      ],
+      "matched_sectors": [],
+      "theme_avg_pct": null,
+      "matched_main_flow_sum": null,
+      "score": -0.4,
+      "strength": "中性",
+      "reasons": [
+        "主要指数整体偏弱"
+      ],
+      "risk_alert": "当前持仓收益率 -16.95% 已触及设定风控线 -15.00%",
+      "action_reference": "已触及设定风控线：优先复核仓位与止损纪律，不用短线反弹预期替代风控。"
+    }
+  ]
+}
