@@ -1,4 +1,5 @@
 name: A-share Smoke Test
+# rerun-v2: tencent-normalization-and-ths-fallback
 
 on:
   push:
