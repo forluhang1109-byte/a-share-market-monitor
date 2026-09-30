@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from datetime import timedelta
 from pathlib import Path
 from typing import Any
 
@@ -11,6 +10,7 @@ from .providers import (
     fetch_indices,
     fetch_sector_flow,
     fetch_market_fund_flow,
+    aggregate_tencent_market_main_flow,
     fetch_limit_stats,
 )
 from .analytics import (
@@ -83,34 +83,60 @@ def run(session: str = "noon") -> dict:
         stocks = []
         breadth = {}
         turnover_current = 0.0
-        snapshot["meta"]["errors"].append(f"A股实时行情失败: {type(exc).__name__}: {str(exc)[:300]}")
+        snapshot["meta"]["errors"].append(
+            f"A股实时行情失败: {type(exc).__name__}: {str(exc)[:300]}"
+        )
 
     try:
         indices, status = fetch_indices(settings.get("index_codes", {}))
         snapshot["meta"]["source_status"]["indices"] = status
     except Exception as exc:
         indices = []
-        snapshot["meta"]["errors"].append(f"指数行情失败: {type(exc).__name__}: {str(exc)[:300]}")
+        snapshot["meta"]["errors"].append(
+            f"指数行情失败: {type(exc).__name__}: {str(exc)[:300]}"
+        )
 
     industry_rows, status = fetch_sector_flow("行业资金流")
     snapshot["meta"]["source_status"]["industry_flow"] = status
     if not status.get("ok"):
-        snapshot["meta"]["errors"].extend([f"行业资金流: {e}" for e in status.get("errors", [])])
+        snapshot["meta"]["errors"].extend(
+            [f"行业资金流: {e}" for e in status.get("errors", [])]
+        )
 
     concept_rows, status = fetch_sector_flow("概念资金流")
     snapshot["meta"]["source_status"]["concept_flow"] = status
     if not status.get("ok"):
-        snapshot["meta"]["errors"].extend([f"概念资金流: {e}" for e in status.get("errors", [])])
+        snapshot["meta"]["errors"].extend(
+            [f"概念资金流: {e}" for e in status.get("errors", [])]
+        )
 
     market_flow, status = fetch_market_fund_flow()
-    snapshot["meta"]["source_status"]["market_fund_flow"] = status
-    if not status.get("ok"):
-        snapshot["meta"]["errors"].extend([f"大盘资金流: {e}" for e in status.get("errors", [])])
+    if status.get("ok"):
+        snapshot["meta"]["source_status"]["market_fund_flow"] = status
+    else:
+        # Eastmoney is frequently rate-limited. When Tencent is the realtime
+        # source, aggregate its per-stock main-flow field as a clearly labelled
+        # fallback instead of reporting a false zero.
+        fallback_flow = aggregate_tencent_market_main_flow(stocks)
+        if fallback_flow is not None:
+            market_flow = fallback_flow
+            snapshot["meta"]["source_status"]["market_fund_flow"] = {
+                "source": "tencent_stock_aggregate",
+                "ok": True,
+                "errors": status.get("errors", []),
+            }
+        else:
+            snapshot["meta"]["source_status"]["market_fund_flow"] = status
+            snapshot["meta"]["errors"].extend(
+                [f"大盘资金流: {e}" for e in status.get("errors", [])]
+            )
 
     limit_stats, status = fetch_limit_stats(date_yyyymmdd)
     snapshot["meta"]["source_status"]["limit_pool"] = status
     if status.get("errors"):
-        snapshot["meta"]["errors"].extend([f"涨跌停池: {e}" for e in status.get("errors", [])])
+        snapshot["meta"]["errors"].extend(
+            [f"涨跌停池: {e}" for e in status.get("errors", [])]
+        )
 
     previous = _previous_snapshot(session, date_str)
     prev_turnover = None
@@ -150,7 +176,17 @@ def run(session: str = "noon") -> dict:
         stop_loss_pct=float(settings.get("risk", {}).get("stop_loss_pct", -15)),
     )
 
-    snapshot["meta"]["status"] = "ok" if not snapshot["meta"]["errors"] else "partial"
+    # 'partial' only when a material data component is unavailable. Provider
+    # fallback warnings live inside source_status.errors and do not downgrade
+    # an otherwise usable snapshot.
+    critical_missing = (
+        not stocks
+        or not indices
+        or not industry_rows
+        or not concept_rows
+    )
+    snapshot["meta"]["status"] = "partial" if critical_missing else "ok"
+
     _write_outputs(snapshot, session, date_str)
     return snapshot
 
