@@ -1,1 +1,29 @@
-[]
+[
+  {
+    "name": "东方人工智能主题混合",
+    "fund_code": "",
+    "amount": 2255.59,
+    "cost_return_pct": 8.50,
+    "themes": ["半导体材料设备", "半导体", "人工智能"],
+    "proxy_codes": [],
+    "notes": "截图未显示A/C份额；关联板块显示为半导体材料设备"
+  },
+  {
+    "name": "财通品质甄选混合C",
+    "fund_code": "024481",
+    "amount": 1044.17,
+    "cost_return_pct": -10.08,
+    "themes": ["PCB", "电子元件"],
+    "proxy_codes": [],
+    "notes": "关联板块显示为PCB"
+  },
+  {
+    "name": "易方达消费电子ETF联接C",
+    "fund_code": "018897",
+    "amount": 1973.26,
+    "cost_return_pct": -16.95,
+    "themes": ["消费电子", "中证消费电子", "电子"],
+    "proxy_codes": [],
+    "notes": "截图关联板块显示为中证消费电子"
+  }
+]
