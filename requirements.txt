@@ -1,0 +1,5 @@
+akshare>=1.17.0,<2
+pandas>=2.2,<3
+numpy>=1.26,<3
+exchange-calendars>=4.5,<5
+tzdata>=2025.1

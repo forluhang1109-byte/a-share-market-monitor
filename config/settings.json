@@ -1,0 +1,19 @@
+{
+  "timezone": "Asia/Shanghai",
+  "risk": {
+    "stop_loss_pct": -15
+  },
+  "volume": {
+    "expand_threshold": 1.05,
+    "shrink_threshold": 0.95
+  },
+  "report": {
+    "top_n": 10
+  },
+  "index_codes": {
+    "000001": "上证指数",
+    "399001": "深证成指",
+    "399006": "创业板指",
+    "000688": "科创50"
+  }
+}

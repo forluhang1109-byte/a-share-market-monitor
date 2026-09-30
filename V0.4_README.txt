@@ -1,0 +1,10 @@
+# v0.4 Windows deployment
+
+For Windows machines without `winget`, double-click:
+
+`DEPLOY_NO_WINGET.bat`
+
+It downloads Git for Windows and GitHub CLI directly from their official GitHub Releases, installs them, asks for one-time GitHub browser authorization, creates a public repository, and pushes this project.
+
+If anything fails, run `SYSTEM_CHECK.bat` and send the screenshot to ChatGPT.
+

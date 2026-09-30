@@ -1,0 +1,11 @@
+[
+  {
+    "name": "示例基金A",
+    "fund_code": "000000",
+    "amount": 5000,
+    "cost_return_pct": -2.5,
+    "themes": ["半导体", "电子元件"],
+    "proxy_codes": [],
+    "notes": "把本文件内容复制到 portfolio.json 后按你的真实持仓修改"
+  }
+]
