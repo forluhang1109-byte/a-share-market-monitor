@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "generated_at": "2026-10-01T11:38:08.266346+08:00",
+    "session": "noon",
+    "date": "2026-10-01",
+    "is_trading_day": false,
+    "calendar_source": "exchange_calendars:XSHG",
+    "source_status": {},
+    "errors": [],
+    "status": "skipped_non_trading_day"
+  },
+  "market": {},
+  "sectors": {},
+  "portfolio": []
+}
