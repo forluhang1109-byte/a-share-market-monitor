@@ -2,9 +2,12 @@ name: A-share 14-40 Snapshot
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/close.yml"
   schedule:
-    # 06:30 UTC = 14:30 Asia/Shanghai, Mon-Fri
-    - cron: "30 6 * * 1-5"
+    # 06:10 UTC = 14:10 Asia/Shanghai, Mon-Fri
+    - cron: "10 6 * * 1-5"
 
 permissions:
   contents: write
@@ -16,7 +19,7 @@ concurrency:
 jobs:
   snapshot:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
         with:
@@ -33,7 +36,7 @@ jobs:
       - name: Build 14:40 pre-close snapshot
         env:
           TZ: Asia/Shanghai
-        run: python scripts/run_snapshot.py --session close --not-before 14:36 --max-wait-minutes 15
+        run: python scripts/run_snapshot.py --session close --not-before 14:36 --max-wait-minutes 35
 
       - name: Commit generated data
         run: |
