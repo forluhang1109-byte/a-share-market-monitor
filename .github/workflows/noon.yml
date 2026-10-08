@@ -3,8 +3,8 @@ name: A-share Noon Snapshot
 on:
   workflow_dispatch:
   schedule:
-    # 03:25 UTC = 11:25 Asia/Shanghai, Mon-Fri
-    - cron: "25 3 * * 1-5"
+    # 03:00 UTC = 11:00 Asia/Shanghai, Mon-Fri
+    - cron: "0 3 * * 1-5"
 
 permissions:
   contents: write
@@ -16,7 +16,7 @@ concurrency:
 jobs:
   snapshot:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 50
     steps:
       - uses: actions/checkout@v4
         with:
@@ -33,7 +33,7 @@ jobs:
       - name: Build noon snapshot
         env:
           TZ: Asia/Shanghai
-        run: python scripts/run_snapshot.py --session noon --not-before 11:31 --max-wait-minutes 15
+        run: python scripts/run_snapshot.py --session noon --not-before 11:31 --max-wait-minutes 40
 
       - name: Commit generated data
         run: |
