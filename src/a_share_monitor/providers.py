@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from typing import Any
+import os
 import pandas as pd
 
 from .utils import retry_call, safe_float, pick, compact_error
@@ -66,6 +67,8 @@ def fetch_a_share_spot() -> tuple[list[dict], dict]:
         ("tencent", lambda: ak.stock_zh_a_spot_tx()),
         ("sina", lambda: ak.stock_zh_a_spot()),
     ]
+    if os.environ.get("ASH_FAST_MODE") == "1":
+        candidates = sorted(candidates, key=lambda x: {"tencent": 0, "sina": 1, "eastmoney": 2}[x[0]])
     errors = []
     for name, fn in candidates:
         try:
@@ -122,6 +125,8 @@ def fetch_indices(wanted: dict[str, str]) -> tuple[list[dict], dict]:
         ("eastmoney", lambda: ak.stock_zh_index_spot_em(symbol="沪深重要指数")),
         ("sina", lambda: ak.stock_zh_index_spot_sina()),
     ]
+    if os.environ.get("ASH_FAST_MODE") == "1":
+        attempts.reverse()
     errors = []
     for name, fn in attempts:
         try:
@@ -234,3 +239,4 @@ def fetch_limit_stats(date_yyyymmdd: str) -> tuple[dict, dict]:
         except Exception as exc:
             errors.append(f"{key}: {compact_error(exc)}")
     return stats, {"source": "eastmoney", "ok": any(v is not None for v in stats.values()), "errors": errors}
+

@@ -39,6 +39,11 @@ def main():
     ap.add_argument("--skip-wait", action="store_true")
     args = ap.parse_args()
 
+    if args.session == "close" and not args.skip_wait:
+        current = datetime.now(ZoneInfo("Asia/Shanghai"))
+        if current.strftime("%H:%M") > "14:47":
+            print("[expired] Past collection deadline; keep prior snapshot and do not claim success")
+            sys.exit(4)
     if args.not_before and not args.skip_wait:
         wait_until(args.not_before, args.max_wait_minutes)
 
@@ -56,3 +61,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

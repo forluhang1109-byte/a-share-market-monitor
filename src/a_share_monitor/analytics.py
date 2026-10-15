@@ -27,7 +27,7 @@ def total_turnover(stocks: list[dict]) -> float:
 
 
 def volume_compare(current: float, previous: float | None, expand_threshold: float, shrink_threshold: float) -> dict:
-    if not previous or previous <= 0:
+    if current is None or not previous or previous <= 0:
         return {
             "current": current,
             "previous_same_session": previous,
@@ -177,3 +177,4 @@ def analyze_portfolio(
             "action_reference": action,
         })
     return results
+

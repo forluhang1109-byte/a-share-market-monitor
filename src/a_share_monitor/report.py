@@ -26,9 +26,12 @@ def make_markdown(snapshot: dict) -> str:
     market = snapshot["market"]
     sectors = snapshot["sectors"]
     lines = [
-        f"# A股{'午盘' if meta['session']=='noon' else '14:40前'}报告",
+        f"# A股{'午盘' if meta['session']=='noon' else '尾盘'}报告",
         "",
         f"- 生成时间：{meta['generated_at']}",
+        f"- 采集完成：{meta.get('collection_completed_at', '未记录')}；耗时：{meta.get('collection_elapsed_seconds', '未知')}秒",
+        "- 时效口径：采集时间可核对；数据源未提供统一可验证的逐笔时间，不等于交易所实时行情。",
+        f"- 推送校验：{meta.get('delivery_reason', '未校验')}",
         f"- Session：`{meta['session']}`",
         f"- 交易日判断来源：{meta.get('calendar_source')}",
         "",
@@ -80,6 +83,9 @@ def make_markdown(snapshot: dict) -> str:
 
     lines += ["", "## 5. 持仓分析", ""]
     pf = snapshot.get("portfolio", [])
+    if meta.get("portfolio_status") == "stored_configuration_not_reconfirmed":
+        lines.append("- 仓库持仓未重新确认，本报告不据此给出个人仓位或买卖建议。")
+        pf = []
     if not pf:
         lines.append("> `config/portfolio.json` 目前为空。把最新持仓填进去后，这里会自动按你的持仓输出。")
     for x in pf:
@@ -107,3 +113,4 @@ def make_markdown(snapshot: dict) -> str:
         "素材仅为个人学习成长，不构成投资建议。",
     ]
     return "\n".join(lines) + "\n"
+
