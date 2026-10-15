@@ -59,12 +59,40 @@ def normalize_stock_spot(df: pd.DataFrame, source: str) -> list[dict]:
     return out
 
 
+def _tencent_parallel_frame():
+    """Same documented AKShare Tencent endpoint, bounded four-page concurrency."""
+    import math
+    import requests
+    from concurrent.futures import ThreadPoolExecutor
+    url = "https://proxy.finance.qq.com/cgi/cgi-bin/rank/hs/getBoardRankList"
+    def page(offset):
+        params = {"_appver": "11.17.0", "board_code": "aStock", "sort_type": "price",
+                  "direct": "down", "offset": str(offset), "count": "200"}
+        response = requests.get(url, params=params, timeout=(3, 8))
+        response.raise_for_status()
+        return response.json()["data"]
+    first = page(0)
+    total = int(first["total"])
+    if total < 1000 or total > 20000:
+        raise ValueError("Unexpected Tencent market size")
+    rows = list(first["rank_list"])
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        for result in pool.map(page, range(200, total, 200)):
+            if int(result["total"]) != total:
+                raise ValueError("Tencent market size changed during collection")
+            rows.extend(result["rank_list"])
+    frame = pd.DataFrame(rows).drop_duplicates(subset=["code"])
+    if len(frame) < total * 0.98:
+        raise ValueError("Incomplete Tencent page coverage")
+    return frame
+
+
 def fetch_a_share_spot() -> tuple[list[dict], dict]:
     import akshare as ak
 
     candidates = [
         ("eastmoney", lambda: ak.stock_zh_a_spot_em()),
-        ("tencent", lambda: ak.stock_zh_a_spot_tx()),
+        ("tencent", lambda: _tencent_parallel_frame() if os.environ.get("ASH_FAST_MODE") == "1" else ak.stock_zh_a_spot_tx()),
         ("sina", lambda: ak.stock_zh_a_spot()),
     ]
     if os.environ.get("ASH_FAST_MODE") == "1":
