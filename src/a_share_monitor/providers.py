@@ -218,6 +218,17 @@ def fetch_sector_flow(sector_type: str) -> tuple[list[dict], dict]:
     return [], {"source": None, "ok": False, "rows": 0, "errors": errors}
 
 
+def validate_market_flow_date(row: dict, expected_date: str) -> bool:
+    """Historical daily endpoints must not masquerade as today's intraday flow."""
+    value = row.get("日期") or row.get("date")
+    if value is None:
+        return False
+    try:
+        return pd.Timestamp(value).date().isoformat() == expected_date
+    except (ValueError, TypeError):
+        return False
+
+
 def fetch_market_fund_flow() -> tuple[dict | None, dict]:
     import akshare as ak
     try:
@@ -234,7 +245,13 @@ def fetch_market_fund_flow() -> tuple[dict | None, dict]:
             elif hasattr(v, "item"):
                 v = v.item()
             cleaned[str(k)] = v
-        return cleaned, {"source": "eastmoney", "ok": True, "errors": []}
+        from .utils import now_cn
+        expected_date = now_cn().date().isoformat()
+        if not validate_market_flow_date(cleaned, expected_date):
+            return None, {"source": "eastmoney", "ok": False,
+                          "data_date": cleaned.get("日期"),
+                          "errors": ["stale or missing market flow date; expected " + expected_date]}
+        return cleaned, {"source": "eastmoney", "ok": True, "data_date": expected_date, "errors": []}
     except Exception as exc:
         return None, {"source": "eastmoney", "ok": False, "errors": [compact_error(exc)]}
 
@@ -267,4 +284,5 @@ def fetch_limit_stats(date_yyyymmdd: str) -> tuple[dict, dict]:
         except Exception as exc:
             errors.append(f"{key}: {compact_error(exc)}")
     return stats, {"source": "eastmoney", "ok": any(v is not None for v in stats.values()), "errors": errors}
+
 

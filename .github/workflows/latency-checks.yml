@@ -1,9 +1,18 @@
 name: A-share bounded latency checks
 on:
+  workflow_dispatch:
+    inputs:
+      live_collection:
+        type: boolean
+        default: false
+        description: Run live providers (off-hours success is not intraday acceptance)
   pull_request:
-    paths: ['src/**', 'tests/**', 'scripts/**', '.github/workflows/latency-checks.yml']
+    paths: ['src/**', 'tests/**', 'scripts/**', 'requirements.txt', '.github/workflows/latency-checks.yml']
   push:
-    branches: ['fix/bounded-close-20261015']
+    branches: [main]
+    paths: ['src/**', 'tests/**', 'scripts/**', 'requirements.txt', '.github/workflows/latency-checks.yml']
+permissions:
+  contents: read
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -15,8 +24,10 @@ jobs:
           python-version: '3.12'
           cache: pip
       - run: python -m pip install -r requirements.txt
-      - run: python tests/test_analytics.py && python tests/test_collection.py && python tests/test_provider_pages.py
-      - name: Live collection timing (after-hours is not intraday acceptance)
+      - run: python tests/test_analytics.py
+      - run: python -m unittest discover -s tests -v
+      - name: Explicit live collection timing
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.live_collection }}
         env:
           ASH_FAST_MODE: '1'
         run: |
