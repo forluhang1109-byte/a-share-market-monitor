@@ -1,0 +1,4204 @@
+{
+  "meta": {
+    "generated_at": "2026-10-19T11:31:38.583013+08:00",
+    "session": "noon",
+    "date": "2026-10-19",
+    "is_trading_day": true,
+    "calendar_source": "exchange_calendars:XSHG",
+    "source_status": {
+      "a_share_spot": {
+        "source": "tencent",
+        "ok": true,
+        "rows": 5575,
+        "valid_pct_rows": 5575,
+        "valid_amount_rows": 5564,
+        "errors": [
+          "eastmoney: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+        ],
+        "collected_at": "2026-10-19T11:31:38.547703+08:00",
+        "elapsed_seconds": 37.29,
+        "quote_timestamp_verified": false
+      },
+      "indices": {
+        "source": "eastmoney",
+        "ok": true,
+        "rows": 4,
+        "errors": [],
+        "collected_at": "2026-10-19T11:31:04.136451+08:00",
+        "elapsed_seconds": 3.04,
+        "quote_timestamp_verified": false
+      },
+      "industry_flow": {
+        "source": "ths",
+        "ok": true,
+        "rows": 90,
+        "errors": [
+          "eastmoney: JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+        ],
+        "collected_at": "2026-10-19T11:31:11.265093+08:00",
+        "elapsed_seconds": 9.86,
+        "quote_timestamp_verified": false
+      },
+      "concept_flow": {
+        "source": "ths",
+        "ok": true,
+        "rows": 387,
+        "errors": [
+          "eastmoney: JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+        ],
+        "collected_at": "2026-10-19T11:31:20.263433+08:00",
+        "elapsed_seconds": 18.93,
+        "quote_timestamp_verified": false
+      },
+      "market_fund_flow": {
+        "source": "tencent_stock_aggregate",
+        "ok": true,
+        "errors": [
+          "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+        ],
+        "collected_at": "2026-10-19T11:31:05.332598+08:00",
+        "elapsed_seconds": 3.87,
+        "quote_timestamp_verified": false
+      },
+      "limit_pool": {
+        "source": "eastmoney",
+        "ok": true,
+        "errors": [],
+        "collected_at": "2026-10-19T11:31:04.941800+08:00",
+        "elapsed_seconds": 3.73,
+        "quote_timestamp_verified": false
+      }
+    },
+    "errors": [
+      "market_fund_flow: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    ],
+    "collection_started_at": "2026-10-19T11:31:00.411180+08:00",
+    "collection_completed_at": "2026-10-19T11:31:38.578498+08:00",
+    "collection_elapsed_seconds": 38.17,
+    "quote_timestamp_verified": false,
+    "status": "ok",
+    "delivery_eligible": false,
+    "delivery_reason": "outside_collection_window",
+    "portfolio_status": "stored_configuration_not_reconfirmed"
+  },
+  "market": {
+    "indices": [
+      {
+        "code": "000001",
+        "name": "上证指数",
+        "price": 3722.2,
+        "pct": 0.16,
+        "amount": 462222094230.5,
+        "volume": 276302084.0,
+        "high": 3733.86,
+        "low": 3692.29,
+        "open": 3694.12,
+        "prev_close": 3716.28
+      },
+      {
+        "code": "399001",
+        "name": "深证成指",
+        "price": 11781.32,
+        "pct": -0.18,
+        "amount": 508436191484.082,
+        "volume": 332671057.0,
+        "high": 11860.22,
+        "low": 11667.18,
+        "open": 11743.22,
+        "prev_close": 11802.46
+      },
+      {
+        "code": "399006",
+        "name": "创业板指",
+        "price": 2742.7,
+        "pct": -1.07,
+        "amount": 243274591082.1,
+        "volume": 105482552.0,
+        "high": 2770.08,
+        "low": 2708.92,
+        "open": 2760.35,
+        "prev_close": 2772.38
+      },
+      {
+        "code": "000688",
+        "name": "科创50",
+        "price": 1335.79,
+        "pct": -1.68,
+        "amount": 46087117894.9,
+        "volume": 5249875.0,
+        "high": 1356.42,
+        "low": 1323.67,
+        "open": 1347.09,
+        "prev_close": 1358.65
+      }
+    ],
+    "breadth": {
+      "total_valid": 5575,
+      "up": 1613,
+      "down": 3839,
+      "flat": 123,
+      "median_pct": -1.08,
+      "avg_pct": -1.0046547085201794,
+      "up_down_ratio": 0.42016150039072675
+    },
+    "turnover": {
+      "current": 978611600000.0,
+      "previous_same_session": null,
+      "ratio": null,
+      "change_pct": null,
+      "label": "暂无同周期基准",
+      "same_collection_time_and_source": false
+    },
+    "limit_stats": {
+      "limit_up": 28,
+      "limit_down": 9,
+      "broken": 21
+    },
+    "market_fund_flow": {
+      "source": "tencent_stock_aggregate",
+      "主力净流入-净额": -14838887500.0,
+      "覆盖股票数": 5575,
+      "说明": "由腾讯个股实时主力净流入字段聚合，作为东财大盘资金流接口失败时的备用参考"
+    }
+  },
+  "sectors": {
+    "industry": {
+      "top_gain": [
+        {
+          "name": "银行",
+          "pct": 1.33,
+          "main_net": 3402000000.0000005,
+          "main_ratio": null,
+          "leader": "苏州银行"
+        },
+        {
+          "name": "白酒",
+          "pct": 1.05,
+          "main_net": 1290000000.0,
+          "main_ratio": null,
+          "leader": "顺鑫农业"
+        },
+        {
+          "name": "军工装备",
+          "pct": 0.92,
+          "main_net": 965000000.0,
+          "main_ratio": null,
+          "leader": "甘化科工"
+        },
+        {
+          "name": "煤炭开采加工",
+          "pct": 0.56,
+          "main_net": 340000000.0,
+          "main_ratio": null,
+          "leader": "恒源煤电"
+        },
+        {
+          "name": "厨卫电器",
+          "pct": 0.54,
+          "main_net": 23000000.0,
+          "main_ratio": null,
+          "leader": "万和电气"
+        },
+        {
+          "name": "保险",
+          "pct": 0.47,
+          "main_net": 501000000.0,
+          "main_ratio": null,
+          "leader": "中国太保"
+        },
+        {
+          "name": "油气开采及服务",
+          "pct": 0.24,
+          "main_net": 126000000.0,
+          "main_ratio": null,
+          "leader": "*ST准油"
+        },
+        {
+          "name": "黑色家电",
+          "pct": 0.23,
+          "main_net": 13000000.0,
+          "main_ratio": null,
+          "leader": "海信视像"
+        },
+        {
+          "name": "汽车整车",
+          "pct": 0.23,
+          "main_net": 8000000.0,
+          "main_ratio": null,
+          "leader": "金龙汽车"
+        },
+        {
+          "name": "贵金属",
+          "pct": 0.22,
+          "main_net": 24000000.0,
+          "main_ratio": null,
+          "leader": "赤峰黄金"
+        }
+      ],
+      "bottom_gain": [
+        {
+          "name": "种植业与林业",
+          "pct": -3.78,
+          "main_net": -546000000.0,
+          "main_ratio": null,
+          "leader": "北大荒"
+        },
+        {
+          "name": "房地产",
+          "pct": -2.8,
+          "main_net": -1058000000.0,
+          "main_ratio": null,
+          "leader": "中国国贸"
+        },
+        {
+          "name": "医疗服务",
+          "pct": -2.76,
+          "main_net": -612000000.0,
+          "main_ratio": null,
+          "leader": "普瑞眼科"
+        },
+        {
+          "name": "饮料制造",
+          "pct": -2.64,
+          "main_net": -177000000.0,
+          "main_ratio": null,
+          "leader": "承德露露"
+        },
+        {
+          "name": "教育",
+          "pct": -2.61,
+          "main_net": -60000000.0,
+          "main_ratio": null,
+          "leader": "*ST高科"
+        },
+        {
+          "name": "影视院线",
+          "pct": -2.48,
+          "main_net": -1000000.0,
+          "main_ratio": null,
+          "leader": "慈文传媒"
+        },
+        {
+          "name": "文化传媒",
+          "pct": -2.45,
+          "main_net": -1307000000.0,
+          "main_ratio": null,
+          "leader": "无线传媒"
+        },
+        {
+          "name": "非金属材料",
+          "pct": -2.34,
+          "main_net": -103000000.0,
+          "main_ratio": null,
+          "leader": "索通发展"
+        },
+        {
+          "name": "化学制药",
+          "pct": -2.24,
+          "main_net": -1262000000.0,
+          "main_ratio": null,
+          "leader": "海正药业"
+        },
+        {
+          "name": "零售",
+          "pct": -2.23,
+          "main_net": -362000000.0,
+          "main_ratio": null,
+          "leader": "重百集团"
+        }
+      ],
+      "top_main_inflow": [
+        {
+          "name": "银行",
+          "pct": 1.33,
+          "main_net": 3402000000.0000005,
+          "main_ratio": null,
+          "leader": "苏州银行"
+        },
+        {
+          "name": "电力",
+          "pct": 0.14,
+          "main_net": 1551000000.0,
+          "main_ratio": null,
+          "leader": "晶科科技"
+        },
+        {
+          "name": "白酒",
+          "pct": 1.05,
+          "main_net": 1290000000.0,
+          "main_ratio": null,
+          "leader": "顺鑫农业"
+        },
+        {
+          "name": "消费电子",
+          "pct": -0.72,
+          "main_net": 1119000000.0,
+          "main_ratio": null,
+          "leader": "朗特智能"
+        },
+        {
+          "name": "通信设备",
+          "pct": -0.62,
+          "main_net": 1075000000.0,
+          "main_ratio": null,
+          "leader": "宇特光电"
+        },
+        {
+          "name": "军工装备",
+          "pct": 0.92,
+          "main_net": 965000000.0,
+          "main_ratio": null,
+          "leader": "甘化科工"
+        },
+        {
+          "name": "白色家电",
+          "pct": -0.94,
+          "main_net": 865000000.0,
+          "main_ratio": null,
+          "leader": "海信家电"
+        },
+        {
+          "name": "自动化设备",
+          "pct": -1.01,
+          "main_net": 745000000.0,
+          "main_ratio": null,
+          "leader": "宇树科技"
+        },
+        {
+          "name": "证券",
+          "pct": 0.07,
+          "main_net": 724000000.0,
+          "main_ratio": null,
+          "leader": "锦龙股份"
+        },
+        {
+          "name": "光伏设备",
+          "pct": -0.2,
+          "main_net": 669000000.0,
+          "main_ratio": null,
+          "leader": "爱旭股份"
+        }
+      ],
+      "top_main_outflow": [
+        {
+          "name": "文化传媒",
+          "pct": -2.45,
+          "main_net": -1307000000.0,
+          "main_ratio": null,
+          "leader": "无线传媒"
+        },
+        {
+          "name": "化学制药",
+          "pct": -2.24,
+          "main_net": -1262000000.0,
+          "main_ratio": null,
+          "leader": "海正药业"
+        },
+        {
+          "name": "房地产",
+          "pct": -2.8,
+          "main_net": -1058000000.0,
+          "main_ratio": null,
+          "leader": "中国国贸"
+        },
+        {
+          "name": "光学光电子",
+          "pct": -1.43,
+          "main_net": -841000000.0,
+          "main_ratio": null,
+          "leader": "海洋王"
+        },
+        {
+          "name": "医疗服务",
+          "pct": -2.76,
+          "main_net": -612000000.0,
+          "main_ratio": null,
+          "leader": "普瑞眼科"
+        },
+        {
+          "name": "生物制品",
+          "pct": -1.5,
+          "main_net": -575000000.0,
+          "main_ratio": null,
+          "leader": "信诺维"
+        },
+        {
+          "name": "通用设备",
+          "pct": -1.22,
+          "main_net": -563000000.0,
+          "main_ratio": null,
+          "leader": "京城股份"
+        },
+        {
+          "name": "种植业与林业",
+          "pct": -3.78,
+          "main_net": -546000000.0,
+          "main_ratio": null,
+          "leader": "北大荒"
+        },
+        {
+          "name": "建筑装饰",
+          "pct": -2.01,
+          "main_net": -420000000.0,
+          "main_ratio": null,
+          "leader": "国投中鲁"
+        },
+        {
+          "name": "零售",
+          "pct": -2.23,
+          "main_net": -362000000.0,
+          "main_ratio": null,
+          "leader": "重百集团"
+        }
+      ],
+      "all": [
+        {
+          "name": "银行",
+          "pct": 1.33,
+          "main_net": 3402000000.0000005,
+          "main_ratio": null,
+          "leader": "苏州银行"
+        },
+        {
+          "name": "白酒",
+          "pct": 1.05,
+          "main_net": 1290000000.0,
+          "main_ratio": null,
+          "leader": "顺鑫农业"
+        },
+        {
+          "name": "军工装备",
+          "pct": 0.92,
+          "main_net": 965000000.0,
+          "main_ratio": null,
+          "leader": "甘化科工"
+        },
+        {
+          "name": "煤炭开采加工",
+          "pct": 0.56,
+          "main_net": 340000000.0,
+          "main_ratio": null,
+          "leader": "恒源煤电"
+        },
+        {
+          "name": "厨卫电器",
+          "pct": 0.54,
+          "main_net": 23000000.0,
+          "main_ratio": null,
+          "leader": "万和电气"
+        },
+        {
+          "name": "保险",
+          "pct": 0.47,
+          "main_net": 501000000.0,
+          "main_ratio": null,
+          "leader": "中国太保"
+        },
+        {
+          "name": "油气开采及服务",
+          "pct": 0.24,
+          "main_net": 126000000.0,
+          "main_ratio": null,
+          "leader": "*ST准油"
+        },
+        {
+          "name": "黑色家电",
+          "pct": 0.23,
+          "main_net": 13000000.0,
+          "main_ratio": null,
+          "leader": "海信视像"
+        },
+        {
+          "name": "汽车整车",
+          "pct": 0.23,
+          "main_net": 8000000.0,
+          "main_ratio": null,
+          "leader": "金龙汽车"
+        },
+        {
+          "name": "贵金属",
+          "pct": 0.22,
+          "main_net": 24000000.0,
+          "main_ratio": null,
+          "leader": "赤峰黄金"
+        },
+        {
+          "name": "电力",
+          "pct": 0.14,
+          "main_net": 1551000000.0,
+          "main_ratio": null,
+          "leader": "晶科科技"
+        },
+        {
+          "name": "证券",
+          "pct": 0.07,
+          "main_net": 724000000.0,
+          "main_ratio": null,
+          "leader": "锦龙股份"
+        },
+        {
+          "name": "机场航运",
+          "pct": 0.06,
+          "main_net": -51000000.0,
+          "main_ratio": null,
+          "leader": "中信海直"
+        },
+        {
+          "name": "港口航运",
+          "pct": -0.01,
+          "main_net": -119000000.0,
+          "main_ratio": null,
+          "leader": "招商港口"
+        },
+        {
+          "name": "公路铁路运输",
+          "pct": -0.07,
+          "main_net": 156000000.0,
+          "main_ratio": null,
+          "leader": "皖通高速"
+        },
+        {
+          "name": "多元金融",
+          "pct": -0.13,
+          "main_net": 32000000.0,
+          "main_ratio": null,
+          "leader": "拉卡拉"
+        },
+        {
+          "name": "光伏设备",
+          "pct": -0.2,
+          "main_net": 669000000.0,
+          "main_ratio": null,
+          "leader": "爱旭股份"
+        },
+        {
+          "name": "中药",
+          "pct": -0.35,
+          "main_net": 590000000.0,
+          "main_ratio": null,
+          "leader": "达仁堂"
+        },
+        {
+          "name": "钢铁",
+          "pct": -0.35,
+          "main_net": -54000000.0,
+          "main_ratio": null,
+          "leader": "鄂尔多斯"
+        },
+        {
+          "name": "工程机械",
+          "pct": -0.39,
+          "main_net": 350000000.0,
+          "main_ratio": null,
+          "leader": "徐工机械"
+        },
+        {
+          "name": "农化制品",
+          "pct": -0.44,
+          "main_net": 200000000.0,
+          "main_ratio": null,
+          "leader": "亚钾国际"
+        },
+        {
+          "name": "工业金属",
+          "pct": -0.46,
+          "main_net": -21000000.0,
+          "main_ratio": null,
+          "leader": "金徽股份"
+        },
+        {
+          "name": "医药商业",
+          "pct": -0.51,
+          "main_net": 56000000.00000001,
+          "main_ratio": null,
+          "leader": "大参林"
+        },
+        {
+          "name": "汽车零部件",
+          "pct": -0.52,
+          "main_net": -89000000.0,
+          "main_ratio": null,
+          "leader": "捷众科技"
+        },
+        {
+          "name": "IT服务",
+          "pct": -0.53,
+          "main_net": -86000000.0,
+          "main_ratio": null,
+          "leader": "太极股份"
+        },
+        {
+          "name": "元件",
+          "pct": -0.55,
+          "main_net": 624000000.0,
+          "main_ratio": null,
+          "leader": "四会富仕"
+        },
+        {
+          "name": "电机",
+          "pct": -0.59,
+          "main_net": -31000000.0,
+          "main_ratio": null,
+          "leader": "中电电机"
+        },
+        {
+          "name": "通信设备",
+          "pct": -0.62,
+          "main_net": 1075000000.0,
+          "main_ratio": null,
+          "leader": "宇特光电"
+        },
+        {
+          "name": "军工电子",
+          "pct": -0.65,
+          "main_net": -142000000.0,
+          "main_ratio": null,
+          "leader": "国睿科技"
+        },
+        {
+          "name": "小家电",
+          "pct": -0.71,
+          "main_net": -321000000.0,
+          "main_ratio": null,
+          "leader": "九阳股份"
+        },
+        {
+          "name": "消费电子",
+          "pct": -0.72,
+          "main_net": 1119000000.0,
+          "main_ratio": null,
+          "leader": "朗特智能"
+        },
+        {
+          "name": "橡胶制品",
+          "pct": -0.73,
+          "main_net": 37000000.0,
+          "main_ratio": null,
+          "leader": "阳谷华泰"
+        },
+        {
+          "name": "化学原料",
+          "pct": -0.74,
+          "main_net": -38000000.0,
+          "main_ratio": null,
+          "leader": "善水科技"
+        },
+        {
+          "name": "轨交设备",
+          "pct": -0.78,
+          "main_net": 28999999.999999996,
+          "main_ratio": null,
+          "leader": "祥和实业"
+        },
+        {
+          "name": "塑料制品",
+          "pct": -0.8,
+          "main_net": -65000000.0,
+          "main_ratio": null,
+          "leader": "肯特股份"
+        },
+        {
+          "name": "通信服务",
+          "pct": -0.84,
+          "main_net": 127000000.0,
+          "main_ratio": null,
+          "leader": "润建股份"
+        },
+        {
+          "name": "食品加工制造",
+          "pct": -0.86,
+          "main_net": -109000000.00000001,
+          "main_ratio": null,
+          "leader": "金达威"
+        },
+        {
+          "name": "电网设备",
+          "pct": -0.9,
+          "main_net": -14000000.000000002,
+          "main_ratio": null,
+          "leader": "科陆电子"
+        },
+        {
+          "name": "纺织制造",
+          "pct": -0.91,
+          "main_net": 44000000.0,
+          "main_ratio": null,
+          "leader": "富春染织"
+        },
+        {
+          "name": "家居用品",
+          "pct": -0.91,
+          "main_net": -200999999.99999997,
+          "main_ratio": null,
+          "leader": "慕思股份"
+        },
+        {
+          "name": "化学纤维",
+          "pct": -0.93,
+          "main_net": 3000000.0,
+          "main_ratio": null,
+          "leader": "*ST三房"
+        },
+        {
+          "name": "白色家电",
+          "pct": -0.94,
+          "main_net": 865000000.0,
+          "main_ratio": null,
+          "leader": "海信家电"
+        },
+        {
+          "name": "软件开发",
+          "pct": -0.94,
+          "main_net": -237000000.0,
+          "main_ratio": null,
+          "leader": "易联众"
+        },
+        {
+          "name": "物流",
+          "pct": -0.95,
+          "main_net": 156000000.0,
+          "main_ratio": null,
+          "leader": "东方嘉盛"
+        },
+        {
+          "name": "汽车服务及其他",
+          "pct": -0.96,
+          "main_net": 49000000.0,
+          "main_ratio": null,
+          "leader": "钱江摩托"
+        },
+        {
+          "name": "风电设备",
+          "pct": -0.98,
+          "main_net": -267000000.0,
+          "main_ratio": null,
+          "leader": "振宏股份"
+        },
+        {
+          "name": "小金属",
+          "pct": -0.99,
+          "main_net": 115999999.99999999,
+          "main_ratio": null,
+          "leader": "宜安科技"
+        },
+        {
+          "name": "自动化设备",
+          "pct": -1.01,
+          "main_net": 745000000.0,
+          "main_ratio": null,
+          "leader": "宇树科技"
+        },
+        {
+          "name": "其他社会服务",
+          "pct": -1.01,
+          "main_net": 39000000.0,
+          "main_ratio": null,
+          "leader": "华测检测"
+        },
+        {
+          "name": "石油加工贸易",
+          "pct": -1.03,
+          "main_net": 148000000.0,
+          "main_ratio": null,
+          "leader": "恒力石化"
+        },
+        {
+          "name": "造纸",
+          "pct": -1.03,
+          "main_net": -52000000.0,
+          "main_ratio": null,
+          "leader": "太阳纸业"
+        },
+        {
+          "name": "养殖业",
+          "pct": -1.06,
+          "main_net": 123000000.0,
+          "main_ratio": null,
+          "leader": "圣农发展"
+        },
+        {
+          "name": "互联网电商",
+          "pct": -1.09,
+          "main_net": 32000000.0,
+          "main_ratio": null,
+          "leader": "行云科技"
+        },
+        {
+          "name": "金属新材料",
+          "pct": -1.1,
+          "main_net": -11000000.0,
+          "main_ratio": null,
+          "leader": "金力永磁"
+        },
+        {
+          "name": "化学制品",
+          "pct": -1.11,
+          "main_net": -76000000.0,
+          "main_ratio": null,
+          "leader": "锦鸡股份"
+        },
+        {
+          "name": "美容护理",
+          "pct": -1.12,
+          "main_net": -11000000.0,
+          "main_ratio": null,
+          "leader": "锦波生物"
+        },
+        {
+          "name": "其他电子",
+          "pct": -1.15,
+          "main_net": 74000000.0,
+          "main_ratio": null,
+          "leader": "中熔电气"
+        },
+        {
+          "name": "医疗器械",
+          "pct": -1.16,
+          "main_net": 459000000.0,
+          "main_ratio": null,
+          "leader": "戴维医疗"
+        },
+        {
+          "name": "其他电源设备",
+          "pct": -1.17,
+          "main_net": -64000000.0,
+          "main_ratio": null,
+          "leader": "盛弘股份"
+        },
+        {
+          "name": "建筑材料",
+          "pct": -1.18,
+          "main_net": -231999999.99999997,
+          "main_ratio": null,
+          "leader": "福建水泥"
+        },
+        {
+          "name": "通用设备",
+          "pct": -1.22,
+          "main_net": -563000000.0,
+          "main_ratio": null,
+          "leader": "京城股份"
+        },
+        {
+          "name": "环境治理",
+          "pct": -1.26,
+          "main_net": -158000000.0,
+          "main_ratio": null,
+          "leader": "*ST动力"
+        },
+        {
+          "name": "专用设备",
+          "pct": -1.28,
+          "main_net": -173000000.0,
+          "main_ratio": null,
+          "leader": "*ST卓然"
+        },
+        {
+          "name": "计算机设备",
+          "pct": -1.34,
+          "main_net": 270000000.0,
+          "main_ratio": null,
+          "leader": "ST佳缘"
+        },
+        {
+          "name": "半导体",
+          "pct": -1.37,
+          "main_net": -316000000.0,
+          "main_ratio": null,
+          "leader": "大普微"
+        },
+        {
+          "name": "燃气",
+          "pct": -1.39,
+          "main_net": -52000000.0,
+          "main_ratio": null,
+          "leader": "佛燃能源"
+        },
+        {
+          "name": "光学光电子",
+          "pct": -1.43,
+          "main_net": -841000000.0,
+          "main_ratio": null,
+          "leader": "海洋王"
+        },
+        {
+          "name": "生物制品",
+          "pct": -1.5,
+          "main_net": -575000000.0,
+          "main_ratio": null,
+          "leader": "信诺维"
+        },
+        {
+          "name": "能源金属",
+          "pct": -1.52,
+          "main_net": -26000000.0,
+          "main_ratio": null,
+          "leader": "寒锐钴业"
+        },
+        {
+          "name": "游戏",
+          "pct": -1.55,
+          "main_net": 35000000.0,
+          "main_ratio": null,
+          "leader": "世纪华通"
+        },
+        {
+          "name": "旅游及酒店",
+          "pct": -1.62,
+          "main_net": -166000000.0,
+          "main_ratio": null,
+          "leader": "九华旅游"
+        },
+        {
+          "name": "服装家纺",
+          "pct": -1.63,
+          "main_net": -136000000.0,
+          "main_ratio": null,
+          "leader": "比音勒芬"
+        },
+        {
+          "name": "贸易",
+          "pct": -1.74,
+          "main_net": -9000000.0,
+          "main_ratio": null,
+          "leader": "苏美达"
+        },
+        {
+          "name": "电池",
+          "pct": -1.78,
+          "main_net": -34000000.0,
+          "main_ratio": null,
+          "leader": "尚水智能"
+        },
+        {
+          "name": "农产品加工",
+          "pct": -1.86,
+          "main_net": -350000000.0,
+          "main_ratio": null,
+          "leader": "路德科技"
+        },
+        {
+          "name": "环保设备",
+          "pct": -1.95,
+          "main_net": 22000000.0,
+          "main_ratio": null,
+          "leader": "紫金龙净"
+        },
+        {
+          "name": "综合",
+          "pct": -1.96,
+          "main_net": -8000000.0,
+          "main_ratio": null,
+          "leader": "特变电工"
+        },
+        {
+          "name": "建筑装饰",
+          "pct": -2.01,
+          "main_net": -420000000.0,
+          "main_ratio": null,
+          "leader": "国投中鲁"
+        },
+        {
+          "name": "电子化学品",
+          "pct": -2.03,
+          "main_net": 111000000.00000001,
+          "main_ratio": null,
+          "leader": "瑞联新材"
+        },
+        {
+          "name": "包装印刷",
+          "pct": -2.09,
+          "main_net": -127000000.0,
+          "main_ratio": null,
+          "leader": "东港股份"
+        },
+        {
+          "name": "零售",
+          "pct": -2.23,
+          "main_net": -362000000.0,
+          "main_ratio": null,
+          "leader": "重百集团"
+        },
+        {
+          "name": "化学制药",
+          "pct": -2.24,
+          "main_net": -1262000000.0,
+          "main_ratio": null,
+          "leader": "海正药业"
+        },
+        {
+          "name": "非金属材料",
+          "pct": -2.34,
+          "main_net": -103000000.0,
+          "main_ratio": null,
+          "leader": "索通发展"
+        },
+        {
+          "name": "文化传媒",
+          "pct": -2.45,
+          "main_net": -1307000000.0,
+          "main_ratio": null,
+          "leader": "无线传媒"
+        },
+        {
+          "name": "影视院线",
+          "pct": -2.48,
+          "main_net": -1000000.0,
+          "main_ratio": null,
+          "leader": "慈文传媒"
+        },
+        {
+          "name": "教育",
+          "pct": -2.61,
+          "main_net": -60000000.0,
+          "main_ratio": null,
+          "leader": "*ST高科"
+        },
+        {
+          "name": "饮料制造",
+          "pct": -2.64,
+          "main_net": -177000000.0,
+          "main_ratio": null,
+          "leader": "承德露露"
+        },
+        {
+          "name": "医疗服务",
+          "pct": -2.76,
+          "main_net": -612000000.0,
+          "main_ratio": null,
+          "leader": "普瑞眼科"
+        },
+        {
+          "name": "房地产",
+          "pct": -2.8,
+          "main_net": -1058000000.0,
+          "main_ratio": null,
+          "leader": "中国国贸"
+        },
+        {
+          "name": "种植业与林业",
+          "pct": -3.78,
+          "main_net": -546000000.0,
+          "main_ratio": null,
+          "leader": "北大荒"
+        }
+      ]
+    },
+    "concept": {
+      "top_gain": [
+        {
+          "name": "国产航母",
+          "pct": 1.14,
+          "main_net": 471000000.0,
+          "main_ratio": null,
+          "leader": "北方导航"
+        },
+        {
+          "name": "证金持股",
+          "pct": 0.76,
+          "main_net": 4172000000.0,
+          "main_ratio": null,
+          "leader": "农业银行"
+        },
+        {
+          "name": "染料",
+          "pct": 0.7,
+          "main_net": 128000000.0,
+          "main_ratio": null,
+          "leader": "锦鸡股份"
+        },
+        {
+          "name": "央企国企改革",
+          "pct": 0.2,
+          "main_net": 3504999999.9999995,
+          "main_ratio": null,
+          "leader": "东安动力"
+        },
+        {
+          "name": "超级品牌",
+          "pct": 0.11,
+          "main_net": 2689000000.0,
+          "main_ratio": null,
+          "leader": "同仁堂"
+        },
+        {
+          "name": "可燃冰",
+          "pct": 0.04,
+          "main_net": -49000000.0,
+          "main_ratio": null,
+          "leader": "广州发展"
+        },
+        {
+          "name": "中字头股票",
+          "pct": 0.01,
+          "main_net": 1540000000.0,
+          "main_ratio": null,
+          "leader": "中信海直"
+        },
+        {
+          "name": "军民融合",
+          "pct": -0.01,
+          "main_net": -356000000.0,
+          "main_ratio": null,
+          "leader": "金盾股份"
+        },
+        {
+          "name": "芬太尼",
+          "pct": -0.07,
+          "main_net": 22000000.0,
+          "main_ratio": null,
+          "leader": "ST人福"
+        },
+        {
+          "name": "蚂蚁集团概念",
+          "pct": -0.13,
+          "main_net": 128000000.0,
+          "main_ratio": null,
+          "leader": "易联众"
+        }
+      ],
+      "bottom_gain": [
+        {
+          "name": "乳业",
+          "pct": -2.99,
+          "main_net": -309000000.0,
+          "main_ratio": null,
+          "leader": "新乳业"
+        },
+        {
+          "name": "CRO概念",
+          "pct": -2.76,
+          "main_net": -1059000000.0,
+          "main_ratio": null,
+          "leader": "华测检测"
+        },
+        {
+          "name": "粮食概念",
+          "pct": -2.68,
+          "main_net": -536000000.00000006,
+          "main_ratio": null,
+          "leader": "莲花控股"
+        },
+        {
+          "name": "赛马概念",
+          "pct": -2.62,
+          "main_net": -33000000.0,
+          "main_ratio": null,
+          "leader": "中体产业"
+        },
+        {
+          "name": "租售同权",
+          "pct": -2.56,
+          "main_net": -540000000.0,
+          "main_ratio": null,
+          "leader": "三湘印象"
+        },
+        {
+          "name": "知识产权保护",
+          "pct": -2.5,
+          "main_net": -500000000.0,
+          "main_ratio": null,
+          "leader": "掌阅科技"
+        },
+        {
+          "name": "转基因",
+          "pct": -2.49,
+          "main_net": -161000000.0,
+          "main_ratio": null,
+          "leader": "芭田股份"
+        },
+        {
+          "name": "物业管理",
+          "pct": -2.44,
+          "main_net": -1630000000.0,
+          "main_ratio": null,
+          "leader": "飞荣达"
+        },
+        {
+          "name": "细胞免疫治疗",
+          "pct": -2.41,
+          "main_net": -775000000.0,
+          "main_ratio": null,
+          "leader": "戴维医疗"
+        },
+        {
+          "name": "玉米",
+          "pct": -2.38,
+          "main_net": -447000000.0,
+          "main_ratio": null,
+          "leader": "云图控股"
+        }
+      ],
+      "top_main_inflow": [
+        {
+          "name": "融资融券",
+          "pct": -0.73,
+          "main_net": 9621000000.0,
+          "main_ratio": null,
+          "leader": "大普微"
+        },
+        {
+          "name": "沪股通",
+          "pct": -0.48,
+          "main_net": 8834000000.0,
+          "main_ratio": null,
+          "leader": "芯动联科"
+        },
+        {
+          "name": "沪股通",
+          "pct": -0.54,
+          "main_net": 8604000000.0,
+          "main_ratio": null,
+          "leader": "芯动联科"
+        },
+        {
+          "name": "证金持股",
+          "pct": 0.76,
+          "main_net": 4172000000.0,
+          "main_ratio": null,
+          "leader": "农业银行"
+        },
+        {
+          "name": "数据中心(AIDC)",
+          "pct": -0.71,
+          "main_net": 3851000000.0,
+          "main_ratio": null,
+          "leader": "大普微"
+        },
+        {
+          "name": "央企国企改革",
+          "pct": 0.2,
+          "main_net": 3504999999.9999995,
+          "main_ratio": null,
+          "leader": "东安动力"
+        },
+        {
+          "name": "机器人概念",
+          "pct": -0.66,
+          "main_net": 3033000000.0,
+          "main_ratio": null,
+          "leader": "四会富仕"
+        },
+        {
+          "name": "机器人概念",
+          "pct": -0.73,
+          "main_net": 3010000000.0,
+          "main_ratio": null,
+          "leader": "四会富仕"
+        },
+        {
+          "name": "人形机器人",
+          "pct": -0.4,
+          "main_net": 2982000000.0,
+          "main_ratio": null,
+          "leader": "四会富仕"
+        },
+        {
+          "name": "新能源汽车",
+          "pct": -0.75,
+          "main_net": 2832000000.0,
+          "main_ratio": null,
+          "leader": "肯特股份"
+        }
+      ],
+      "top_main_outflow": [
+        {
+          "name": "合成生物",
+          "pct": -1.51,
+          "main_net": -1739999999.9999998,
+          "main_ratio": null,
+          "leader": "海正药业"
+        },
+        {
+          "name": "物业管理",
+          "pct": -2.44,
+          "main_net": -1630000000.0,
+          "main_ratio": null,
+          "leader": "飞荣达"
+        },
+        {
+          "name": "文化传媒概念",
+          "pct": -2.19,
+          "main_net": -1561000000.0,
+          "main_ratio": null,
+          "leader": "无线传媒"
+        },
+        {
+          "name": "独角兽概念",
+          "pct": -0.86,
+          "main_net": -1441000000.0,
+          "main_ratio": null,
+          "leader": "万丰奥威"
+        },
+        {
+          "name": "创新药",
+          "pct": -1.38,
+          "main_net": -1360000000.0,
+          "main_ratio": null,
+          "leader": "海正药业"
+        },
+        {
+          "name": "仿制药一致性评价",
+          "pct": -1.78,
+          "main_net": -1210000000.0,
+          "main_ratio": null,
+          "leader": "海正药业"
+        },
+        {
+          "name": "抖音概念(字节概念)",
+          "pct": -1.04,
+          "main_net": -1205000000.0,
+          "main_ratio": null,
+          "leader": "大普微"
+        },
+        {
+          "name": "AI应用",
+          "pct": -1.08,
+          "main_net": -1139000000.0,
+          "main_ratio": null,
+          "leader": "易联众"
+        },
+        {
+          "name": "AI应用",
+          "pct": -1.01,
+          "main_net": -1104000000.0,
+          "main_ratio": null,
+          "leader": "易联众"
+        },
+        {
+          "name": "新股与次新股",
+          "pct": -0.59,
+          "main_net": -1094000000.0,
+          "main_ratio": null,
+          "leader": "大普微"
+        }
+      ],
+      "all": [
+        {
+          "name": "国产航母",
+          "pct": 1.14,
+          "main_net": 471000000.0,
+          "main_ratio": null,
+          "leader": "北方导航"
+        },
+        {
+          "name": "证金持股",
+          "pct": 0.76,
+          "main_net": 4172000000.0,
+          "main_ratio": null,
+          "leader": "农业银行"
+        },
+        {
+          "name": "染料",
+          "pct": 0.7,
+          "main_net": 128000000.0,
+          "main_ratio": null,
+          "leader": "锦鸡股份"
+        },
+        {
+          "name": "央企国企改革",
+          "pct": 0.2,
+          "main_net": 3504999999.9999995,
+          "main_ratio": null,
+          "leader": "东安动力"
+        },
+        {
+          "name": "超级品牌",
+          "pct": 0.11,
+          "main_net": 2689000000.0,
+          "main_ratio": null,
+          "leader": "同仁堂"
+        },
+        {
+          "name": "可燃冰",
+          "pct": 0.04,
+          "main_net": -49000000.0,
+          "main_ratio": null,
+          "leader": "广州发展"
+        },
+        {
+          "name": "中字头股票",
+          "pct": 0.01,
+          "main_net": 1540000000.0,
+          "main_ratio": null,
+          "leader": "中信海直"
+        },
+        {
+          "name": "军民融合",
+          "pct": -0.01,
+          "main_net": -356000000.0,
+          "main_ratio": null,
+          "leader": "金盾股份"
+        },
+        {
+          "name": "芬太尼",
+          "pct": -0.07,
+          "main_net": 22000000.0,
+          "main_ratio": null,
+          "leader": "ST人福"
+        },
+        {
+          "name": "蚂蚁集团概念",
+          "pct": -0.13,
+          "main_net": 128000000.0,
+          "main_ratio": null,
+          "leader": "易联众"
+        },
+        {
+          "name": "页岩气",
+          "pct": -0.23,
+          "main_net": 430999999.99999994,
+          "main_ratio": null,
+          "leader": "*ST准油"
+        },
+        {
+          "name": "期货概念",
+          "pct": -0.28,
+          "main_net": 716000000.0,
+          "main_ratio": null,
+          "leader": "锦龙股份"
+        },
+        {
+          "name": "移动支付",
+          "pct": -0.32,
+          "main_net": -231000000.0,
+          "main_ratio": null,
+          "leader": "易联众"
+        },
+        {
+          "name": "大飞机",
+          "pct": -0.32,
+          "main_net": 362000000.0,
+          "main_ratio": null,
+          "leader": "航材股份"
+        },
+        {
+          "name": "军工",
+          "pct": -0.37,
+          "main_net": 339000000.0,
+          "main_ratio": null,
+          "leader": "肯特股份"
+        },
+        {
+          "name": "白酒概念",
+          "pct": -0.37,
+          "main_net": 1234000000.0,
+          "main_ratio": null,
+          "leader": "顺鑫农业"
+        },
+        {
+          "name": "煤化工概念",
+          "pct": -0.39,
+          "main_net": 710000000.0,
+          "main_ratio": null,
+          "leader": "安泰集团"
+        },
+        {
+          "name": "电力物联网",
+          "pct": -0.39,
+          "main_net": 134000000.00000001,
+          "main_ratio": null,
+          "leader": "太极股份"
+        },
+        {
+          "name": "PM2.5",
+          "pct": -0.4,
+          "main_net": 91000000.0,
+          "main_ratio": null,
+          "leader": "金盾股份"
+        },
+        {
+          "name": "风电",
+          "pct": -0.4,
+          "main_net": 2508000000.0,
+          "main_ratio": null,
+          "leader": "肯特股份"
+        },
+        {
+          "name": "航运概念",
+          "pct": -0.4,
+          "main_net": 227999999.99999997,
+          "main_ratio": null,
+          "leader": "东方嘉盛"
+        },
+        {
+          "name": "草甘膦",
+          "pct": -0.41,
+          "main_net": 35000000.0,
+          "main_ratio": null,
+          "leader": "润丰股份"
+        },
+        {
+          "name": "特高压",
+          "pct": -0.43,
+          "main_net": 1081000000.0,
+          "main_ratio": null,
+          "leader": "华瓷股份"
+        },
+        {
+          "name": "互联网保险",
+          "pct": -0.45,
+          "main_net": 607000000.0,
+          "main_ratio": null,
+          "leader": "中科软"
+        },
+        {
+          "name": "特钢概念",
+          "pct": -0.48,
+          "main_net": -54000000.0,
+          "main_ratio": null,
+          "leader": "*ST八钢"
+        },
+        {
+          "name": "海工装备",
+          "pct": -0.49,
+          "main_net": 169000000.0,
+          "main_ratio": null,
+          "leader": "肯特股份"
+        },
+        {
+          "name": "信托概念",
+          "pct": -0.53,
+          "main_net": 62000000.0,
+          "main_ratio": null,
+          "leader": "电投产融"
+        },
+        {
+          "name": "核电",
+          "pct": -0.53,
+          "main_net": 573000000.0,
+          "main_ratio": null,
+          "leader": "肯特股份"
+        },
+        {
+          "name": "沪股通",
+          "pct": -0.54,
+          "main_net": 8604000000.0,
+          "main_ratio": null,
+          "leader": "芯动联科"
+        },
+        {
+          "name": "智能电网",
+          "pct": -0.58,
+          "main_net": 2021000000.0,
+          "main_ratio": null,
+          "leader": "润建股份"
+        },
+        {
+          "name": "新股与次新股",
+          "pct": -0.59,
+          "main_net": -1094000000.0,
+          "main_ratio": null,
+          "leader": "大普微"
+        },
+        {
+          "name": "工业互联网",
+          "pct": -0.59,
+          "main_net": 798000000.0,
+          "main_ratio": null,
+          "leader": "太极股份"
+        },
+        {
+          "name": "养鸡",
+          "pct": -0.6,
+          "main_net": 54000000.0,
+          "main_ratio": null,
+          "leader": "圣农发展"
+        },
+        {
+          "name": "猪肉",
+          "pct": -0.61,
+          "main_net": 67000000.00000001,
+          "main_ratio": null,
+          "leader": "顺鑫农业"
+        },
+        {
+          "name": "深股通",
+          "pct": -0.61,
+          "main_net": 1847000000.0,
+          "main_ratio": null,
+          "leader": "金盾股份"
+        },
+        {
+          "name": "无人机",
+          "pct": -0.62,
+          "main_net": -794000000.0,
+          "main_ratio": null,
+          "leader": "金盾股份"
+        },
+        {
+          "name": "自由贸易港",
+          "pct": -0.63,
+          "main_net": -54000000.0,
+          "main_ratio": null,
+          "leader": "东方嘉盛"
+        },
+        {
+          "name": "特斯拉概念",
+          "pct": -0.64,
+          "main_net": 639000000.0,
+          "main_ratio": null,
+          "leader": "捷众科技"
+        },
+        {
+          "name": "无人驾驶",
+          "pct": -0.64,
+          "main_net": 1213000000.0,
+          "main_ratio": null,
+          "leader": "芯动联科"
+        },
+        {
+          "name": "区块链",
+          "pct": -0.68,
+          "main_net": -91000000.0,
+          "main_ratio": null,
+          "leader": "易联众"
+        },
+        {
+          "name": "稀土永磁",
+          "pct": -0.69,
+          "main_net": 407000000.0,
+          "main_ratio": null,
+          "leader": "金力永磁"
+        },
+        {
+          "name": "黄金概念",
+          "pct": -0.71,
+          "main_net": -193000000.0,
+          "main_ratio": null,
+          "leader": "金徽股份"
+        },
+        {
+          "name": "网络安全",
+          "pct": -0.72,
+          "main_net": 458000000.0,
+          "main_ratio": null,
+          "leader": "太极股份"
+        },
+        {
+          "name": "家用电器",
+          "pct": -0.72,
+          "main_net": 983000000.0,
+          "main_ratio": null,
+          "leader": "朗特智能"
+        },
+        {
+          "name": "无线充电",
+          "pct": -0.73,
+          "main_net": -198000000.0,
+          "main_ratio": null,
+          "leader": "绿联科技"
+        },
+        {
+          "name": "云计算",
+          "pct": -0.73,
+          "main_net": 827000000.0,
+          "main_ratio": null,
+          "leader": "太极股份"
+        },
+        {
+          "name": "机器人概念",
+          "pct": -0.73,
+          "main_net": 3010000000.0,
+          "main_ratio": null,
+          "leader": "四会富仕"
+        },
+        {
+          "name": "工业大麻",
+          "pct": -0.75,
+          "main_net": -16000000.0,
+          "main_ratio": null,
+          "leader": "昆药集团"
+        },
+        {
+          "name": "智能物流",
+          "pct": -0.75,
+          "main_net": 712000000.0,
+          "main_ratio": null,
+          "leader": "东方嘉盛"
+        },
+        {
+          "name": "高端装备",
+          "pct": -0.75,
+          "main_net": 348000000.0,
+          "main_ratio": null,
+          "leader": "金盾股份"
+        },
+        {
+          "name": "飞行汽车(eVTOL)",
+          "pct": -0.31,
+          "main_net": -754000000.0,
+          "main_ratio": null,
+          "leader": "金盾股份"
+        },
+        {
+          "name": "同花顺果指数",
+          "pct": -0.32,
+          "main_net": 544000000.0,
+          "main_ratio": null,
+          "leader": "珠海冠宇"
+        },
+        {
+          "name": "白酒概念",
+          "pct": -0.33,
+          "main_net": 1240000000.0,
+          "main_ratio": null,
+          "leader": "顺鑫农业"
+        },
+        {
+          "name": "风电",
+          "pct": -0.33,
+          "main_net": 2560000000.0,
+          "main_ratio": null,
+          "leader": "肯特股份"
+        },
+        {
+          "name": "PM2.5",
+          "pct": -0.34,
+          "main_net": 88000000.0,
+          "main_ratio": null,
+          "leader": "金盾股份"
+        },
+        {
+          "name": "航空发动机",
+          "pct": -0.34,
+          "main_net": -87000000.0,
+          "main_ratio": null,
+          "leader": "万丰奥威"
+        },
+        {
+          "name": "同花顺新质50",
+          "pct": -0.34,
+          "main_net": 749000000.0,
+          "main_ratio": null,
+          "leader": "万丰奥威"
+        },
+        {
+          "name": "虚拟电厂",
+          "pct": -0.34,
+          "main_net": -38000000.0,
+          "main_ratio": null,
+          "leader": "晶科科技"
+        },
+        {
+          "name": "英伟达概念",
+          "pct": -0.34,
+          "main_net": 98000000.0,
+          "main_ratio": null,
+          "leader": "大普微"
+        },
+        {
+          "name": "草甘膦",
+          "pct": -0.35,
+          "main_net": 39000000.0,
+          "main_ratio": null,
+          "leader": "润丰股份"
+        },
+        {
+          "name": "碳交易",
+          "pct": -0.35,
+          "main_net": 1495000000.0,
+          "main_ratio": null,
+          "leader": "晶科科技"
+        },
+        {
+          "name": "电子身份证",
+          "pct": -0.35,
+          "main_net": -176000000.0,
+          "main_ratio": null,
+          "leader": "吉大正元"
+        },
+        {
+          "name": "煤化工概念",
+          "pct": -0.36,
+          "main_net": 714000000.0,
+          "main_ratio": null,
+          "leader": "安泰集团"
+        },
+        {
+          "name": "绿色电力",
+          "pct": -0.36,
+          "main_net": 2305000000.0,
+          "main_ratio": null,
+          "leader": "晶科科技"
+        },
+        {
+          "name": "特高压",
+          "pct": -0.36,
+          "main_net": 1115000000.0,
+          "main_ratio": null,
+          "leader": "华瓷股份"
+        },
+        {
+          "name": "钒电池",
+          "pct": -0.36,
+          "main_net": -25000000.0,
+          "main_ratio": null,
+          "leader": "惠城环保"
+        },
+        {
+          "name": "POE胶膜",
+          "pct": -0.38,
+          "main_net": 208000000.0,
+          "main_ratio": null,
+          "leader": "天洋新材"
+        },
+        {
+          "name": "特钢概念",
+          "pct": -0.38,
+          "main_net": -46000000.0,
+          "main_ratio": null,
+          "leader": "*ST八钢"
+        },
+        {
+          "name": "航运概念",
+          "pct": -0.38,
+          "main_net": 235000000.0,
+          "main_ratio": null,
+          "leader": "东方嘉盛"
+        },
+        {
+          "name": "人形机器人",
+          "pct": -0.4,
+          "main_net": 2982000000.0,
+          "main_ratio": null,
+          "leader": "四会富仕"
+        },
+        {
+          "name": "NMN概念",
+          "pct": -0.4,
+          "main_net": -258000000.0,
+          "main_ratio": null,
+          "leader": "金达威"
+        },
+        {
+          "name": "互联网保险",
+          "pct": -0.41,
+          "main_net": 606000000.0,
+          "main_ratio": null,
+          "leader": "中科软"
+        },
+        {
+          "name": "BC电池",
+          "pct": -0.42,
+          "main_net": 396000000.0,
+          "main_ratio": null,
+          "leader": "爱旭股份"
+        },
+        {
+          "name": "海工装备",
+          "pct": -0.42,
+          "main_net": 208000000.0,
+          "main_ratio": null,
+          "leader": "肯特股份"
+        },
+        {
+          "name": "俄乌冲突概念",
+          "pct": -0.45,
+          "main_net": -119000000.0,
+          "main_ratio": null,
+          "leader": "京城股份"
+        },
+        {
+          "name": "信托概念",
+          "pct": -0.45,
+          "main_net": 64000000.0,
+          "main_ratio": null,
+          "leader": "电投产融"
+        },
+        {
+          "name": "数字货币",
+          "pct": -0.45,
+          "main_net": -413000000.0,
+          "main_ratio": null,
+          "leader": "太极股份"
+        },
+        {
+          "name": "数据安全",
+          "pct": -0.46,
+          "main_net": -196000000.0,
+          "main_ratio": null,
+          "leader": "大普微"
+        },
+        {
+          "name": "数字水印",
+          "pct": -0.46,
+          "main_net": -288000000.0,
+          "main_ratio": null,
+          "leader": "易联众"
+        },
+        {
+          "name": "核电",
+          "pct": -0.47,
+          "main_net": 605000000.0,
+          "main_ratio": null,
+          "leader": "肯特股份"
+        },
+        {
+          "name": "沪股通",
+          "pct": -0.48,
+          "main_net": 8834000000.0,
+          "main_ratio": null,
+          "leader": "芯动联科"
+        },
+        {
+          "name": "成飞概念",
+          "pct": -0.48,
+          "main_net": 5000000.0,
+          "main_ratio": null,
+          "leader": "侨源股份"
+        },
+        {
+          "name": "养鸡",
+          "pct": -0.49,
+          "main_net": 61000000.0,
+          "main_ratio": null,
+          "leader": "圣农发展"
+        },
+        {
+          "name": "算力租赁",
+          "pct": -0.51,
+          "main_net": 1181000000.0,
+          "main_ratio": null,
+          "leader": "锦鸡股份"
+        },
+        {
+          "name": "工业互联网",
+          "pct": -0.51,
+          "main_net": 868000000.0,
+          "main_ratio": null,
+          "leader": "太极股份"
+        },
+        {
+          "name": "智能电网",
+          "pct": -0.51,
+          "main_net": 2061000000.0,
+          "main_ratio": null,
+          "leader": "润建股份"
+        },
+        {
+          "name": "商业航天",
+          "pct": -0.52,
+          "main_net": 1243000000.0,
+          "main_ratio": null,
+          "leader": "肯特股份"
+        },
+        {
+          "name": "财税数字化",
+          "pct": -0.52,
+          "main_net": -48000000.0,
+          "main_ratio": null,
+          "leader": "太极股份"
+        },
+        {
+          "name": "新股与次新股",
+          "pct": -0.53,
+          "main_net": -1049000000.0,
+          "main_ratio": null,
+          "leader": "大普微"
+        },
+        {
+          "name": "无人机",
+          "pct": -0.53,
+          "main_net": -750000000.0,
+          "main_ratio": null,
+          "leader": "金盾股份"
+        },
+        {
+          "name": "自由贸易港",
+          "pct": -0.54,
+          "main_net": -43000000.0,
+          "main_ratio": null,
+          "leader": "东方嘉盛"
+        },
+        {
+          "name": "猪肉",
+          "pct": -0.54,
+          "main_net": 75000000.0,
+          "main_ratio": null,
+          "leader": "顺鑫农业"
+        },
+        {
+          "name": "深股通",
+          "pct": -0.54,
+          "main_net": 2097000000.0,
+          "main_ratio": null,
+          "leader": "金盾股份"
+        },
+        {
+          "name": "华为盘古",
+          "pct": -0.56,
+          "main_net": 113999999.99999999,
+          "main_ratio": null,
+          "leader": "万达信息"
+        },
+        {
+          "name": "特斯拉概念",
+          "pct": -0.57,
+          "main_net": 659000000.0,
+          "main_ratio": null,
+          "leader": "捷众科技"
+        },
+        {
+          "name": "钙钛矿电池",
+          "pct": -0.57,
+          "main_net": 384000000.0,
+          "main_ratio": null,
+          "leader": "尚水智能"
+        },
+        {
+          "name": "无人驾驶",
+          "pct": -0.57,
+          "main_net": 1257000000.0,
+          "main_ratio": null,
+          "leader": "芯动联科"
+        },
+        {
+          "name": "光纤概念",
+          "pct": -0.58,
+          "main_net": -174000000.0,
+          "main_ratio": null,
+          "leader": "宇特光电"
+        },
+        {
+          "name": "化肥",
+          "pct": -0.58,
+          "main_net": -33000000.0,
+          "main_ratio": null,
+          "leader": "广东宏大"
+        },
+        {
+          "name": "牙科医疗",
+          "pct": -0.6,
+          "main_net": 218000000.00000003,
+          "main_ratio": null,
+          "leader": "华瓷股份"
+        },
+        {
+          "name": "自由贸易港",
+          "pct": -0.6,
+          "main_net": -52000000.0,
+          "main_ratio": null,
+          "leader": "东方嘉盛"
+        },
+        {
+          "name": "稀土永磁",
+          "pct": -0.61,
+          "main_net": 408000000.0,
+          "main_ratio": null,
+          "leader": "金力永磁"
+        },
+        {
+          "name": "无线充电",
+          "pct": -0.61,
+          "main_net": -197000000.0,
+          "main_ratio": null,
+          "leader": "绿联科技"
+        },
+        {
+          "name": "网络安全",
+          "pct": -0.61,
+          "main_net": 467000000.0,
+          "main_ratio": null,
+          "leader": "太极股份"
+        },
+        {
+          "name": "区块链",
+          "pct": -0.62,
+          "main_net": -81000000.0,
+          "main_ratio": null,
+          "leader": "易联众"
+        },
+        {
+          "name": "硅能源",
+          "pct": -0.62,
+          "main_net": 202000000.0,
+          "main_ratio": null,
+          "leader": "晶科能源"
+        },
+        {
+          "name": "汽车热管理",
+          "pct": -0.62,
+          "main_net": 391000000.0,
+          "main_ratio": null,
+          "leader": "捷众科技"
+        },
+        {
+          "name": "华为鲲鹏",
+          "pct": -0.63,
+          "main_net": -120000000.0,
+          "main_ratio": null,
+          "leader": "易联众"
+        },
+        {
+          "name": "家用电器",
+          "pct": -0.63,
+          "main_net": 985000000.0,
+          "main_ratio": null,
+          "leader": "朗特智能"
+        },
+        {
+          "name": "智能穿戴",
+          "pct": -0.65,
+          "main_net": 1535000000.0,
+          "main_ratio": null,
+          "leader": "华瓷股份"
+        },
+        {
+          "name": "云计算",
+          "pct": -0.65,
+          "main_net": 844000000.0,
+          "main_ratio": null,
+          "leader": "太极股份"
+        },
+        {
+          "name": "机器人概念",
+          "pct": -0.66,
+          "main_net": 3033000000.0,
+          "main_ratio": null,
+          "leader": "四会富仕"
+        },
+        {
+          "name": "光热发电",
+          "pct": -0.66,
+          "main_net": 186000000.0,
+          "main_ratio": null,
+          "leader": "绿发电力"
+        },
+        {
+          "name": "汽车电子",
+          "pct": -0.67,
+          "main_net": 1489000000.0,
+          "main_ratio": null,
+          "leader": "四会富仕"
+        },
+        {
+          "name": "黄金概念",
+          "pct": -0.67,
+          "main_net": -186000000.0,
+          "main_ratio": null,
+          "leader": "金徽股份"
+        },
+        {
+          "name": "国企改革",
+          "pct": -0.67,
+          "main_net": 1750000000.0,
+          "main_ratio": null,
+          "leader": "易联众"
+        },
+        {
+          "name": "东数西算(算力)",
+          "pct": -0.67,
+          "main_net": 1433000000.0,
+          "main_ratio": null,
+          "leader": "锦鸡股份"
+        },
+        {
+          "name": "新型工业化",
+          "pct": -0.67,
+          "main_net": 472000000.0,
+          "main_ratio": null,
+          "leader": "太极股份"
+        },
+        {
+          "name": "共封装光学(CPO)",
+          "pct": -0.68,
+          "main_net": 2766000000.0,
+          "main_ratio": null,
+          "leader": "宇特光电"
+        },
+        {
+          "name": "卫星导航",
+          "pct": -0.68,
+          "main_net": -284000000.0,
+          "main_ratio": null,
+          "leader": "肯特股份"
+        },
+        {
+          "name": "禽流感",
+          "pct": -0.68,
+          "main_net": 121000000.0,
+          "main_ratio": null,
+          "leader": "众生药业"
+        },
+        {
+          "name": "高端装备",
+          "pct": -0.68,
+          "main_net": 354000000.0,
+          "main_ratio": null,
+          "leader": "金盾股份"
+        },
+        {
+          "name": "量子科技",
+          "pct": -0.68,
+          "main_net": 1572000000.0,
+          "main_ratio": null,
+          "leader": "吉大正元"
+        },
+        {
+          "name": "两轮车",
+          "pct": -0.69,
+          "main_net": -577000000.0,
+          "main_ratio": null,
+          "leader": "文灿股份"
+        },
+        {
+          "name": "智能医疗",
+          "pct": -0.69,
+          "main_net": -343000000.0,
+          "main_ratio": null,
+          "leader": "易联众"
+        },
+        {
+          "name": "智能物流",
+          "pct": -0.69,
+          "main_net": 717000000.0,
+          "main_ratio": null,
+          "leader": "东方嘉盛"
+        },
+        {
+          "name": "氢能源",
+          "pct": -0.69,
+          "main_net": 939000000.0,
+          "main_ratio": null,
+          "leader": "肯特股份"
+        },
+        {
+          "name": "可控核聚变",
+          "pct": -0.69,
+          "main_net": 17000000.0,
+          "main_ratio": null,
+          "leader": "金盾股份"
+        },
+        {
+          "name": "华为昇腾",
+          "pct": -0.7,
+          "main_net": -62000000.0,
+          "main_ratio": null,
+          "leader": "久远银海"
+        },
+        {
+          "name": "传感器",
+          "pct": -0.7,
+          "main_net": -96000000.0,
+          "main_ratio": null,
+          "leader": "芯动联科"
+        },
+        {
+          "name": "DeepSeek概念",
+          "pct": -0.7,
+          "main_net": 1368000000.0,
+          "main_ratio": null,
+          "leader": "大普微"
+        },
+        {
+          "name": "智能音箱",
+          "pct": -0.7,
+          "main_net": 861000000.0,
+          "main_ratio": null,
+          "leader": "科森科技"
+        },
+        {
+          "name": "长安汽车概念",
+          "pct": -0.71,
+          "main_net": -327000000.0,
+          "main_ratio": null,
+          "leader": "东安动力"
+        },
+        {
+          "name": "数据中心(AIDC)",
+          "pct": -0.71,
+          "main_net": 3851000000.0,
+          "main_ratio": null,
+          "leader": "大普微"
+        },
+        {
+          "name": "F5G概念",
+          "pct": -0.71,
+          "main_net": 530999999.99999994,
+          "main_ratio": null,
+          "leader": "亨通光电"
+        },
+        {
+          "name": "低空经济",
+          "pct": -0.72,
+          "main_net": -928999999.9999999,
+          "main_ratio": null,
+          "leader": "金盾股份"
+        },
+        {
+          "name": "参股银行",
+          "pct": -0.72,
+          "main_net": 304000000.0,
+          "main_ratio": null,
+          "leader": "善水科技"
+        },
+        {
+          "name": "鸿蒙概念",
+          "pct": -0.72,
+          "main_net": -267000000.0,
+          "main_ratio": null,
+          "leader": "慕思股份"
+        },
+        {
+          "name": "智能座舱",
+          "pct": -0.73,
+          "main_net": 478000000.0,
+          "main_ratio": null,
+          "leader": "松原安全"
+        },
+        {
+          "name": "可降解塑料",
+          "pct": -0.73,
+          "main_net": 163000000.0,
+          "main_ratio": null,
+          "leader": "卓越新能"
+        },
+        {
+          "name": "天然气",
+          "pct": -0.73,
+          "main_net": 70000000.0,
+          "main_ratio": null,
+          "leader": "京城股份"
+        },
+        {
+          "name": "共享单车",
+          "pct": -0.73,
+          "main_net": 26000000.0,
+          "main_ratio": null,
+          "leader": "爱玛科技"
+        },
+        {
+          "name": "智能家居",
+          "pct": -0.73,
+          "main_net": 791000000.0,
+          "main_ratio": null,
+          "leader": "朗特智能"
+        },
+        {
+          "name": "融资融券",
+          "pct": -0.73,
+          "main_net": 9621000000.0,
+          "main_ratio": null,
+          "leader": "大普微"
+        },
+        {
+          "name": "医药电商",
+          "pct": -0.74,
+          "main_net": -356000000.0,
+          "main_ratio": null,
+          "leader": "易联众"
+        },
+        {
+          "name": "数字乡村",
+          "pct": -0.74,
+          "main_net": -445000000.0,
+          "main_ratio": null,
+          "leader": "太极股份"
+        },
+        {
+          "name": "信创",
+          "pct": -0.74,
+          "main_net": -168000000.0,
+          "main_ratio": null,
+          "leader": "易联众"
+        },
+        {
+          "name": "一带一路",
+          "pct": -0.75,
+          "main_net": 1467000000.0,
+          "main_ratio": null,
+          "leader": "四会富仕"
+        },
+        {
+          "name": "新能源汽车",
+          "pct": -0.76,
+          "main_net": 2742000000.0,
+          "main_ratio": null,
+          "leader": "肯特股份"
+        },
+        {
+          "name": "华为概念",
+          "pct": -0.76,
+          "main_net": 1119000000.0,
+          "main_ratio": null,
+          "leader": "易联众"
+        },
+        {
+          "name": "新能源汽车",
+          "pct": -0.75,
+          "main_net": 2832000000.0,
+          "main_ratio": null,
+          "leader": "肯特股份"
+        },
+        {
+          "name": "共封装光学(CPO)",
+          "pct": -0.76,
+          "main_net": 2761000000.0,
+          "main_ratio": null,
+          "leader": "宇特光电"
+        },
+        {
+          "name": "华为概念",
+          "pct": -0.76,
+          "main_net": 1286000000.0,
+          "main_ratio": null,
+          "leader": "易联众"
+        },
+        {
+          "name": "换电概念",
+          "pct": -0.77,
+          "main_net": 709000000.0,
+          "main_ratio": null,
+          "leader": "长春一东"
+        },
+        {
+          "name": "石墨电极",
+          "pct": -0.78,
+          "main_net": -71000000.0,
+          "main_ratio": null,
+          "leader": "中兵红箭"
+        },
+        {
+          "name": "物联网",
+          "pct": -0.79,
+          "main_net": -112000000.00000001,
+          "main_ratio": null,
+          "leader": "朗特智能"
+        },
+        {
+          "name": "安防",
+          "pct": -0.8,
+          "main_net": -440000000.00000006,
+          "main_ratio": null,
+          "leader": "太极股份"
+        },
+        {
+          "name": "金属钴",
+          "pct": -0.8,
+          "main_net": -248000000.0,
+          "main_ratio": null,
+          "leader": "道氏技术"
+        },
+        {
+          "name": "AI智能体",
+          "pct": -0.8,
+          "main_net": 1135000000.0,
+          "main_ratio": null,
+          "leader": "锦鸡股份"
+        },
+        {
+          "name": "净水概念",
+          "pct": -0.8,
+          "main_net": 501999999.99999994,
+          "main_ratio": null,
+          "leader": "朗特智能"
+        },
+        {
+          "name": "举牌",
+          "pct": -0.8,
+          "main_net": 90000000.0,
+          "main_ratio": null,
+          "leader": "平高电气"
+        },
+        {
+          "name": "华为海思概念股",
+          "pct": -0.81,
+          "main_net": 219000000.0,
+          "main_ratio": null,
+          "leader": "赛微电子"
+        },
+        {
+          "name": "新疆振兴",
+          "pct": -0.81,
+          "main_net": -129000000.0,
+          "main_ratio": null,
+          "leader": "久远银海"
+        },
+        {
+          "name": "碳中和",
+          "pct": -0.82,
+          "main_net": 254000000.0,
+          "main_ratio": null,
+          "leader": "*ST卓然"
+        },
+        {
+          "name": "小金属概念",
+          "pct": -0.82,
+          "main_net": -359000000.0,
+          "main_ratio": null,
+          "leader": "金徽股份"
+        },
+        {
+          "name": "储能",
+          "pct": -0.82,
+          "main_net": 2527000000.0,
+          "main_ratio": null,
+          "leader": "朗特智能"
+        },
+        {
+          "name": "时空大数据",
+          "pct": -0.82,
+          "main_net": -222000000.00000003,
+          "main_ratio": null,
+          "leader": "太极股份"
+        },
+        {
+          "name": "充电桩",
+          "pct": -0.83,
+          "main_net": 534000000.0,
+          "main_ratio": null,
+          "leader": "朗特智能"
+        },
+        {
+          "name": "汽车拆解概念",
+          "pct": -0.83,
+          "main_net": 240000000.0,
+          "main_ratio": null,
+          "leader": "中力股份"
+        },
+        {
+          "name": "小米概念",
+          "pct": -0.83,
+          "main_net": -617000000.0,
+          "main_ratio": null,
+          "leader": "保隆科技"
+        },
+        {
+          "name": "百度概念",
+          "pct": -0.84,
+          "main_net": -142000000.0,
+          "main_ratio": null,
+          "leader": "大普微"
+        },
+        {
+          "name": "比亚迪概念",
+          "pct": -0.84,
+          "main_net": 90000000.0,
+          "main_ratio": null,
+          "leader": "肯特股份"
+        },
+        {
+          "name": "超导概念",
+          "pct": -0.84,
+          "main_net": -2000000.0,
+          "main_ratio": null,
+          "leader": "中天科技"
+        },
+        {
+          "name": "人民币贬值受益",
+          "pct": -0.85,
+          "main_net": 515000000.00000006,
+          "main_ratio": null,
+          "leader": "四会富仕"
+        },
+        {
+          "name": "固废处理",
+          "pct": -0.85,
+          "main_net": -189000000.0,
+          "main_ratio": null,
+          "leader": "路德科技"
+        },
+        {
+          "name": "智慧政务",
+          "pct": -0.86,
+          "main_net": -628000000.0,
+          "main_ratio": null,
+          "leader": "易联众"
+        },
+        {
+          "name": "科创次新股",
+          "pct": -0.86,
+          "main_net": -942000000.0,
+          "main_ratio": null,
+          "leader": "宇树科技"
+        },
+        {
+          "name": "液冷服务器",
+          "pct": -0.86,
+          "main_net": 2802000000.0,
+          "main_ratio": null,
+          "leader": "朗特智能"
+        },
+        {
+          "name": "燃料电池",
+          "pct": -0.86,
+          "main_net": -525000000.0,
+          "main_ratio": null,
+          "leader": "金龙汽车"
+        },
+        {
+          "name": "独角兽概念",
+          "pct": -0.86,
+          "main_net": -1441000000.0,
+          "main_ratio": null,
+          "leader": "万丰奥威"
+        },
+        {
+          "name": "5G",
+          "pct": -0.87,
+          "main_net": 1952000000.0,
+          "main_ratio": null,
+          "leader": "四会富仕"
+        },
+        {
+          "name": "3D打印",
+          "pct": -0.87,
+          "main_net": 41000000.0,
+          "main_ratio": null,
+          "leader": "沃特股份"
+        },
+        {
+          "name": "数字经济",
+          "pct": -0.88,
+          "main_net": -790000000.0,
+          "main_ratio": null,
+          "leader": "易联众"
+        },
+        {
+          "name": "智谱AI",
+          "pct": -0.88,
+          "main_net": 48000000.0,
+          "main_ratio": null,
+          "leader": "德生科技"
+        },
+        {
+          "name": "环氧丙烷",
+          "pct": -0.88,
+          "main_net": 155000000.0,
+          "main_ratio": null,
+          "leader": "卫星化学"
+        },
+        {
+          "name": "工业母机",
+          "pct": -0.88,
+          "main_net": 557000000.0,
+          "main_ratio": null,
+          "leader": "*ST宝馨"
+        },
+        {
+          "name": "星闪概念",
+          "pct": -0.89,
+          "main_net": 37000000.0,
+          "main_ratio": null,
+          "leader": "海能达"
+        },
+        {
+          "name": "铜缆高速连接",
+          "pct": -0.9,
+          "main_net": 635000000.0,
+          "main_ratio": null,
+          "leader": "中天科技"
+        },
+        {
+          "name": "车联网(车路协同)",
+          "pct": -0.9,
+          "main_net": 197000000.0,
+          "main_ratio": null,
+          "leader": "吉大正元"
+        },
+        {
+          "name": "阿里巴巴概念",
+          "pct": -0.9,
+          "main_net": -671000000.0,
+          "main_ratio": null,
+          "leader": "大普微"
+        },
+        {
+          "name": "统一大市场",
+          "pct": -0.9,
+          "main_net": -269000000.0,
+          "main_ratio": null,
+          "leader": "东方嘉盛"
+        },
+        {
+          "name": "金属铜",
+          "pct": -0.91,
+          "main_net": -457000000.0,
+          "main_ratio": null,
+          "leader": "藏格矿业"
+        },
+        {
+          "name": "天津自贸区",
+          "pct": -0.91,
+          "main_net": -12000000.0,
+          "main_ratio": null,
+          "leader": "天汽模"
+        },
+        {
+          "name": "数据要素",
+          "pct": -0.91,
+          "main_net": -397000000.0,
+          "main_ratio": null,
+          "leader": "易联众"
+        },
+        {
+          "name": "西部大开发",
+          "pct": -0.92,
+          "main_net": 294000000.0,
+          "main_ratio": null,
+          "leader": "久远银海"
+        },
+        {
+          "name": "消毒剂",
+          "pct": -0.93,
+          "main_net": -103000000.0,
+          "main_ratio": null,
+          "leader": "世龙实业"
+        },
+        {
+          "name": "Web3.0",
+          "pct": -0.93,
+          "main_net": -365000000.0,
+          "main_ratio": null,
+          "leader": "易联众"
+        },
+        {
+          "name": "水泥概念",
+          "pct": -0.94,
+          "main_net": -287000000.0,
+          "main_ratio": null,
+          "leader": "福建水泥"
+        },
+        {
+          "name": "2026中报预增",
+          "pct": -0.94,
+          "main_net": 2595000000.0,
+          "main_ratio": null,
+          "leader": "善水科技"
+        },
+        {
+          "name": "光伏建筑一体化",
+          "pct": -0.94,
+          "main_net": -250000000.0,
+          "main_ratio": null,
+          "leader": "晶科科技"
+        },
+        {
+          "name": "宁德时代概念",
+          "pct": -0.94,
+          "main_net": 178000000.0,
+          "main_ratio": null,
+          "leader": "尚水智能"
+        },
+        {
+          "name": "医美概念",
+          "pct": -0.94,
+          "main_net": -362000000.0,
+          "main_ratio": null,
+          "leader": "海正药业"
+        },
+        {
+          "name": "人脸识别",
+          "pct": -0.95,
+          "main_net": -96000000.0,
+          "main_ratio": null,
+          "leader": "易联众"
+        },
+        {
+          "name": "机器视觉",
+          "pct": -0.95,
+          "main_net": 755000000.0,
+          "main_ratio": null,
+          "leader": "易联众"
+        },
+        {
+          "name": "参股保险",
+          "pct": -0.96,
+          "main_net": 15000000.0,
+          "main_ratio": null,
+          "leader": "易联众"
+        },
+        {
+          "name": "中俄贸易概念",
+          "pct": -0.96,
+          "main_net": -429000000.0,
+          "main_ratio": null,
+          "leader": "长春一东"
+        },
+        {
+          "name": "金属镍",
+          "pct": -0.96,
+          "main_net": -369000000.0,
+          "main_ratio": null,
+          "leader": "海亮股份"
+        },
+        {
+          "name": "光伏概念",
+          "pct": -0.97,
+          "main_net": 335000000.0,
+          "main_ratio": null,
+          "leader": "晶科科技"
+        },
+        {
+          "name": "人工智能",
+          "pct": -0.97,
+          "main_net": -568000000.0,
+          "main_ratio": null,
+          "leader": "金盾股份"
+        },
+        {
+          "name": "新型烟草(电子烟)",
+          "pct": -0.97,
+          "main_net": -1000000.0,
+          "main_ratio": null,
+          "leader": "朗特智能"
+        },
+        {
+          "name": "AI眼镜",
+          "pct": -0.98,
+          "main_net": 864000000.0,
+          "main_ratio": null,
+          "leader": "宜安科技"
+        },
+        {
+          "name": "金属铅",
+          "pct": -0.98,
+          "main_net": -293000000.0,
+          "main_ratio": null,
+          "leader": "金徽股份"
+        },
+        {
+          "name": "农机",
+          "pct": -0.98,
+          "main_net": 316000000.0,
+          "main_ratio": null,
+          "leader": "斯菱智驱"
+        },
+        {
+          "name": "空气能热泵",
+          "pct": -0.98,
+          "main_net": 623000000.0,
+          "main_ratio": null,
+          "leader": "金奥博"
+        },
+        {
+          "name": "京津冀一体化",
+          "pct": -0.99,
+          "main_net": -761000000.0,
+          "main_ratio": null,
+          "leader": "达仁堂"
+        },
+        {
+          "name": "共同富裕示范区",
+          "pct": -0.99,
+          "main_net": 309000000.0,
+          "main_ratio": null,
+          "leader": "金盾股份"
+        },
+        {
+          "name": "数字孪生",
+          "pct": -0.99,
+          "main_net": 129000000.0,
+          "main_ratio": null,
+          "leader": "太极股份"
+        },
+        {
+          "name": "电子纸",
+          "pct": -0.99,
+          "main_net": -671000000.0,
+          "main_ratio": null,
+          "leader": "掌阅科技"
+        },
+        {
+          "name": "互联网金融",
+          "pct": -0.99,
+          "main_net": 93000000.0,
+          "main_ratio": null,
+          "leader": "太极股份"
+        },
+        {
+          "name": "雄安新区",
+          "pct": -1.0,
+          "main_net": 16000000.0,
+          "main_ratio": null,
+          "leader": "太极股份"
+        },
+        {
+          "name": "2026三季报预增",
+          "pct": -1.0,
+          "main_net": 1402000000.0,
+          "main_ratio": null,
+          "leader": "海正药业"
+        },
+        {
+          "name": "MCU芯片",
+          "pct": -1.01,
+          "main_net": 723000000.0,
+          "main_ratio": null,
+          "leader": "海信视像"
+        },
+        {
+          "name": "高压快充",
+          "pct": -1.01,
+          "main_net": 727000000.0,
+          "main_ratio": null,
+          "leader": "*ST宝馨"
+        },
+        {
+          "name": "AI语料",
+          "pct": -1.01,
+          "main_net": -694000000.0,
+          "main_ratio": null,
+          "leader": "慈文传媒"
+        },
+        {
+          "name": "金属锌",
+          "pct": -1.01,
+          "main_net": -440000000.00000006,
+          "main_ratio": null,
+          "leader": "金徽股份"
+        },
+        {
+          "name": "核污染防治",
+          "pct": -1.01,
+          "main_net": -69000000.0,
+          "main_ratio": null,
+          "leader": "华强科技"
+        },
+        {
+          "name": "腾讯概念",
+          "pct": -1.01,
+          "main_net": -985000000.0,
+          "main_ratio": null,
+          "leader": "大普微"
+        },
+        {
+          "name": "苹果概念",
+          "pct": -1.02,
+          "main_net": 571000000.0,
+          "main_ratio": null,
+          "leader": "福莱新材"
+        },
+        {
+          "name": "玻璃基板",
+          "pct": -1.02,
+          "main_net": -298000000.0,
+          "main_ratio": null,
+          "leader": "赛微电子"
+        },
+        {
+          "name": "数据确权",
+          "pct": -1.02,
+          "main_net": -522000000.0,
+          "main_ratio": null,
+          "leader": "易联众"
+        },
+        {
+          "name": "黑龙江自贸区",
+          "pct": -1.03,
+          "main_net": -375000000.0,
+          "main_ratio": null,
+          "leader": "东安动力"
+        },
+        {
+          "name": "汽车芯片",
+          "pct": -1.03,
+          "main_net": 1036000000.0,
+          "main_ratio": null,
+          "leader": "ST佳缘"
+        },
+        {
+          "name": "血氧仪",
+          "pct": -1.03,
+          "main_net": 57999999.99999999,
+          "main_ratio": null,
+          "leader": "戴维医疗"
+        },
+        {
+          "name": "智慧城市",
+          "pct": -1.03,
+          "main_net": -607000000.0,
+          "main_ratio": null,
+          "leader": "易联众"
+        },
+        {
+          "name": "抖音概念(字节概念)",
+          "pct": -1.04,
+          "main_net": -1205000000.0,
+          "main_ratio": null,
+          "leader": "大普微"
+        },
+        {
+          "name": "柔性屏(折叠屏)",
+          "pct": -1.04,
+          "main_net": 114999999.99999999,
+          "main_ratio": null,
+          "leader": "科森科技"
+        },
+        {
+          "name": "PVDF概念",
+          "pct": -1.04,
+          "main_net": 38000000.0,
+          "main_ratio": null,
+          "leader": "盛景微"
+        },
+        {
+          "name": "参股券商",
+          "pct": -1.05,
+          "main_net": 163000000.0,
+          "main_ratio": null,
+          "leader": "福建水泥"
+        },
+        {
+          "name": "跨境电商",
+          "pct": -1.05,
+          "main_net": -1048000000.0,
+          "main_ratio": null,
+          "leader": "慕思股份"
+        },
+        {
+          "name": "水利",
+          "pct": -1.05,
+          "main_net": 914000000.0,
+          "main_ratio": null,
+          "leader": "金盾股份"
+        },
+        {
+          "name": "医疗器械概念",
+          "pct": -1.05,
+          "main_net": -357000000.0,
+          "main_ratio": null,
+          "leader": "肯特股份"
+        },
+        {
+          "name": "粤港澳大湾区",
+          "pct": -1.06,
+          "main_net": 631000000.0,
+          "main_ratio": null,
+          "leader": "四会富仕"
+        },
+        {
+          "name": "电子竞技",
+          "pct": -1.07,
+          "main_net": -83000000.0,
+          "main_ratio": null,
+          "leader": "云图控股"
+        },
+        {
+          "name": "华为手机",
+          "pct": -1.07,
+          "main_net": 966000000.0,
+          "main_ratio": null,
+          "leader": "珠海冠宇"
+        },
+        {
+          "name": "消费电子概念",
+          "pct": -1.07,
+          "main_net": 861000000.0,
+          "main_ratio": null,
+          "leader": "朗特智能"
+        },
+        {
+          "name": "钠离子电池",
+          "pct": -1.07,
+          "main_net": -130000000.0,
+          "main_ratio": null,
+          "leader": "江苏新能"
+        },
+        {
+          "name": "云办公",
+          "pct": -1.08,
+          "main_net": -231999999.99999997,
+          "main_ratio": null,
+          "leader": "润建股份"
+        },
+        {
+          "name": "AI应用",
+          "pct": -1.08,
+          "main_net": -1139000000.0,
+          "main_ratio": null,
+          "leader": "易联众"
+        },
+        {
+          "name": "垃圾分类",
+          "pct": -1.09,
+          "main_net": -170000000.0,
+          "main_ratio": null,
+          "leader": "瀚蓝环境"
+        },
+        {
+          "name": "磷化工",
+          "pct": -1.09,
+          "main_net": -135000000.0,
+          "main_ratio": null,
+          "leader": "富临精工"
+        },
+        {
+          "name": "垃圾分类",
+          "pct": -1.0,
+          "main_net": -168000000.0,
+          "main_ratio": null,
+          "leader": "瀚蓝环境"
+        },
+        {
+          "name": "AI应用",
+          "pct": -1.01,
+          "main_net": -1104000000.0,
+          "main_ratio": null,
+          "leader": "易联众"
+        },
+        {
+          "name": "PVDF概念",
+          "pct": -1.01,
+          "main_net": 39000000.0,
+          "main_ratio": null,
+          "leader": "盛景微"
+        },
+        {
+          "name": "ChatGPT概念",
+          "pct": -1.01,
+          "main_net": -747000000.0,
+          "main_ratio": null,
+          "leader": "易联众"
+        },
+        {
+          "name": "长三角一体化",
+          "pct": -1.01,
+          "main_net": 951000000.0,
+          "main_ratio": null,
+          "leader": "亨通光电"
+        },
+        {
+          "name": "虚拟现实",
+          "pct": -1.02,
+          "main_net": -370000000.0,
+          "main_ratio": null,
+          "leader": "润建股份"
+        },
+        {
+          "name": "养老概念",
+          "pct": -1.03,
+          "main_net": -717000000.0,
+          "main_ratio": null,
+          "leader": "易联众"
+        },
+        {
+          "name": "语音技术",
+          "pct": -1.03,
+          "main_net": 24000000.0,
+          "main_ratio": null,
+          "leader": "传音控股"
+        },
+        {
+          "name": "MiniLED",
+          "pct": -1.03,
+          "main_net": 186000000.0,
+          "main_ratio": null,
+          "leader": "慧谷新材"
+        },
+        {
+          "name": "石墨烯",
+          "pct": -1.04,
+          "main_net": -287000000.0,
+          "main_ratio": null,
+          "leader": "沃特股份"
+        },
+        {
+          "name": "钛白粉概念",
+          "pct": -1.04,
+          "main_net": -176000000.0,
+          "main_ratio": null,
+          "leader": "安宁股份"
+        },
+        {
+          "name": "农村电商",
+          "pct": -1.04,
+          "main_net": -178000000.0,
+          "main_ratio": null,
+          "leader": "德生科技"
+        },
+        {
+          "name": "专精特新",
+          "pct": -1.05,
+          "main_net": -615000000.0,
+          "main_ratio": null,
+          "leader": "大普微"
+        },
+        {
+          "name": "污水处理",
+          "pct": -1.05,
+          "main_net": -183000000.0,
+          "main_ratio": null,
+          "leader": "路德科技"
+        },
+        {
+          "name": "PPP概念",
+          "pct": -1.05,
+          "main_net": -263000000.0,
+          "main_ratio": null,
+          "leader": "*ST动力"
+        },
+        {
+          "name": "EDR概念",
+          "pct": -1.05,
+          "main_net": 80000000.0,
+          "main_ratio": null,
+          "leader": "国投智能"
+        },
+        {
+          "name": "上海国企改革",
+          "pct": -1.05,
+          "main_net": -543000000.0,
+          "main_ratio": null,
+          "leader": "云赛智联"
+        },
+        {
+          "name": "HJT电池",
+          "pct": -1.06,
+          "main_net": 195000000.0,
+          "main_ratio": null,
+          "leader": "*ST宝馨"
+        },
+        {
+          "name": "快手概念",
+          "pct": -1.07,
+          "main_net": -574000000.0,
+          "main_ratio": null,
+          "leader": "大普微"
+        },
+        {
+          "name": "锂电池概念",
+          "pct": -1.08,
+          "main_net": 256999999.99999997,
+          "main_ratio": null,
+          "leader": "万丰奥威"
+        },
+        {
+          "name": "有机硅概念",
+          "pct": -1.09,
+          "main_net": -150000000.0,
+          "main_ratio": null,
+          "leader": "宜安科技"
+        },
+        {
+          "name": "MLCC概念",
+          "pct": -1.09,
+          "main_net": 26000000.0,
+          "main_ratio": null,
+          "leader": "华瓷股份"
+        },
+        {
+          "name": "盐湖提锂",
+          "pct": -1.09,
+          "main_net": 154000000.0,
+          "main_ratio": null,
+          "leader": "富临精工"
+        },
+        {
+          "name": "多模态AI",
+          "pct": -1.1,
+          "main_net": -637000000.0,
+          "main_ratio": null,
+          "leader": "润建股份"
+        },
+        {
+          "name": "元宇宙",
+          "pct": -1.11,
+          "main_net": -10000000.0,
+          "main_ratio": null,
+          "leader": "润建股份"
+        },
+        {
+          "name": "MR(混合现实)",
+          "pct": -1.11,
+          "main_net": 246000000.0,
+          "main_ratio": null,
+          "leader": "润建股份"
+        },
+        {
+          "name": "宠物经济",
+          "pct": -1.12,
+          "main_net": 67000000.00000001,
+          "main_ratio": null,
+          "leader": "海正药业"
+        },
+        {
+          "name": "福建自贸区",
+          "pct": -1.12,
+          "main_net": -1027999999.9999999,
+          "main_ratio": null,
+          "leader": "易联众"
+        },
+        {
+          "name": "C2M概念",
+          "pct": -1.13,
+          "main_net": 13000000.0,
+          "main_ratio": null,
+          "leader": "安诺其"
+        },
+        {
+          "name": "预制菜",
+          "pct": -1.14,
+          "main_net": 178000000.0,
+          "main_ratio": null,
+          "leader": "圣农发展"
+        },
+        {
+          "name": "化债概念(AMC概念)",
+          "pct": -1.14,
+          "main_net": -180000000.0,
+          "main_ratio": null,
+          "leader": "华光环能"
+        },
+        {
+          "name": "毛发医疗",
+          "pct": -1.15,
+          "main_net": -47000000.0,
+          "main_ratio": null,
+          "leader": "科伦药业"
+        },
+        {
+          "name": "虚拟数字人",
+          "pct": -1.16,
+          "main_net": -588000000.0,
+          "main_ratio": null,
+          "leader": "润建股份"
+        },
+        {
+          "name": "托育服务",
+          "pct": -1.16,
+          "main_net": -43000000.0,
+          "main_ratio": null,
+          "leader": "易联众"
+        },
+        {
+          "name": "碳纤维",
+          "pct": -1.16,
+          "main_net": -25000000.0,
+          "main_ratio": null,
+          "leader": "万丰奥威"
+        },
+        {
+          "name": "生物疫苗",
+          "pct": -1.16,
+          "main_net": -519000000.00000006,
+          "main_ratio": null,
+          "leader": "东方嘉盛"
+        },
+        {
+          "name": "广东自贸区",
+          "pct": -1.17,
+          "main_net": -259000000.0,
+          "main_ratio": null,
+          "leader": "东方嘉盛"
+        },
+        {
+          "name": "阿尔茨海默概念",
+          "pct": -1.17,
+          "main_net": -191000000.0,
+          "main_ratio": null,
+          "leader": "海正药业"
+        },
+        {
+          "name": "金属回收",
+          "pct": -1.18,
+          "main_net": -254000000.0,
+          "main_ratio": null,
+          "leader": "宏桥控股"
+        },
+        {
+          "name": "小红书概念",
+          "pct": -1.19,
+          "main_net": -475000000.0,
+          "main_ratio": null,
+          "leader": "大普微"
+        },
+        {
+          "name": "AIGC概念",
+          "pct": -1.19,
+          "main_net": -98000000.0,
+          "main_ratio": null,
+          "leader": "易联众"
+        },
+        {
+          "name": "土壤修复",
+          "pct": -1.19,
+          "main_net": -114999999.99999999,
+          "main_ratio": null,
+          "leader": "*ST动力"
+        },
+        {
+          "name": "冷链物流",
+          "pct": -1.19,
+          "main_net": -992000000.0,
+          "main_ratio": null,
+          "leader": "东方嘉盛"
+        },
+        {
+          "name": "MicroLED概念",
+          "pct": -1.2,
+          "main_net": -428000000.0,
+          "main_ratio": null,
+          "leader": "慧谷新材"
+        },
+        {
+          "name": "创投",
+          "pct": -1.2,
+          "main_net": 206999999.99999997,
+          "main_ratio": null,
+          "leader": "赛微电子"
+        },
+        {
+          "name": "第三代半导体",
+          "pct": -1.2,
+          "main_net": 183000000.0,
+          "main_ratio": null,
+          "leader": "甘化科工"
+        },
+        {
+          "name": "脑机接口",
+          "pct": -1.21,
+          "main_net": -81000000.0,
+          "main_ratio": null,
+          "leader": "可孚医疗"
+        },
+        {
+          "name": "在线教育",
+          "pct": -1.22,
+          "main_net": -377000000.0,
+          "main_ratio": null,
+          "leader": "易联众"
+        },
+        {
+          "name": "露营经济",
+          "pct": -1.23,
+          "main_net": -30000000.0,
+          "main_ratio": null,
+          "leader": "朗特智能"
+        },
+        {
+          "name": "光刻机",
+          "pct": -1.23,
+          "main_net": 99000000.0,
+          "main_ratio": null,
+          "leader": "捷众科技"
+        },
+        {
+          "name": "PET铜箔",
+          "pct": -1.35,
+          "main_net": 109000000.00000001,
+          "main_ratio": null,
+          "leader": "中天科技"
+        },
+        {
+          "name": "ST板块",
+          "pct": -1.36,
+          "main_net": -505999999.99999994,
+          "main_ratio": null,
+          "leader": "*ST卓然"
+        },
+        {
+          "name": "在线教育",
+          "pct": -1.36,
+          "main_net": -421000000.0,
+          "main_ratio": null,
+          "leader": "易联众"
+        },
+        {
+          "name": "乡村振兴",
+          "pct": -1.36,
+          "main_net": -957000000.0,
+          "main_ratio": null,
+          "leader": "久远银海"
+        },
+        {
+          "name": "云游戏",
+          "pct": -1.37,
+          "main_net": 89000000.0,
+          "main_ratio": null,
+          "leader": "世纪华通"
+        },
+        {
+          "name": "ETC",
+          "pct": -1.38,
+          "main_net": -72000000.0,
+          "main_ratio": null,
+          "leader": "华信新材"
+        },
+        {
+          "name": "创新药",
+          "pct": -1.38,
+          "main_net": -1360000000.0,
+          "main_ratio": null,
+          "leader": "海正药业"
+        },
+        {
+          "name": "先进封装",
+          "pct": -1.38,
+          "main_net": 843000000.0,
+          "main_ratio": null,
+          "leader": "沃特股份"
+        },
+        {
+          "name": "中韩自贸区",
+          "pct": -1.39,
+          "main_net": -12000000.0,
+          "main_ratio": null,
+          "leader": "明泰铝业"
+        },
+        {
+          "name": "动力电池回收",
+          "pct": -1.39,
+          "main_net": 386000000.0,
+          "main_ratio": null,
+          "leader": "协鑫能科"
+        },
+        {
+          "name": "海峡两岸",
+          "pct": -1.4,
+          "main_net": -425000000.0,
+          "main_ratio": null,
+          "leader": "易联众"
+        },
+        {
+          "name": "固态电池",
+          "pct": -1.41,
+          "main_net": -266000000.0,
+          "main_ratio": null,
+          "leader": "尚水智能"
+        },
+        {
+          "name": "无人零售",
+          "pct": -1.41,
+          "main_net": -552000000.0,
+          "main_ratio": null,
+          "leader": "冰山冷热"
+        },
+        {
+          "name": "上海自贸区",
+          "pct": -1.42,
+          "main_net": -272000000.0,
+          "main_ratio": null,
+          "leader": "密尔克卫"
+        },
+        {
+          "name": "地下管网",
+          "pct": -1.43,
+          "main_net": -285000000.0,
+          "main_ratio": null,
+          "leader": "凌云股份"
+        },
+        {
+          "name": "智慧灯杆",
+          "pct": -1.43,
+          "main_net": -797000000.0,
+          "main_ratio": null,
+          "leader": "海洋王"
+        },
+        {
+          "name": "足球概念",
+          "pct": -1.43,
+          "main_net": -171000000.0,
+          "main_ratio": null,
+          "leader": "诺瓦星云"
+        },
+        {
+          "name": "OLED",
+          "pct": -1.44,
+          "main_net": -586000000.0,
+          "main_ratio": null,
+          "leader": "视涯科技"
+        },
+        {
+          "name": "眼科医疗",
+          "pct": -1.44,
+          "main_net": -274000000.0,
+          "main_ratio": null,
+          "leader": "普瑞眼科"
+        },
+        {
+          "name": "股权转让(并购重组)",
+          "pct": -1.46,
+          "main_net": -297000000.0,
+          "main_ratio": null,
+          "leader": "华瓷股份"
+        },
+        {
+          "name": "高压氧舱",
+          "pct": -1.47,
+          "main_net": -84000000.0,
+          "main_ratio": null,
+          "leader": "三星电气"
+        },
+        {
+          "name": "生态农业",
+          "pct": -1.48,
+          "main_net": -224000000.00000003,
+          "main_ratio": null,
+          "leader": "广东宏大"
+        },
+        {
+          "name": "氟化工概念",
+          "pct": -1.48,
+          "main_net": 56999999.99999999,
+          "main_ratio": null,
+          "leader": "闰土股份"
+        },
+        {
+          "name": "供销社",
+          "pct": -1.49,
+          "main_net": -28999999.999999996,
+          "main_ratio": null,
+          "leader": "亚钾国际"
+        },
+        {
+          "name": "富士康概念",
+          "pct": -1.5,
+          "main_net": -1000000.0,
+          "main_ratio": null,
+          "leader": "沃特股份"
+        },
+        {
+          "name": "减肥药",
+          "pct": -1.5,
+          "main_net": -768000000.0,
+          "main_ratio": null,
+          "leader": "海正药业"
+        },
+        {
+          "name": "合成生物",
+          "pct": -1.51,
+          "main_net": -1739999999.9999998,
+          "main_ratio": null,
+          "leader": "海正药业"
+        },
+        {
+          "name": "幽门螺杆菌概念",
+          "pct": -1.53,
+          "main_net": -229000000.0,
+          "main_ratio": null,
+          "leader": "善水科技"
+        },
+        {
+          "name": "免税店",
+          "pct": -1.53,
+          "main_net": -160000000.0,
+          "main_ratio": null,
+          "leader": "白云机场"
+        },
+        {
+          "name": "培育钻石",
+          "pct": -1.53,
+          "main_net": -2000000.0,
+          "main_ratio": null,
+          "leader": "中兵红箭"
+        },
+        {
+          "name": "食品安全",
+          "pct": -1.53,
+          "main_net": -167000000.0,
+          "main_ratio": null,
+          "leader": "久远银海"
+        },
+        {
+          "name": "国家大基金持股",
+          "pct": -1.54,
+          "main_net": -873000000.0,
+          "main_ratio": null,
+          "leader": "赛微电子"
+        },
+        {
+          "name": "人造肉",
+          "pct": -1.55,
+          "main_net": -18000000.0,
+          "main_ratio": null,
+          "leader": "美盈森"
+        },
+        {
+          "name": "冰雪产业",
+          "pct": -1.56,
+          "main_net": -731000000.0,
+          "main_ratio": null,
+          "leader": "东方嘉盛"
+        },
+        {
+          "name": "民营医院",
+          "pct": -1.56,
+          "main_net": -936999999.9999999,
+          "main_ratio": null,
+          "leader": "普瑞眼科"
+        },
+        {
+          "name": "空间计算",
+          "pct": -1.57,
+          "main_net": -592000000.0,
+          "main_ratio": null,
+          "leader": "润建股份"
+        },
+        {
+          "name": "肝炎概念",
+          "pct": -1.59,
+          "main_net": -977999999.9999999,
+          "main_ratio": null,
+          "leader": "新产业"
+        },
+        {
+          "name": "建筑节能",
+          "pct": -1.61,
+          "main_net": -177000000.0,
+          "main_ratio": null,
+          "leader": "森鹰窗业"
+        },
+        {
+          "name": "网约车",
+          "pct": -1.61,
+          "main_net": -138000000.0,
+          "main_ratio": null,
+          "leader": "博实结"
+        },
+        {
+          "name": "职业教育",
+          "pct": -1.64,
+          "main_net": -567000000.0,
+          "main_ratio": null,
+          "leader": "德生科技"
+        },
+        {
+          "name": "手机游戏",
+          "pct": -1.67,
+          "main_net": -248000000.0,
+          "main_ratio": null,
+          "leader": "慈文传媒"
+        },
+        {
+          "name": "啤酒概念",
+          "pct": -1.67,
+          "main_net": -103000000.0,
+          "main_ratio": null,
+          "leader": "燕京啤酒"
+        },
+        {
+          "name": "拼多多概念",
+          "pct": -1.68,
+          "main_net": -294000000.0,
+          "main_ratio": null,
+          "leader": "小熊电器"
+        },
+        {
+          "name": "流感",
+          "pct": -1.68,
+          "main_net": -952999999.9999999,
+          "main_ratio": null,
+          "leader": "海正药业"
+        },
+        {
+          "name": "NFT概念",
+          "pct": -1.7,
+          "main_net": -351000000.0,
+          "main_ratio": null,
+          "leader": "华瓷股份"
+        },
+        {
+          "name": "存储芯片",
+          "pct": -1.7,
+          "main_net": -163000000.0,
+          "main_ratio": null,
+          "leader": "大普微"
+        },
+        {
+          "name": "摘帽",
+          "pct": -1.72,
+          "main_net": -171000000.0,
+          "main_ratio": null,
+          "leader": "易联众"
+        },
+        {
+          "name": "旅游概念",
+          "pct": -1.73,
+          "main_net": -612000000.0,
+          "main_ratio": null,
+          "leader": "中信海直"
+        },
+        {
+          "name": "三胎概念",
+          "pct": -1.74,
+          "main_net": -561000000.0,
+          "main_ratio": null,
+          "leader": "戴维医疗"
+        },
+        {
+          "name": "短剧游戏",
+          "pct": -1.74,
+          "main_net": -889000000.0,
+          "main_ratio": null,
+          "leader": "无线传媒"
+        },
+        {
+          "name": "存储芯片",
+          "pct": -1.75,
+          "main_net": -100000000.0,
+          "main_ratio": null,
+          "leader": "大普微"
+        },
+        {
+          "name": "维生素",
+          "pct": -1.76,
+          "main_net": -847000000.0000001,
+          "main_ratio": null,
+          "leader": "金达威"
+        },
+        {
+          "name": "仿制药一致性评价",
+          "pct": -1.78,
+          "main_net": -1210000000.0,
+          "main_ratio": null,
+          "leader": "海正药业"
+        },
+        {
+          "name": "烟草",
+          "pct": -1.79,
+          "main_net": -92000000.0,
+          "main_ratio": null,
+          "leader": "昆船智能"
+        },
+        {
+          "name": "光刻胶",
+          "pct": -1.81,
+          "main_net": 13000000.0,
+          "main_ratio": null,
+          "leader": "七彩化学"
+        },
+        {
+          "name": "体育产业",
+          "pct": -1.83,
+          "main_net": -754000000.0,
+          "main_ratio": null,
+          "leader": "太极股份"
+        },
+        {
+          "name": "海南自贸区",
+          "pct": -1.83,
+          "main_net": -173000000.0,
+          "main_ratio": null,
+          "leader": "海南华铁"
+        },
+        {
+          "name": "网红经济",
+          "pct": -1.84,
+          "main_net": -658000000.0,
+          "main_ratio": null,
+          "leader": "遥望科技"
+        },
+        {
+          "name": "网络游戏",
+          "pct": -1.85,
+          "main_net": -623000000.0,
+          "main_ratio": null,
+          "leader": "世纪华通"
+        },
+        {
+          "name": "猴痘概念",
+          "pct": -1.85,
+          "main_net": -557000000.0,
+          "main_ratio": null,
+          "leader": "新产业"
+        },
+        {
+          "name": "新型城镇化",
+          "pct": -1.85,
+          "main_net": -785000000.0,
+          "main_ratio": null,
+          "leader": "海洋王"
+        },
+        {
+          "name": "丙烯酸",
+          "pct": -1.87,
+          "main_net": 160000000.0,
+          "main_ratio": null,
+          "leader": "卫星化学"
+        },
+        {
+          "name": "代糖概念",
+          "pct": -1.89,
+          "main_net": -178000000.0,
+          "main_ratio": null,
+          "leader": "晨光生物"
+        },
+        {
+          "name": "大豆",
+          "pct": -1.89,
+          "main_net": -55000000.00000001,
+          "main_ratio": null,
+          "leader": "新洋丰"
+        },
+        {
+          "name": "房屋检测",
+          "pct": -1.9,
+          "main_net": -165000000.0,
+          "main_ratio": null,
+          "leader": "国投中鲁"
+        },
+        {
+          "name": "深圳国企改革",
+          "pct": -1.92,
+          "main_net": -117000000.0,
+          "main_ratio": null,
+          "leader": "国信证券"
+        },
+        {
+          "name": "装配式建筑",
+          "pct": -1.93,
+          "main_net": -576000000.0,
+          "main_ratio": null,
+          "leader": "森鹰窗业"
+        },
+        {
+          "name": "中芯国际概念",
+          "pct": -1.99,
+          "main_net": 779000000.0,
+          "main_ratio": null,
+          "leader": "德明利"
+        },
+        {
+          "name": "农业种植",
+          "pct": -2.0,
+          "main_net": -463999999.99999994,
+          "main_ratio": null,
+          "leader": "昆药集团"
+        },
+        {
+          "name": "基因测序",
+          "pct": -2.04,
+          "main_net": -281000000.0,
+          "main_ratio": null,
+          "leader": "华测检测"
+        },
+        {
+          "name": "IP经济(谷子经济)",
+          "pct": -2.07,
+          "main_net": -794000000.0,
+          "main_ratio": null,
+          "leader": "广博股份"
+        },
+        {
+          "name": "AI视频",
+          "pct": -2.08,
+          "main_net": -793000000.0,
+          "main_ratio": null,
+          "leader": "安诺其"
+        },
+        {
+          "name": "特色小镇",
+          "pct": -2.18,
+          "main_net": -250000000.0,
+          "main_ratio": null,
+          "leader": "大千生态"
+        },
+        {
+          "name": "辅助生殖",
+          "pct": -2.18,
+          "main_net": -556000000.0,
+          "main_ratio": null,
+          "leader": "众生药业"
+        },
+        {
+          "name": "文化传媒概念",
+          "pct": -2.19,
+          "main_net": -1561000000.0,
+          "main_ratio": null,
+          "leader": "无线传媒"
+        },
+        {
+          "name": "横琴新区",
+          "pct": -2.23,
+          "main_net": -223000000.0,
+          "main_ratio": null,
+          "leader": "健帆生物"
+        },
+        {
+          "name": "土地流转",
+          "pct": -2.37,
+          "main_net": -339000000.0,
+          "main_ratio": null,
+          "leader": "芭田股份"
+        },
+        {
+          "name": "玉米",
+          "pct": -2.38,
+          "main_net": -447000000.0,
+          "main_ratio": null,
+          "leader": "云图控股"
+        },
+        {
+          "name": "细胞免疫治疗",
+          "pct": -2.41,
+          "main_net": -775000000.0,
+          "main_ratio": null,
+          "leader": "戴维医疗"
+        },
+        {
+          "name": "物业管理",
+          "pct": -2.44,
+          "main_net": -1630000000.0,
+          "main_ratio": null,
+          "leader": "飞荣达"
+        },
+        {
+          "name": "转基因",
+          "pct": -2.49,
+          "main_net": -161000000.0,
+          "main_ratio": null,
+          "leader": "芭田股份"
+        },
+        {
+          "name": "知识产权保护",
+          "pct": -2.5,
+          "main_net": -500000000.0,
+          "main_ratio": null,
+          "leader": "掌阅科技"
+        },
+        {
+          "name": "租售同权",
+          "pct": -2.56,
+          "main_net": -540000000.0,
+          "main_ratio": null,
+          "leader": "三湘印象"
+        },
+        {
+          "name": "赛马概念",
+          "pct": -2.62,
+          "main_net": -33000000.0,
+          "main_ratio": null,
+          "leader": "中体产业"
+        },
+        {
+          "name": "粮食概念",
+          "pct": -2.68,
+          "main_net": -536000000.00000006,
+          "main_ratio": null,
+          "leader": "莲花控股"
+        },
+        {
+          "name": "CRO概念",
+          "pct": -2.76,
+          "main_net": -1059000000.0,
+          "main_ratio": null,
+          "leader": "华测检测"
+        },
+        {
+          "name": "乳业",
+          "pct": -2.99,
+          "main_net": -309000000.0,
+          "main_ratio": null,
+          "leader": "新乳业"
+        }
+      ]
+    }
+  },
+  "portfolio": [
+    {
+      "name": "东方人工智能主题混合",
+      "fund_code": "",
+      "amount": 2255.59,
+      "cost_return_pct": 8.5,
+      "themes": [
+        "半导体材料设备",
+        "半导体",
+        "人工智能"
+      ],
+      "matched_sectors": [
+        {
+          "name": "半导体",
+          "pct": -1.37,
+          "main_net": -316000000.0,
+          "main_ratio": null,
+          "leader": "大普微"
+        },
+        {
+          "name": "人工智能",
+          "pct": -0.97,
+          "main_net": -568000000.0,
+          "main_ratio": null,
+          "leader": "金盾股份"
+        }
+      ],
+      "theme_avg_pct": -1.17,
+      "matched_main_flow_sum": -884000000.0,
+      "score": -2.2,
+      "strength": "偏弱",
+      "reasons": [
+        "对应主题偏弱",
+        "匹配板块主力资金合计为净流出",
+        "主要指数整体偏弱"
+      ],
+      "risk_alert": null,
+      "action_reference": "暂不加仓；观察是否止跌、资金回流。若已触及个人风控线，优先执行既定风控。"
+    },
+    {
+      "name": "财通品质甄选混合C",
+      "fund_code": "024481",
+      "amount": 1044.17,
+      "cost_return_pct": -10.08,
+      "themes": [
+        "PCB",
+        "电子元件"
+      ],
+      "matched_sectors": [
+        {
+          "name": "元件",
+          "pct": -0.55,
+          "main_net": 624000000.0,
+          "main_ratio": null,
+          "leader": "四会富仕"
+        }
+      ],
+      "theme_avg_pct": -0.55,
+      "matched_main_flow_sum": 624000000.0,
+      "score": -0.6,
+      "strength": "中性",
+      "reasons": [
+        "对应主题偏弱",
+        "匹配板块主力资金合计为净流入",
+        "主要指数整体偏弱"
+      ],
+      "risk_alert": null,
+      "action_reference": "以持有观察为主；等待方向、成交量和资金流进一步确认，不追涨。"
+    },
+    {
+      "name": "易方达消费电子ETF联接C",
+      "fund_code": "018897",
+      "amount": 1973.26,
+      "cost_return_pct": -16.95,
+      "themes": [
+        "消费电子",
+        "中证消费电子",
+        "电子"
+      ],
+      "matched_sectors": [
+        {
+          "name": "消费电子",
+          "pct": -0.72,
+          "main_net": 1119000000.0,
+          "main_ratio": null,
+          "leader": "朗特智能"
+        },
+        {
+          "name": "军工电子",
+          "pct": -0.65,
+          "main_net": -142000000.0,
+          "main_ratio": null,
+          "leader": "国睿科技"
+        },
+        {
+          "name": "其他电子",
+          "pct": -1.15,
+          "main_net": 74000000.0,
+          "main_ratio": null,
+          "leader": "中熔电气"
+        }
+      ],
+      "theme_avg_pct": -0.84,
+      "matched_main_flow_sum": 1051000000.0,
+      "score": -0.6,
+      "strength": "中性",
+      "reasons": [
+        "对应主题偏弱",
+        "匹配板块主力资金合计为净流入",
+        "主要指数整体偏弱"
+      ],
+      "risk_alert": "当前持仓收益率 -16.95% 已触及设定风控线 -15.00%",
+      "action_reference": "已触及设定风控线：优先复核仓位与止损纪律，不用短线反弹预期替代风控。"
+    }
+  ]
+}
