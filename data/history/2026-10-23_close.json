@@ -1,0 +1,240 @@
+{
+  "meta": {
+    "generated_at": "2026-10-23T14:41:15.357956+08:00",
+    "session": "close",
+    "date": "2026-10-23",
+    "is_trading_day": true,
+    "calendar_source": "exchange_calendars:XSHG",
+    "source_status": {
+      "a_share_spot": {
+        "source": "tencent",
+        "ok": true,
+        "rows": 5574,
+        "valid_pct_rows": 5574,
+        "valid_amount_rows": 5569,
+        "errors": [],
+        "collected_at": "2026-10-23T14:40:09.911887+08:00",
+        "elapsed_seconds": 8.65,
+        "quote_timestamp_verified": false
+      },
+      "indices": {
+        "source": "sina",
+        "ok": true,
+        "rows": 4,
+        "errors": [],
+        "collected_at": "2026-10-23T14:40:08.207093+08:00",
+        "elapsed_seconds": 6.82,
+        "quote_timestamp_verified": false
+      },
+      "industry_flow": {
+        "ok": false,
+        "errors": [
+          "collection deadline exceeded or worker exited"
+        ],
+        "timed_out": true
+      },
+      "concept_flow": {
+        "ok": false,
+        "errors": [
+          "collection deadline exceeded or worker exited"
+        ],
+        "timed_out": true
+      },
+      "market_fund_flow": {
+        "source": "tencent_stock_aggregate",
+        "ok": true,
+        "data_date": "2026-10-22",
+        "errors": [
+          "stale or missing market flow date; expected 2026-10-23"
+        ],
+        "collected_at": "2026-10-23T14:40:03.220159+08:00",
+        "elapsed_seconds": 1.99,
+        "quote_timestamp_verified": false
+      },
+      "limit_pool": {
+        "source": "eastmoney",
+        "ok": true,
+        "errors": [],
+        "collected_at": "2026-10-23T14:40:05.608560+08:00",
+        "elapsed_seconds": 4.45,
+        "quote_timestamp_verified": false
+      }
+    },
+    "errors": [
+      "industry_flow: collection deadline exceeded or worker exited",
+      "concept_flow: collection deadline exceeded or worker exited",
+      "market_fund_flow: stale or missing market flow date; expected 2026-10-23"
+    ],
+    "collection_started_at": "2026-10-23T14:40:00.316358+08:00",
+    "collection_completed_at": "2026-10-23T14:41:15.356229+08:00",
+    "collection_elapsed_seconds": 75.04,
+    "quote_timestamp_verified": false,
+    "status": "partial",
+    "delivery_eligible": true,
+    "delivery_reason": "collection_fresh_quote_timestamps_unverified",
+    "portfolio_status": "stored_configuration_not_reconfirmed"
+  },
+  "market": {
+    "indices": [
+      {
+        "code": "000001",
+        "name": "上证指数",
+        "price": 3686.1981,
+        "pct": 0.77,
+        "amount": 816621649797.0,
+        "volume": 503855749.0,
+        "high": 3687.3632,
+        "low": 3574.2712,
+        "open": 3623.5669,
+        "prev_close": 3658.0256
+      },
+      {
+        "code": "399001",
+        "name": "深证成指",
+        "price": 11680.816,
+        "pct": 2.848,
+        "amount": 965722039135.0,
+        "volume": 63136198030.0,
+        "high": 11683.127,
+        "low": 11043.313,
+        "open": 11187.548,
+        "prev_close": 11357.319
+      },
+      {
+        "code": "399006",
+        "name": "创业板指",
+        "price": 2686.858,
+        "pct": 4.267,
+        "amount": 488895336611.0,
+        "volume": 20385124255.0,
+        "high": 2687.593,
+        "low": 2494.215,
+        "open": 2534.156,
+        "prev_close": 2576.901
+      },
+      {
+        "code": "000688",
+        "name": "科创50",
+        "price": 1347.283,
+        "pct": 3.171,
+        "amount": 87299639876.0,
+        "volume": 9385534.0,
+        "high": 1347.8449,
+        "low": 1257.287,
+        "open": 1287.8749,
+        "prev_close": 1305.8731
+      }
+    ],
+    "breadth": {
+      "total_valid": 5574,
+      "up": 4502,
+      "down": 930,
+      "flat": 142,
+      "median_pct": 1.54,
+      "avg_pct": 1.899616074632221,
+      "up_down_ratio": 4.840860215053763
+    },
+    "turnover": {
+      "current": 1798090060000.0,
+      "previous_same_session": 1383625790000.0,
+      "ratio": 1.2995493962280076,
+      "change_pct": 29.954939622800758,
+      "label": "放量",
+      "same_collection_time_and_source": true
+    },
+    "limit_stats": {
+      "limit_up": 76,
+      "limit_down": 9,
+      "broken": 14
+    },
+    "market_fund_flow": {
+      "source": "tencent_stock_aggregate",
+      "主力净流入-净额": -6700526500.0,
+      "覆盖股票数": 5574,
+      "说明": "由腾讯个股实时主力净流入字段聚合，作为东财大盘资金流接口失败时的备用参考"
+    }
+  },
+  "sectors": {
+    "industry": {
+      "top_gain": [],
+      "bottom_gain": [],
+      "top_main_inflow": [],
+      "top_main_outflow": [],
+      "all": []
+    },
+    "concept": {
+      "top_gain": [],
+      "bottom_gain": [],
+      "top_main_inflow": [],
+      "top_main_outflow": [],
+      "all": []
+    }
+  },
+  "portfolio": [
+    {
+      "name": "东方人工智能主题混合",
+      "fund_code": "",
+      "amount": 2255.59,
+      "cost_return_pct": 8.5,
+      "themes": [
+        "半导体材料设备",
+        "半导体",
+        "人工智能"
+      ],
+      "matched_sectors": [],
+      "theme_avg_pct": null,
+      "matched_main_flow_sum": null,
+      "score": 0.7,
+      "strength": "中性",
+      "reasons": [
+        "主要指数整体偏强",
+        "市场较上一同周期放量"
+      ],
+      "risk_alert": null,
+      "action_reference": "以持有观察为主；等待方向、成交量和资金流进一步确认，不追涨。"
+    },
+    {
+      "name": "财通品质甄选混合C",
+      "fund_code": "024481",
+      "amount": 1044.17,
+      "cost_return_pct": -10.08,
+      "themes": [
+        "PCB",
+        "电子元件"
+      ],
+      "matched_sectors": [],
+      "theme_avg_pct": null,
+      "matched_main_flow_sum": null,
+      "score": 0.7,
+      "strength": "中性",
+      "reasons": [
+        "主要指数整体偏强",
+        "市场较上一同周期放量"
+      ],
+      "risk_alert": null,
+      "action_reference": "以持有观察为主；等待方向、成交量和资金流进一步确认，不追涨。"
+    },
+    {
+      "name": "易方达消费电子ETF联接C",
+      "fund_code": "018897",
+      "amount": 1973.26,
+      "cost_return_pct": -16.95,
+      "themes": [
+        "消费电子",
+        "中证消费电子",
+        "电子"
+      ],
+      "matched_sectors": [],
+      "theme_avg_pct": null,
+      "matched_main_flow_sum": null,
+      "score": 0.7,
+      "strength": "中性",
+      "reasons": [
+        "主要指数整体偏强",
+        "市场较上一同周期放量"
+      ],
+      "risk_alert": "当前持仓收益率 -16.95% 已触及设定风控线 -15.00%",
+      "action_reference": "已触及设定风控线：优先复核仓位与止损纪律，不用短线反弹预期替代风控。"
+    }
+  ]
+}
