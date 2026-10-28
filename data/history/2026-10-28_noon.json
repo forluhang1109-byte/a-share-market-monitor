@@ -1,0 +1,7654 @@
+{
+  "meta": {
+    "generated_at": "2026-10-28T11:32:15.350683+08:00",
+    "session": "noon",
+    "date": "2026-10-28",
+    "is_trading_day": true,
+    "calendar_source": "exchange_calendars:XSHG",
+    "source_status": {
+      "a_share_spot": {
+        "ok": false,
+        "errors": [
+          "collection deadline exceeded or worker exited"
+        ],
+        "timed_out": true
+      },
+      "indices": {
+        "source": "eastmoney",
+        "ok": true,
+        "rows": 4,
+        "errors": [],
+        "collected_at": "2026-10-28T11:31:04.738441+08:00",
+        "elapsed_seconds": 3.6,
+        "quote_timestamp_verified": false
+      },
+      "industry_flow": {
+        "source": "eastmoney",
+        "ok": true,
+        "rows": 496,
+        "errors": [],
+        "collected_at": "2026-10-28T11:31:15.295032+08:00",
+        "elapsed_seconds": 14.08,
+        "quote_timestamp_verified": false
+      },
+      "concept_flow": {
+        "source": "eastmoney",
+        "ok": true,
+        "rows": 516,
+        "errors": [],
+        "collected_at": "2026-10-28T11:31:17.475820+08:00",
+        "elapsed_seconds": 16.05,
+        "quote_timestamp_verified": false
+      },
+      "market_fund_flow": {
+        "source": "eastmoney",
+        "ok": false,
+        "errors": [
+          "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+        ],
+        "collected_at": "2026-10-28T11:31:06.074791+08:00",
+        "elapsed_seconds": 4.59,
+        "quote_timestamp_verified": false
+      },
+      "limit_pool": {
+        "source": "eastmoney",
+        "ok": true,
+        "errors": [],
+        "collected_at": "2026-10-28T11:31:05.083513+08:00",
+        "elapsed_seconds": 4.06,
+        "quote_timestamp_verified": false
+      }
+    },
+    "errors": [
+      "a_share_spot: collection deadline exceeded or worker exited",
+      "market_fund_flow: ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    ],
+    "collection_started_at": "2026-10-28T11:31:00.316445+08:00",
+    "collection_completed_at": "2026-10-28T11:32:15.345414+08:00",
+    "collection_elapsed_seconds": 75.03,
+    "quote_timestamp_verified": false,
+    "status": "partial",
+    "delivery_eligible": false,
+    "delivery_reason": "outside_collection_window",
+    "portfolio_status": "stored_configuration_not_reconfirmed"
+  },
+  "market": {
+    "indices": [
+      {
+        "code": "000001",
+        "name": "上证指数",
+        "price": 3674.44,
+        "pct": 0.72,
+        "amount": 463110532797.5,
+        "volume": 266921490.0,
+        "high": 3684.49,
+        "low": 3652.37,
+        "open": 3676.92,
+        "prev_close": 3648.3
+      },
+      {
+        "code": "399001",
+        "name": "深证成指",
+        "price": 11470.03,
+        "pct": 1.99,
+        "amount": 550534795302.955,
+        "volume": 340896899.0,
+        "high": 11511.79,
+        "low": 11292.7,
+        "open": 11359.08,
+        "prev_close": 11245.73
+      },
+      {
+        "code": "399006",
+        "name": "创业板指",
+        "price": 2624.64,
+        "pct": 3.0,
+        "amount": 282973098424.13,
+        "volume": 117574225.0,
+        "high": 2637.9,
+        "low": 2562.9,
+        "open": 2593.15,
+        "prev_close": 2548.15
+      },
+      {
+        "code": "000688",
+        "name": "科创50",
+        "price": 1283.67,
+        "pct": 2.51,
+        "amount": 45352512656.0,
+        "volume": 4592639.0,
+        "high": 1291.16,
+        "low": 1257.96,
+        "open": 1279.9,
+        "prev_close": 1252.28
+      }
+    ],
+    "breadth": {},
+    "turnover": {
+      "current": null,
+      "previous_same_session": null,
+      "ratio": null,
+      "change_pct": null,
+      "label": "行情缺失，不能判断量能",
+      "same_collection_time_and_source": false
+    },
+    "limit_stats": {
+      "limit_up": 79,
+      "limit_down": 0,
+      "broken": 21
+    },
+    "market_fund_flow": null
+  },
+  "sectors": {
+    "industry": {
+      "top_gain": [
+        {
+          "name": "文字媒体",
+          "pct": 8.63,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "视频媒体",
+          "pct": 6.9,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "模拟芯片设计",
+          "pct": 6.04,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "机器人",
+          "pct": 5.8,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "合成树脂",
+          "pct": 5.72,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "机床工具",
+          "pct": 5.7,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "其他自动化设备",
+          "pct": 5.62,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "自动化设备",
+          "pct": 5.46,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "金属制品",
+          "pct": 5.27,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "工控设备",
+          "pct": 5.27,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        }
+      ],
+      "bottom_gain": [
+        {
+          "name": "白酒Ⅱ",
+          "pct": -2.11,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "白酒Ⅲ",
+          "pct": -2.11,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "会展服务",
+          "pct": -1.55,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "品牌化妆品",
+          "pct": -1.53,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "超市",
+          "pct": -1.52,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "电信运营商",
+          "pct": -1.3,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "钢铁管材",
+          "pct": -1.17,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "医美耗材",
+          "pct": -1.02,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "股份制银行Ⅲ",
+          "pct": -0.85,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "铁路运输",
+          "pct": -0.82,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        }
+      ],
+      "top_main_inflow": [],
+      "top_main_outflow": [],
+      "all": [
+        {
+          "name": "电子",
+          "pct": 3.85,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "元件",
+          "pct": 3.93,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "印制电路板",
+          "pct": 4.0,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "通信",
+          "pct": 2.47,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "通信设备",
+          "pct": 2.58,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "机械设备",
+          "pct": 3.71,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "半导体",
+          "pct": 4.57,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "通信网络设备及器件",
+          "pct": 2.98,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "数字芯片设计",
+          "pct": 5.13,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "汽车",
+          "pct": 3.87,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "汽车零部件",
+          "pct": 4.41,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "底盘与发动机系统",
+          "pct": 4.59,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "通用设备",
+          "pct": 4.22,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "自动化设备",
+          "pct": 5.46,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "金属制品",
+          "pct": 5.27,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "机器人",
+          "pct": 5.8,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "消费电子零部件及组装",
+          "pct": 3.82,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "传媒",
+          "pct": 2.51,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "消费电子",
+          "pct": 3.61,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "基础化工",
+          "pct": 2.14,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "塑料",
+          "pct": 4.08,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "专用设备",
+          "pct": 2.79,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "数字媒体",
+          "pct": 3.35,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "玻纤制造",
+          "pct": 3.2,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "家用电器",
+          "pct": 2.49,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "玻璃玻纤",
+          "pct": 1.52,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "化学制剂",
+          "pct": 1.23,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "银行Ⅱ",
+          "pct": -0.59,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "银行",
+          "pct": -0.59,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "文字媒体",
+          "pct": 8.63,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "其他电子Ⅲ",
+          "pct": 4.15,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "其他电子Ⅱ",
+          "pct": 4.15,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "国有大型银行Ⅲ",
+          "pct": -0.67,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "家电零部件Ⅲ",
+          "pct": 3.38,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "家电零部件Ⅱ",
+          "pct": 3.38,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "面板",
+          "pct": 2.13,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "建筑材料",
+          "pct": 0.92,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "电子化学品Ⅲ",
+          "pct": 4.02,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "电子化学品Ⅱ",
+          "pct": 4.02,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "合成树脂",
+          "pct": 5.72,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "医疗研发外包",
+          "pct": 4.31,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "医疗服务",
+          "pct": 2.93,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "膜材料",
+          "pct": 3.84,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "汽车电子电气系统",
+          "pct": 4.18,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "化学制药",
+          "pct": 1.42,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "工控设备",
+          "pct": 5.27,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "其他汽车零部件",
+          "pct": 4.73,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "化学制品",
+          "pct": 2.41,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "车身附件及饰件",
+          "pct": 4.67,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "通信线缆及配套",
+          "pct": 2.17,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "其他专用设备",
+          "pct": 3.25,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "股份制银行Ⅲ",
+          "pct": -0.85,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "通信终端及配件",
+          "pct": 2.02,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "光学光电子",
+          "pct": 2.5,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "集成电路封测",
+          "pct": 3.08,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "通信工程及服务",
+          "pct": 2.27,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "生活用纸",
+          "pct": 0.92,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "仪器仪表",
+          "pct": 3.51,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "个护用品",
+          "pct": 0.47,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "印刷包装机械",
+          "pct": 3.99,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "白色家电",
+          "pct": 1.66,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "影视动漫制作",
+          "pct": 3.02,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "能源及重型设备",
+          "pct": 2.19,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "影视院线",
+          "pct": 2.74,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "空调",
+          "pct": 1.66,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "游戏Ⅱ",
+          "pct": 2.95,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "游戏Ⅲ",
+          "pct": 2.95,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "通信服务",
+          "pct": 2.18,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "其他化学制品",
+          "pct": 2.76,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "包装印刷",
+          "pct": 1.92,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "视频媒体",
+          "pct": 6.9,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "硅料硅片",
+          "pct": 0.86,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "电动乘用车",
+          "pct": 1.35,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "机床工具",
+          "pct": 5.7,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "轻工制造",
+          "pct": 1.61,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "航天装备Ⅲ",
+          "pct": 5.05,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "航天装备Ⅱ",
+          "pct": 5.05,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "分立器件",
+          "pct": 4.53,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "无机盐",
+          "pct": 1.64,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "模拟芯片设计",
+          "pct": 6.04,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "小家电",
+          "pct": 2.45,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "乘用车",
+          "pct": 0.81,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "线缆部件及其他",
+          "pct": 1.66,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "商用车",
+          "pct": 0.63,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "铜",
+          "pct": 1.18,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "其他通用设备",
+          "pct": 3.8,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "集成电路制造",
+          "pct": 2.86,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "氟化工",
+          "pct": 2.73,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "锂",
+          "pct": 2.49,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "美容护理",
+          "pct": 0.12,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "其他黑色家电",
+          "pct": 5.27,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "商用载货车",
+          "pct": 0.38,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "综合电力设备商",
+          "pct": 0.89,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "民爆制品",
+          "pct": 1.85,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "纺织化学制品",
+          "pct": 3.21,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "黑色家电",
+          "pct": 3.11,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "诊断服务",
+          "pct": 3.58,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "油品石化贸易",
+          "pct": 3.21,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "学历教育",
+          "pct": 2.08,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "纸包装",
+          "pct": 1.7,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "IT服务Ⅲ",
+          "pct": 1.59,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "IT服务Ⅱ",
+          "pct": 1.59,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "厨房小家电",
+          "pct": 1.43,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "被动元件",
+          "pct": 3.76,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "火力发电",
+          "pct": 0.91,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "激光设备",
+          "pct": 4.87,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "其他数字媒体",
+          "pct": 5.27,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "金属包装",
+          "pct": 1.51,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "油气及炼化工程",
+          "pct": 2.55,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "鞋帽及其他",
+          "pct": 2.64,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "胶黏剂及胶带",
+          "pct": 2.74,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "磷肥及磷化工",
+          "pct": 0.91,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "教育",
+          "pct": 0.66,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "其他电源设备Ⅱ",
+          "pct": 2.3,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "大众出版",
+          "pct": 3.42,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "钨",
+          "pct": 1.38,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "其他种植业",
+          "pct": 0.95,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "定制家居",
+          "pct": 2.09,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "塑料包装",
+          "pct": 2.43,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "其他纺织",
+          "pct": 2.5,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "铅锌",
+          "pct": 1.13,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "广告媒体",
+          "pct": 0.52,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "电视广播Ⅲ",
+          "pct": 2.19,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "电视广播Ⅱ",
+          "pct": 2.19,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "半导体设备",
+          "pct": 3.96,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "瓷砖地板",
+          "pct": 2.2,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "水产饲料",
+          "pct": -0.36,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "卫浴制品",
+          "pct": 2.5,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "医药生物",
+          "pct": 1.67,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "汽车服务",
+          "pct": 2.18,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "清洁小家电",
+          "pct": 2.94,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "通信应用增值服务",
+          "pct": 2.71,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "军工电子Ⅱ",
+          "pct": 2.79,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "军工电子Ⅲ",
+          "pct": 2.79,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "园林工程",
+          "pct": 1.84,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "能源金属",
+          "pct": 1.94,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "汽车综合服务",
+          "pct": 4.72,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "工程机械整机",
+          "pct": 1.45,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "工业金属",
+          "pct": 1.16,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "核力发电",
+          "pct": 0.51,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "商用载客车",
+          "pct": 1.09,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "工程机械",
+          "pct": 2.21,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "公交",
+          "pct": 0.88,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "个护小家电",
+          "pct": 4.15,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "其他塑料制品",
+          "pct": 3.45,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "渔业",
+          "pct": -0.16,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "锦纶",
+          "pct": 1.09,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "风电整机",
+          "pct": 1.61,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "钟表珠宝",
+          "pct": 1.42,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "水产养殖",
+          "pct": -0.4,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "饰品",
+          "pct": 1.25,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "冰洗",
+          "pct": 1.66,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "钾肥",
+          "pct": 0.33,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "焦炭Ⅱ",
+          "pct": 1.36,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "焦炭Ⅲ",
+          "pct": 1.36,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "大宗用纸",
+          "pct": 1.09,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "纺织制造",
+          "pct": 2.0,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "农用机械",
+          "pct": 2.1,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "图片媒体",
+          "pct": 1.7,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "其他小金属",
+          "pct": 1.94,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "果蔬加工",
+          "pct": 1.37,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "其他能源发电",
+          "pct": 4.88,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "饲料",
+          "pct": 0.03,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "纺织服饰",
+          "pct": 1.28,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "卫浴电器",
+          "pct": 1.88,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "印刷",
+          "pct": 1.82,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "工程咨询服务Ⅱ",
+          "pct": 1.49,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "工程咨询服务Ⅲ",
+          "pct": 1.49,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "培训教育",
+          "pct": 0.38,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "家居用品",
+          "pct": 1.64,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "汽车经销商",
+          "pct": 0.91,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "食品及饲料添加剂",
+          "pct": 0.99,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "油服工程",
+          "pct": 1.88,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "氨纶",
+          "pct": 1.84,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "商业地产",
+          "pct": 0.1,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "家纺",
+          "pct": 0.91,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "管材",
+          "pct": 0.11,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "纺织鞋类制造",
+          "pct": 2.09,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "燃气Ⅲ",
+          "pct": 0.97,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "燃气Ⅱ",
+          "pct": 0.97,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "海洋捕捞",
+          "pct": 0.16,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "其他专业工程",
+          "pct": 1.74,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "人工景区",
+          "pct": 0.1,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "纯碱",
+          "pct": 0.05,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "跨境电商",
+          "pct": 1.29,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "化妆品制造及其他",
+          "pct": 1.47,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "水泥制品",
+          "pct": 0.71,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "房地产综合服务",
+          "pct": 1.25,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "长材",
+          "pct": -0.15,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "钢结构",
+          "pct": 0.97,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "港口",
+          "pct": 0.13,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "高速公路",
+          "pct": 0.77,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "涤纶",
+          "pct": 0.73,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "其他饰品",
+          "pct": -0.06,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "综合包装",
+          "pct": 2.48,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "产业地产",
+          "pct": 0.37,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "仓储物流",
+          "pct": 0.91,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "防水材料",
+          "pct": 3.81,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "摩托车",
+          "pct": 0.81,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "复合肥",
+          "pct": 0.81,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "棉纺",
+          "pct": 0.97,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "大气治理",
+          "pct": 2.0,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "餐饮",
+          "pct": 0.46,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "铁矿石",
+          "pct": 1.16,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "工程机械器件",
+          "pct": 3.49,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "医美服务",
+          "pct": 0.79,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "其他通信设备",
+          "pct": 3.03,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "非金属材料Ⅱ",
+          "pct": 4.53,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "非金属材料Ⅲ",
+          "pct": 4.53,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "院线",
+          "pct": 1.74,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "资产管理",
+          "pct": 0.88,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "造纸",
+          "pct": 0.97,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "门户网站",
+          "pct": 1.53,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "光伏辅材",
+          "pct": 2.38,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "橡胶助剂",
+          "pct": 1.41,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "印染",
+          "pct": 1.56,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "租赁",
+          "pct": 1.78,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "人力资源服务",
+          "pct": 1.11,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "焦煤",
+          "pct": 1.02,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "其他运输设备",
+          "pct": 0.67,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "超市",
+          "pct": -1.52,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "公路货运",
+          "pct": -0.69,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "农业综合Ⅲ",
+          "pct": -0.68,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "农业综合Ⅱ",
+          "pct": -0.68,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "摩托车及其他",
+          "pct": 0.74,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "会展服务",
+          "pct": -1.55,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "涂料",
+          "pct": 0.17,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "氯碱",
+          "pct": 0.51,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "出版",
+          "pct": 2.35,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "综合电商",
+          "pct": 0.7,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "综合环境治理",
+          "pct": 1.58,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "冶钢辅料",
+          "pct": 0.83,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "酒店",
+          "pct": -0.19,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "光伏发电",
+          "pct": 1.26,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "其他农产品加工",
+          "pct": 0.2,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "火电设备",
+          "pct": 1.47,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "纺织服装设备",
+          "pct": 3.03,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "酒店餐饮",
+          "pct": 0.07,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "娱乐用品",
+          "pct": 1.65,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "冶钢原料",
+          "pct": 1.03,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "其他养殖",
+          "pct": 0.15,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "氮肥",
+          "pct": -0.04,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "电网自动化设备",
+          "pct": 1.57,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "彩电",
+          "pct": 0.41,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "信托",
+          "pct": 0.76,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "跨境物流",
+          "pct": 2.11,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "其他专业服务",
+          "pct": 1.7,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "畜禽饲料",
+          "pct": -0.04,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "宠物食品",
+          "pct": 0.59,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "房地产开发",
+          "pct": 0.66,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "贸易Ⅲ",
+          "pct": 0.51,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "贸易Ⅱ",
+          "pct": 0.51,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "体育Ⅲ",
+          "pct": 0.35,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "体育Ⅱ",
+          "pct": 0.35,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "食用菌",
+          "pct": 0.8,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "燃料电池",
+          "pct": 1.44,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "洗护用品",
+          "pct": -0.54,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "钛白粉",
+          "pct": -0.3,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "钢铁管材",
+          "pct": -1.17,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "物业管理",
+          "pct": 0.52,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "住宅开发",
+          "pct": 0.83,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "有机硅",
+          "pct": 2.38,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "耐火材料",
+          "pct": 0.57,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "文化用品",
+          "pct": 1.46,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "楼宇设备",
+          "pct": 1.96,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "保健品",
+          "pct": 1.58,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "锂电专用设备",
+          "pct": 2.42,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "炭黑",
+          "pct": 1.44,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "特种纸",
+          "pct": 0.87,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "其他橡胶制品",
+          "pct": 0.87,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "其他家电Ⅱ",
+          "pct": 3.13,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "其他家电Ⅲ",
+          "pct": 3.13,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "钼",
+          "pct": 0.78,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "端到端供应链服务",
+          "pct": 1.31,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "电工仪器仪表",
+          "pct": 1.2,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "服装家纺",
+          "pct": 0.88,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "电商服务",
+          "pct": 3.01,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "肉制品",
+          "pct": -0.75,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "原材料供应链服务",
+          "pct": 0.22,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "旅游综合",
+          "pct": 0.32,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "熟食",
+          "pct": 3.64,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "水力发电",
+          "pct": 0.12,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "粮食种植",
+          "pct": 0.26,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "肉鸡养殖",
+          "pct": -0.36,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "成品家居",
+          "pct": 1.23,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "运动服装",
+          "pct": -0.06,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "镍",
+          "pct": 0.91,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "互联网电商",
+          "pct": 1.99,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "其他电源设备Ⅲ",
+          "pct": 2.5,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "辅料",
+          "pct": 2.85,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "机场",
+          "pct": 0.27,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "文娱用品",
+          "pct": 1.61,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "其他医疗服务",
+          "pct": 2.32,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "热力服务",
+          "pct": 0.85,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "金融信息服务",
+          "pct": 2.04,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "电池化学品",
+          "pct": 2.19,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "线下药店",
+          "pct": 0.05,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "软饮料",
+          "pct": 0.75,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "教育运营及其他",
+          "pct": 0.26,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "国际工程",
+          "pct": 1.21,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "旅游零售Ⅲ",
+          "pct": -0.52,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "旅游零售Ⅱ",
+          "pct": -0.52,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "零食",
+          "pct": -0.19,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "蓄电池及其他电池",
+          "pct": 1.28,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "烘焙食品",
+          "pct": 1.2,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "LED",
+          "pct": 2.16,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "白银",
+          "pct": 0.42,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "专业连锁Ⅱ",
+          "pct": 0.75,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "专业连锁Ⅲ",
+          "pct": 0.75,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "动物保健Ⅲ",
+          "pct": 1.18,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "动物保健Ⅱ",
+          "pct": 1.18,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "金融控股",
+          "pct": 0.09,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "预加工食品",
+          "pct": 0.31,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "橡胶",
+          "pct": 1.07,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "调味发酵品Ⅲ",
+          "pct": -0.2,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "调味发酵品Ⅱ",
+          "pct": -0.2,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "粘胶",
+          "pct": 0.24,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "航空运输",
+          "pct": 0.74,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "磁性材料",
+          "pct": 5.26,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "厨卫电器",
+          "pct": 1.08,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "保险Ⅲ",
+          "pct": -0.51,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "保险Ⅱ",
+          "pct": -0.51,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "其他化学原料",
+          "pct": 1.29,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "种植业",
+          "pct": 0.18,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "期货",
+          "pct": -0.73,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "光伏电池组件",
+          "pct": 0.96,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "安防设备",
+          "pct": 3.11,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "涂料油墨",
+          "pct": 2.51,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "化学工程",
+          "pct": 1.13,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "房产租赁经纪",
+          "pct": -0.4,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "钴",
+          "pct": 0.77,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "其他化学纤维",
+          "pct": 2.37,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "广告营销",
+          "pct": 1.91,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "其他建材Ⅲ",
+          "pct": 1.45,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "地面兵装Ⅲ",
+          "pct": 1.07,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "地面兵装Ⅱ",
+          "pct": 1.07,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "改性塑料",
+          "pct": 3.94,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "快递",
+          "pct": -0.28,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "检测服务",
+          "pct": 1.85,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "综合乘用车",
+          "pct": 0.54,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "厨房电器",
+          "pct": 0.68,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "磨具磨料",
+          "pct": 3.1,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "光伏加工设备",
+          "pct": 2.85,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "小金属",
+          "pct": 1.64,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "聚氨酯",
+          "pct": 2.09,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "油田服务",
+          "pct": 1.39,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "固废治理",
+          "pct": 1.53,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "其他石化",
+          "pct": 0.58,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "血液制品",
+          "pct": 0.27,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "品牌消费电子",
+          "pct": 1.91,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "其他酒类",
+          "pct": 0.42,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "非运动服装",
+          "pct": 0.45,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "轨交设备Ⅱ",
+          "pct": 2.02,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "轨交设备Ⅲ",
+          "pct": 2.02,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "教育出版",
+          "pct": 0.42,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "医药流通",
+          "pct": 0.13,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "房地产服务",
+          "pct": 0.39,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "光伏主材",
+          "pct": -0.31,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "种子",
+          "pct": -0.46,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "其他金属新材料",
+          "pct": 2.88,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "化学纤维",
+          "pct": 1.27,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "配电设备",
+          "pct": 1.52,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "房屋建设Ⅲ",
+          "pct": 0.17,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "房屋建设Ⅱ",
+          "pct": 0.17,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "啤酒",
+          "pct": 0.4,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "航空机场",
+          "pct": 0.58,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "装修建材",
+          "pct": 1.11,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "化学原料",
+          "pct": 0.76,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "医美耗材",
+          "pct": -1.02,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "特钢Ⅲ",
+          "pct": 0.9,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "特钢Ⅱ",
+          "pct": 0.9,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "电能综合服务",
+          "pct": 1.05,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "农商行Ⅲ",
+          "pct": -0.35,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "医疗美容",
+          "pct": -0.3,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "环保设备Ⅲ",
+          "pct": 2.1,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "环保设备Ⅱ",
+          "pct": 2.1,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "房地产",
+          "pct": 0.62,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "专业服务",
+          "pct": 1.46,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "专业工程",
+          "pct": 1.39,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "林业Ⅱ",
+          "pct": -0.45,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "林业Ⅲ",
+          "pct": -0.45,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "水务及水治理",
+          "pct": 1.6,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "食品加工",
+          "pct": 0.46,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "农化制品",
+          "pct": 0.51,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "炼化及贸易",
+          "pct": 0.71,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "医院",
+          "pct": 0.23,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "风力发电",
+          "pct": 0.21,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "电机Ⅲ",
+          "pct": 3.91,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "电机Ⅱ",
+          "pct": 3.91,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "综合Ⅲ",
+          "pct": 0.25,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "综合",
+          "pct": 0.25,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "综合Ⅱ",
+          "pct": 0.25,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "水泥",
+          "pct": 0.16,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "疫苗",
+          "pct": -0.47,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "水泥制造",
+          "pct": -0.2,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "休闲食品",
+          "pct": 0.85,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "其他家居用品",
+          "pct": 1.11,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "体外诊断",
+          "pct": 2.42,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "营销代理",
+          "pct": 2.07,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "医药商业",
+          "pct": 0.11,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "光伏设备",
+          "pct": 1.95,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "铁路公路",
+          "pct": 0.49,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "煤炭",
+          "pct": 0.87,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "炼油化工",
+          "pct": -0.6,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "公用事业",
+          "pct": 0.87,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "稀土",
+          "pct": 1.34,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "逆变器",
+          "pct": 3.32,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "板材",
+          "pct": 0.15,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "电力",
+          "pct": 0.84,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "金属新材料",
+          "pct": 3.87,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "物流",
+          "pct": 0.91,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "化妆品",
+          "pct": -0.03,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "电网设备",
+          "pct": 1.41,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "动力煤",
+          "pct": 0.58,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "医疗耗材",
+          "pct": 2.01,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "品牌化妆品",
+          "pct": -1.53,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "百货",
+          "pct": -0.38,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "基础建设",
+          "pct": 1.16,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "煤炭开采",
+          "pct": 0.74,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "铁路运输",
+          "pct": -0.82,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "其他计算机设备",
+          "pct": 2.04,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "制冷空调设备",
+          "pct": 2.81,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "普钢",
+          "pct": -0.05,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "电信运营商",
+          "pct": -1.3,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "乳品",
+          "pct": 0.08,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "装修装饰Ⅱ",
+          "pct": 1.08,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "装修装饰Ⅲ",
+          "pct": 1.08,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "其他生物制品",
+          "pct": 2.53,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "非白酒",
+          "pct": 0.41,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "铝",
+          "pct": 1.15,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "输变电设备",
+          "pct": 0.93,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "多元金融",
+          "pct": 0.6,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "照明设备Ⅱ",
+          "pct": 1.39,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "照明设备Ⅲ",
+          "pct": 1.39,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "风电设备",
+          "pct": 1.89,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "农药",
+          "pct": 0.43,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "农产品加工",
+          "pct": 0.35,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "基建市政工程",
+          "pct": 0.8,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "玻璃制造",
+          "pct": 0.02,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "环境治理",
+          "pct": 1.6,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "粮油加工",
+          "pct": -0.1,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "光学元件",
+          "pct": 3.45,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "风电零部件",
+          "pct": 1.94,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "煤化工",
+          "pct": 0.21,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "饮料乳品",
+          "pct": 0.27,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "中药Ⅱ",
+          "pct": 0.66,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "中药Ⅲ",
+          "pct": 0.66,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "航运港口",
+          "pct": -0.11,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "航运",
+          "pct": -0.3,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "其他自动化设备",
+          "pct": 5.62,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "自然景区",
+          "pct": -0.42,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "计算机设备",
+          "pct": 2.35,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "商业物业经营",
+          "pct": 0.38,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "旅游及景区",
+          "pct": -0.07,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "横向通用软件",
+          "pct": 1.53,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "油气开采Ⅱ",
+          "pct": 0.08,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "油气开采Ⅲ",
+          "pct": 0.08,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "原料药",
+          "pct": 1.89,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "钢铁",
+          "pct": 0.43,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "生猪养殖",
+          "pct": -0.63,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "环保",
+          "pct": 1.7,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "城商行Ⅲ",
+          "pct": -0.56,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "医疗设备",
+          "pct": 2.57,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "社会服务",
+          "pct": 0.66,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "黄金",
+          "pct": 0.54,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "养殖业",
+          "pct": -0.43,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "石油石化",
+          "pct": 0.98,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "贵金属",
+          "pct": 0.51,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "生物制品",
+          "pct": 1.63,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "轮胎轮毂",
+          "pct": 2.46,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "航海装备Ⅲ",
+          "pct": -0.07,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "航海装备Ⅱ",
+          "pct": -0.07,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "建筑装饰",
+          "pct": 1.25,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "有色金属",
+          "pct": 1.92,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "医疗器械",
+          "pct": 2.31,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "交通运输",
+          "pct": 0.48,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "半导体材料",
+          "pct": 3.46,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "锂电池",
+          "pct": 3.06,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "农林牧渔",
+          "pct": 0.12,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "多业态零售",
+          "pct": -0.55,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "电池",
+          "pct": 2.4,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "航空装备Ⅱ",
+          "pct": 1.69,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "航空装备Ⅲ",
+          "pct": 1.69,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "垂直应用软件",
+          "pct": 1.55,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "一般零售",
+          "pct": -0.33,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "国防军工",
+          "pct": 2.2,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "商贸零售",
+          "pct": 0.27,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "软件开发",
+          "pct": 1.54,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "电力设备",
+          "pct": 2.04,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "白酒Ⅱ",
+          "pct": -2.11,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "白酒Ⅲ",
+          "pct": -2.11,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "证券Ⅲ",
+          "pct": -0.31,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "证券Ⅱ",
+          "pct": -0.31,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "计算机",
+          "pct": 1.76,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "非银金融",
+          "pct": -0.03,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "食品饮料",
+          "pct": 0.01,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        }
+      ]
+    },
+    "concept": {
+      "top_gain": [
+        {
+          "name": "减速器",
+          "pct": 6.38,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "机器人执行器",
+          "pct": 6.11,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "噪声防治",
+          "pct": 5.94,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "人形机器人",
+          "pct": 5.85,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "昨日连板",
+          "pct": 5.41,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "工业母机",
+          "pct": 5.17,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "同步磁阻电机",
+          "pct": 5.06,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "PEEK材料概念",
+          "pct": 5.0,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "昨日打二板以上表现",
+          "pct": 4.9,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "PLC概念",
+          "pct": 4.76,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        }
+      ],
+      "bottom_gain": [
+        {
+          "name": "酿酒概念",
+          "pct": -0.91,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "青蒿素",
+          "pct": -0.76,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "白酒",
+          "pct": -0.71,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "历史新高",
+          "pct": -0.67,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "科创板做市商",
+          "pct": -0.58,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "证金持股",
+          "pct": -0.57,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "退税商店",
+          "pct": -0.55,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "草甘膦",
+          "pct": -0.47,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "超级品牌",
+          "pct": -0.46,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "大盘价值",
+          "pct": -0.45,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        }
+      ],
+      "top_main_inflow": [],
+      "top_main_outflow": [],
+      "all": [
+        {
+          "name": "融资融券",
+          "pct": 2.3,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "MSCI中国",
+          "pct": 1.43,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "富时罗素",
+          "pct": 1.21,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "深股通",
+          "pct": 2.35,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "基金重仓",
+          "pct": 2.91,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "基金增仓",
+          "pct": 2.57,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "机器人概念",
+          "pct": 4.02,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "通信技术",
+          "pct": 3.22,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "科技风格",
+          "pct": 2.99,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "5G概念",
+          "pct": 3.26,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "标准普尔",
+          "pct": 0.98,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "大盘股",
+          "pct": 0.94,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "百元股",
+          "pct": 3.88,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "2026中报预增",
+          "pct": 2.17,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "人形机器人",
+          "pct": 5.85,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "大盘成长",
+          "pct": 2.23,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "深成500",
+          "pct": 1.85,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "沪股通",
+          "pct": 1.98,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "HS300_",
+          "pct": 0.54,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "昨日高振幅",
+          "pct": 2.25,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "国产芯片",
+          "pct": 3.4,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "华为概念",
+          "pct": 2.62,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "PCB",
+          "pct": 3.82,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "AH股",
+          "pct": 1.33,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "新能源车",
+          "pct": 3.57,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "中盘股",
+          "pct": 2.08,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "CPO概念",
+          "pct": 3.39,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "中证500",
+          "pct": 1.89,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "半导体概念",
+          "pct": 3.68,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "光通信模块",
+          "pct": 3.76,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "东方财富热股",
+          "pct": 2.34,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "人工智能",
+          "pct": 2.37,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "高市净率",
+          "pct": 2.41,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "中盘成长",
+          "pct": 3.1,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "算力概念",
+          "pct": 2.34,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "基金减仓",
+          "pct": 2.32,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "创业板综",
+          "pct": 3.19,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "机构重仓",
+          "pct": 1.54,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "特斯拉概念",
+          "pct": 4.16,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "上证180_",
+          "pct": 0.35,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "深证100R",
+          "pct": 1.05,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "智能驾驶",
+          "pct": 3.19,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "消费电子概念",
+          "pct": 3.67,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "光纤概念",
+          "pct": 2.58,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "专精特新",
+          "pct": 3.74,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "智能穿戴",
+          "pct": 3.72,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "券商金股",
+          "pct": 1.95,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "减速器",
+          "pct": 6.38,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "上证50_",
+          "pct": 0.09,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "物联网",
+          "pct": 2.54,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "创业成份",
+          "pct": 2.94,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "2026三季报预增",
+          "pct": 3.05,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "苹果概念",
+          "pct": 4.62,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "权重股",
+          "pct": 0.51,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "虚拟现实",
+          "pct": 3.08,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "QFII重仓",
+          "pct": 2.51,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "高成长股",
+          "pct": 2.08,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "AI眼镜",
+          "pct": 4.11,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "传感器",
+          "pct": 4.36,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "存储芯片",
+          "pct": 3.48,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "节能环保",
+          "pct": 2.16,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "数据中心",
+          "pct": 2.34,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "F5G概念",
+          "pct": 3.23,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "央视50_",
+          "pct": 0.78,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "电池技术",
+          "pct": 2.65,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "破增发价股",
+          "pct": 1.55,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "先进封装",
+          "pct": 3.62,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "超清视频",
+          "pct": 3.01,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "无线耳机",
+          "pct": 3.72,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "行业龙头",
+          "pct": 0.99,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "机器人执行器",
+          "pct": 6.11,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "柔性屏(折叠屏)",
+          "pct": 4.4,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "上证380",
+          "pct": 1.61,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "新材料",
+          "pct": 2.8,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "贬值受益",
+          "pct": 2.11,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "智能家居",
+          "pct": 2.66,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "汽车芯片",
+          "pct": 4.12,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "股权分散",
+          "pct": 1.82,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "QFII新进",
+          "pct": 2.39,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "长江三角",
+          "pct": 1.21,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "小米概念",
+          "pct": 3.26,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "股权激励",
+          "pct": 2.38,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "AI芯片",
+          "pct": 3.42,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "液冷服务器",
+          "pct": 3.37,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "华为汽车",
+          "pct": 4.25,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "固态电池",
+          "pct": 2.78,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "深圳特区",
+          "pct": 2.33,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "医疗器械概念",
+          "pct": 2.1,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "小米汽车",
+          "pct": 3.98,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "区块链",
+          "pct": 1.29,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "社保新进",
+          "pct": 2.64,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "玻璃基板",
+          "pct": 3.26,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "MiniLED",
+          "pct": 2.87,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "锂电池概念",
+          "pct": 2.48,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "OLED",
+          "pct": 3.17,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "工业母机",
+          "pct": 5.17,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "AIPC",
+          "pct": 3.43,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "英伟达概念",
+          "pct": 4.44,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "军民融合",
+          "pct": 2.38,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "百度概念",
+          "pct": 2.07,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "工业互联网",
+          "pct": 2.63,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "光伏概念",
+          "pct": 2.2,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "一带一路",
+          "pct": 1.32,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "商业航天",
+          "pct": 2.96,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "低空经济",
+          "pct": 2.64,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "机器视觉",
+          "pct": 4.34,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "燃料电池概念",
+          "pct": 2.97,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "汽车热管理",
+          "pct": 4.62,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "新型工业化",
+          "pct": 4.24,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "小盘股",
+          "pct": 2.31,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "卫星互联网",
+          "pct": 2.86,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "风能",
+          "pct": 2.11,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "2026一季报预增",
+          "pct": 2.19,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "创投",
+          "pct": 1.49,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "储能概念",
+          "pct": 2.43,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "私募重仓",
+          "pct": 2.88,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "短剧互动游戏",
+          "pct": 3.33,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "西部大开发",
+          "pct": 1.49,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "知识产权",
+          "pct": 3.39,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "混合现实",
+          "pct": 4.05,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "毫米波概念",
+          "pct": 3.43,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "脑机接口",
+          "pct": 2.95,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "周期股",
+          "pct": 0.63,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "LED概念",
+          "pct": 2.88,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "云计算",
+          "pct": 1.81,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "无人机",
+          "pct": 2.85,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "边缘计算",
+          "pct": 2.28,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "中芯概念",
+          "pct": 3.48,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "独角兽",
+          "pct": 1.79,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "PEEK材料概念",
+          "pct": 5.0,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "小盘成长",
+          "pct": 3.12,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "6G概念",
+          "pct": 3.21,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "元宇宙概念",
+          "pct": 2.73,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "WiFi",
+          "pct": 3.39,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "第三代半导体",
+          "pct": 3.46,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "充电桩",
+          "pct": 2.18,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "中药概念",
+          "pct": 0.89,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "抖音概念(字节概念)",
+          "pct": 2.22,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "密集调研",
+          "pct": 2.86,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "激光雷达",
+          "pct": 3.56,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "文娱消费",
+          "pct": 1.91,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "大基金持股",
+          "pct": 3.19,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "数据安全",
+          "pct": 1.68,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "影视概念",
+          "pct": 2.68,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "AI语料",
+          "pct": 3.05,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "DeepSeek概念",
+          "pct": 1.93,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "多模态AI",
+          "pct": 2.46,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "单抗概念",
+          "pct": 1.41,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "3D打印",
+          "pct": 3.58,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "安防概念",
+          "pct": 2.57,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "电子烟",
+          "pct": 3.16,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "IGBT概念",
+          "pct": 3.05,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "冷链物流",
+          "pct": 1.36,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "蓝宝石",
+          "pct": 3.1,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "大数据",
+          "pct": 1.74,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "跨境支付",
+          "pct": 0.49,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "数字阅读",
+          "pct": 3.47,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "空气能热泵",
+          "pct": 2.68,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "碳化硅",
+          "pct": 3.12,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "智慧灯杆",
+          "pct": 2.3,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "华为海思",
+          "pct": 3.61,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "鸿蒙概念",
+          "pct": 1.88,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "裸眼3D",
+          "pct": 3.91,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "快手概念",
+          "pct": 2.64,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "无线充电",
+          "pct": 3.54,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "数字孪生",
+          "pct": 2.15,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "趋势股",
+          "pct": 0.14,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "东数西算",
+          "pct": 1.88,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "MLCC",
+          "pct": 3.65,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "铁路基建",
+          "pct": 1.88,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "免疫治疗",
+          "pct": 1.55,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "CRO",
+          "pct": 3.71,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "MicroLED",
+          "pct": 2.91,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "生物识别",
+          "pct": 2.36,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "UWB概念",
+          "pct": 2.25,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "昨日高换手",
+          "pct": 1.21,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "AI手机",
+          "pct": 3.76,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "显示技术",
+          "pct": 3.18,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "创新药",
+          "pct": 1.66,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "铜缆高速连接",
+          "pct": 2.7,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "核能核电",
+          "pct": 1.5,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "AIGC概念",
+          "pct": 2.66,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "特高压",
+          "pct": 1.39,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "海洋经济",
+          "pct": 1.34,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "谷子经济",
+          "pct": 2.63,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "电网概念",
+          "pct": 1.56,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "电子纸概念",
+          "pct": 1.78,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "在线教育",
+          "pct": 1.96,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "网红经济",
+          "pct": 1.34,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "3D玻璃",
+          "pct": 3.22,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "ChatGPT概念",
+          "pct": 2.33,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "车联网(车路云)",
+          "pct": 2.14,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "智谱AI概念",
+          "pct": 2.22,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "可控核聚变",
+          "pct": 2.11,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "飞行汽车(eVTOL)",
+          "pct": 3.78,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "红利股",
+          "pct": 0.18,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "盲盒经济",
+          "pct": 2.7,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "减肥药",
+          "pct": 2.42,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "网络游戏",
+          "pct": 2.83,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "海工装备",
+          "pct": 1.91,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "虚拟数字人",
+          "pct": 2.38,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "军工",
+          "pct": 2.47,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "互联网医疗",
+          "pct": 1.14,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "智慧城市",
+          "pct": 1.88,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "PLC概念",
+          "pct": 4.76,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "电子竞技",
+          "pct": 1.97,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "氮化镓",
+          "pct": 3.44,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "3D摄像头",
+          "pct": 4.23,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "AB股",
+          "pct": 0.47,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "幽门螺杆菌概念",
+          "pct": 1.83,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "量子科技",
+          "pct": 1.94,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "智能电网",
+          "pct": 1.62,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "湖北自贸",
+          "pct": 1.42,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "荣耀概念",
+          "pct": 3.87,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "信创",
+          "pct": 1.58,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "移动支付",
+          "pct": 1.23,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "复合集流体",
+          "pct": 3.69,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "净水概念",
+          "pct": 1.28,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "网络安全",
+          "pct": 1.78,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "AI智能体",
+          "pct": 1.9,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "央国企改革",
+          "pct": 1.0,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "先进制造风格",
+          "pct": 1.84,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "全息技术",
+          "pct": 2.44,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "医药医疗风格",
+          "pct": 1.17,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "屏下摄像",
+          "pct": 1.67,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "中俄贸易概念",
+          "pct": 1.9,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "IPv6",
+          "pct": 1.91,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "数字水印",
+          "pct": 2.13,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "红利破净股",
+          "pct": -0.24,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "CAR-T细胞疗法",
+          "pct": 2.16,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "AI应用",
+          "pct": 2.09,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "新能源",
+          "pct": 1.7,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "并购重组概念",
+          "pct": 2.61,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "超导概念",
+          "pct": 2.14,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "体育产业",
+          "pct": 1.2,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "增强现实",
+          "pct": 3.17,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "参股新三板",
+          "pct": 1.34,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "腾讯云",
+          "pct": 2.03,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "历史新高",
+          "pct": -0.67,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "辅助生殖",
+          "pct": 1.82,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "昨日炸板",
+          "pct": 1.06,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "昨日触板",
+          "pct": 0.96,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "虚拟电厂",
+          "pct": 1.23,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "页岩气",
+          "pct": 1.37,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "Web3.0",
+          "pct": 2.27,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "核污染防治",
+          "pct": 2.62,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "同步磁阻电机",
+          "pct": 5.06,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "降解塑料",
+          "pct": 2.08,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "石墨烯",
+          "pct": 2.57,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "阿里概念",
+          "pct": 1.93,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "汽车整车",
+          "pct": 0.82,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "婴童概念",
+          "pct": 1.59,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "光刻机",
+          "pct": 4.1,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "光刻胶",
+          "pct": 3.46,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "化工原料",
+          "pct": 1.24,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "抽水蓄能",
+          "pct": 1.39,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "高压快充",
+          "pct": 2.84,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "创新医疗服务",
+          "pct": 1.98,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "空间站概念",
+          "pct": 3.9,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "雄安新区",
+          "pct": 1.22,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "钙钛矿电池",
+          "pct": 2.74,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "滨海新区",
+          "pct": 1.16,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "职业教育",
+          "pct": 1.76,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "粤港自贸",
+          "pct": 1.4,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "尾气治理",
+          "pct": 2.78,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "卫星导航",
+          "pct": 2.17,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "Kimi概念",
+          "pct": 1.81,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "户外露营",
+          "pct": 1.38,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "地热能",
+          "pct": 1.35,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "被动元件概念",
+          "pct": 3.32,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "MLOps概念",
+          "pct": 1.65,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "包装材料",
+          "pct": 1.74,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "基因测序",
+          "pct": 2.86,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "钛白粉概念",
+          "pct": 0.66,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "低价股",
+          "pct": 0.72,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "碳纤维",
+          "pct": 3.2,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "C2M概念",
+          "pct": 2.11,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "发电机概念",
+          "pct": 2.56,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "钒电池",
+          "pct": 0.72,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "噪声防治",
+          "pct": 5.94,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "小红书概念",
+          "pct": 1.65,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "转债标的",
+          "pct": 2.36,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "VPN",
+          "pct": 1.92,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "电子后视镜",
+          "pct": 3.74,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "首发经济",
+          "pct": 1.56,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "智能电视",
+          "pct": 2.0,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "数字货币",
+          "pct": 1.14,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "超级电容",
+          "pct": 2.11,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "胎压监测",
+          "pct": 2.9,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "生态农业",
+          "pct": 0.56,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "汽车拆解",
+          "pct": 1.54,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "植物照明",
+          "pct": 2.78,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "保险重仓",
+          "pct": 0.54,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "海绵城市",
+          "pct": 1.53,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "土壤修复",
+          "pct": 1.66,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "建筑节能",
+          "pct": 2.51,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "地下管网",
+          "pct": 1.29,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "抗菌面料",
+          "pct": 2.41,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "2026中报首亏",
+          "pct": 1.46,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "刀片电池",
+          "pct": 2.02,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "2026一季报预减",
+          "pct": 2.42,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "磁悬浮概念",
+          "pct": 2.47,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "近期摘帽",
+          "pct": 1.25,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "数据确权",
+          "pct": 2.24,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "民爆概念",
+          "pct": 1.49,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "电子身份证",
+          "pct": 1.28,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "病原体防治",
+          "pct": 1.65,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "工程机械概念",
+          "pct": 2.59,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "汽车一体化压铸",
+          "pct": 4.15,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "PVDF概念",
+          "pct": 2.57,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "人造肉",
+          "pct": 1.04,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "造纸印刷",
+          "pct": 1.35,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "熔盐储能",
+          "pct": 2.28,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "私募新进",
+          "pct": 2.25,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "微盘精选",
+          "pct": 2.43,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "阿兹海默",
+          "pct": 1.68,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "空间计算",
+          "pct": 2.79,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "2026中报预减",
+          "pct": 1.52,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "2026三季报预减",
+          "pct": 1.81,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "2026一季报扭亏",
+          "pct": 1.96,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "数字经济",
+          "pct": 1.45,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "2026中报扭亏",
+          "pct": 1.6,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "低碳冶金",
+          "pct": 0.26,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "DRG/DIP",
+          "pct": 0.32,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "数据要素",
+          "pct": 1.7,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "B股",
+          "pct": -0.13,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "雅下水电概念",
+          "pct": 0.84,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "宠物经济",
+          "pct": 1.54,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "国资云概念",
+          "pct": 1.46,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "超超临界发电",
+          "pct": 1.35,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "共享经济",
+          "pct": 0.87,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "拼多多概念",
+          "pct": 2.59,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "垃圾分类",
+          "pct": 1.66,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "第四代半导体",
+          "pct": 3.91,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "工业气体",
+          "pct": 1.85,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "医美概念",
+          "pct": 0.9,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "2026三季报首亏",
+          "pct": 3.13,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "券商重仓",
+          "pct": 1.69,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "EDA概念",
+          "pct": 3.35,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "氢能源",
+          "pct": 2.06,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "土地流转",
+          "pct": 0.3,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "水产概念",
+          "pct": -0.26,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "托育服务",
+          "pct": 1.3,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "旅游概念",
+          "pct": 0.66,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "华为欧拉",
+          "pct": 1.12,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "肝素概念",
+          "pct": 0.35,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "免税概念",
+          "pct": 0.08,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "可燃冰",
+          "pct": 0.48,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "京津冀",
+          "pct": 1.19,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "维生素",
+          "pct": 0.3,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "调味品概念",
+          "pct": 0.41,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "举牌",
+          "pct": 1.84,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "代糖概念",
+          "pct": 0.57,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "电子车牌",
+          "pct": 0.93,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "有机硅概念",
+          "pct": 1.93,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "生物疫苗",
+          "pct": 0.87,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "碳基材料",
+          "pct": 3.06,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "医废处理",
+          "pct": 1.59,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "长寿药",
+          "pct": 0.78,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "社保重仓",
+          "pct": 2.45,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "时空大数据",
+          "pct": 1.34,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "租售同权",
+          "pct": 0.46,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "换电概念",
+          "pct": 2.45,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "快递概念",
+          "pct": 1.57,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "资源开采概念",
+          "pct": 1.41,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "新消费",
+          "pct": 1.08,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "地摊经济",
+          "pct": 0.91,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "东北振兴",
+          "pct": 0.44,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "啤酒概念",
+          "pct": 0.6,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "培育钻石",
+          "pct": 2.27,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "环氧丙烷",
+          "pct": 1.35,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "氟化工概念",
+          "pct": 1.86,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "生物质能发电",
+          "pct": 1.24,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "EDR概念",
+          "pct": 2.45,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "SPD概念",
+          "pct": 0.11,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "海南自贸",
+          "pct": 0.77,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "青蒿素",
+          "pct": -0.76,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "TOPCon电池",
+          "pct": 1.8,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "稀土永磁",
+          "pct": 2.61,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "昨日首板",
+          "pct": 2.36,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "肝炎概念",
+          "pct": 1.58,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "ETC",
+          "pct": 1.5,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "草甘膦",
+          "pct": -0.47,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "新型城镇化",
+          "pct": 1.58,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "绿色电力",
+          "pct": 1.31,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "北交所概念",
+          "pct": 0.82,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "重组蛋白",
+          "pct": 2.79,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "轮毂电机",
+          "pct": 2.03,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "房屋检测",
+          "pct": 1.03,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "GDR",
+          "pct": 0.13,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "ERP概念",
+          "pct": 1.67,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "上海自贸",
+          "pct": 0.89,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "股权转让",
+          "pct": 1.43,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "毛发医疗",
+          "pct": 0.42,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "虚拟机器人",
+          "pct": 1.8,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "微盘股",
+          "pct": 2.14,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "工业大麻",
+          "pct": 0.7,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "养老概念",
+          "pct": 1.05,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "鸡肉概念",
+          "pct": -0.37,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "冰雪经济",
+          "pct": 0.46,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "最近多板",
+          "pct": 1.84,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "化债(AMC)概念",
+          "pct": 0.39,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "退税商店",
+          "pct": -0.55,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "彩票概念",
+          "pct": 0.63,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "社区团购",
+          "pct": 0.22,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "预制菜概念",
+          "pct": 0.06,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "近期新高",
+          "pct": 1.72,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "统一大市场",
+          "pct": 0.92,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "氦气概念",
+          "pct": 1.67,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "化妆品概念",
+          "pct": 0.9,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "精准医疗",
+          "pct": 1.43,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "微利股",
+          "pct": 2.04,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "转基因",
+          "pct": -0.06,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "农药兽药",
+          "pct": 0.64,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "PPP模式",
+          "pct": 1.03,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "磷化工",
+          "pct": 0.96,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "油气设服",
+          "pct": 1.29,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "信托重仓",
+          "pct": 1.7,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "食品安全",
+          "pct": 1.26,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "高带宽内存",
+          "pct": 2.8,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "零售概念",
+          "pct": 0.09,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "动力电池回收",
+          "pct": 1.83,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "工程建设",
+          "pct": 1.02,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "REITs概念",
+          "pct": 0.3,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "IPO受益",
+          "pct": 0.34,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "供销社概念",
+          "pct": 0.59,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "参股保险",
+          "pct": 0.38,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "中特估",
+          "pct": 0.1,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "特色药",
+          "pct": 0.57,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "价值股",
+          "pct": 0.6,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "黄金概念",
+          "pct": 0.95,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "粮食概念",
+          "pct": -0.09,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "沪企改革",
+          "pct": -0.21,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "旅游酒店",
+          "pct": -0.04,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "HJT电池",
+          "pct": 2.28,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "通用航空",
+          "pct": 1.31,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "体外诊断概念",
+          "pct": 2.03,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "稀缺资源",
+          "pct": 1.18,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "财税数字化",
+          "pct": 1.19,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "独家药品",
+          "pct": 0.8,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "交运设备",
+          "pct": 1.13,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "精准诊断",
+          "pct": 2.12,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "华为昇腾",
+          "pct": 2.4,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "大盘价值",
+          "pct": -0.45,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "乡村振兴",
+          "pct": 1.05,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "乳业",
+          "pct": 0.4,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "股权集中",
+          "pct": 0.96,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "猪肉概念",
+          "pct": -0.16,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "中盘价值",
+          "pct": 0.89,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "水利建设",
+          "pct": 1.28,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "农业种植",
+          "pct": 0.52,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "昨日连板",
+          "pct": 5.41,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "船舶制造",
+          "pct": 0.51,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "油气资源",
+          "pct": 1.29,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "小金属概念",
+          "pct": 1.31,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "碳交易",
+          "pct": 1.36,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "金融地产风格",
+          "pct": -0.22,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "钠离子电池",
+          "pct": 2.07,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "AI制药（医疗）",
+          "pct": 2.42,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "大飞机",
+          "pct": 2.38,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "ST股",
+          "pct": 0.62,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "航天航空",
+          "pct": 2.13,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "超跌股",
+          "pct": 2.26,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "科创板做市商",
+          "pct": -0.58,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "保险新进",
+          "pct": 2.8,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "互联网服务",
+          "pct": 1.79,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "合成生物",
+          "pct": 1.63,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "BC电池",
+          "pct": 2.4,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "茅指数",
+          "pct": 0.46,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "参股期货",
+          "pct": 0.19,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "航母概念",
+          "pct": 0.88,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "中字头",
+          "pct": 0.4,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "智慧政务",
+          "pct": 1.31,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "病毒防治",
+          "pct": 1.05,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "煤化工概念",
+          "pct": 0.72,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "装配建筑",
+          "pct": 0.89,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "纳米银",
+          "pct": 3.11,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "天然气",
+          "pct": 1.19,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "流感",
+          "pct": 0.71,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "参股券商",
+          "pct": 0.56,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "反内卷概念",
+          "pct": 0.8,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "长期破净",
+          "pct": 0.03,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "破净股",
+          "pct": 0.47,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "破发股",
+          "pct": 1.98,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "反转股",
+          "pct": 0.48,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "科创板做市股",
+          "pct": 2.8,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "证金持股",
+          "pct": -0.57,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "锂矿概念",
+          "pct": 1.68,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "麒麟电池",
+          "pct": 4.3,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "低市净率",
+          "pct": 0.33,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "互联网金融",
+          "pct": 0.18,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "小盘价值",
+          "pct": 1.11,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "参股银行",
+          "pct": 0.61,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "宁组合",
+          "pct": 1.51,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "百日新高",
+          "pct": 0.7,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "昨日连板_含一字",
+          "pct": 3.77,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "次新股",
+          "pct": 2.14,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "昨日打二板以上表现",
+          "pct": 4.9,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "跨境电商",
+          "pct": 1.48,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "养老金",
+          "pct": 1.91,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "超级品牌",
+          "pct": -0.46,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "题材股",
+          "pct": 1.37,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "券商概念",
+          "pct": -0.19,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "白酒",
+          "pct": -0.71,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "成渝特区",
+          "pct": 1.11,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "蚂蚁金服概念",
+          "pct": 0.88,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "电商概念",
+          "pct": 0.89,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "消费风格",
+          "pct": 0.65,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "国产软件",
+          "pct": 1.49,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "酿酒概念",
+          "pct": -0.91,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "内贸流通",
+          "pct": 0.23,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "昨日涨停",
+          "pct": 2.52,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "味蕾经济",
+          "pct": 0.03,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "新零售",
+          "pct": 0.36,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "2026三季报扭亏",
+          "pct": 0.71,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "昨日涨停_含一字",
+          "pct": 2.54,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        }
+      ]
+    }
+  },
+  "portfolio": [
+    {
+      "name": "东方人工智能主题混合",
+      "fund_code": "",
+      "amount": 2255.59,
+      "cost_return_pct": 8.5,
+      "themes": [
+        "半导体材料设备",
+        "半导体",
+        "人工智能"
+      ],
+      "matched_sectors": [
+        {
+          "name": "半导体",
+          "pct": 4.57,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "半导体材料",
+          "pct": 3.46,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "人工智能",
+          "pct": 2.37,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        }
+      ],
+      "theme_avg_pct": 3.466666666666667,
+      "matched_main_flow_sum": null,
+      "score": 2.4,
+      "strength": "偏强",
+      "reasons": [
+        "对应主题平均涨幅较强",
+        "主要指数整体偏强"
+      ],
+      "risk_alert": null,
+      "action_reference": "继续持有观察；若尾盘仍放量且对应板块资金未转负，再评估是否分批加仓。"
+    },
+    {
+      "name": "财通品质甄选混合C",
+      "fund_code": "024481",
+      "amount": 1044.17,
+      "cost_return_pct": -10.08,
+      "themes": [
+        "PCB",
+        "电子元件"
+      ],
+      "matched_sectors": [
+        {
+          "name": "PCB",
+          "pct": 3.82,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "电子",
+          "pct": 3.85,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "元件",
+          "pct": 3.93,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        }
+      ],
+      "theme_avg_pct": 3.8666666666666667,
+      "matched_main_flow_sum": null,
+      "score": 2.4,
+      "strength": "偏强",
+      "reasons": [
+        "对应主题平均涨幅较强",
+        "主要指数整体偏强"
+      ],
+      "risk_alert": null,
+      "action_reference": "继续持有观察；若尾盘仍放量且对应板块资金未转负，再评估是否分批加仓。"
+    },
+    {
+      "name": "易方达消费电子ETF联接C",
+      "fund_code": "018897",
+      "amount": 1973.26,
+      "cost_return_pct": -16.95,
+      "themes": [
+        "消费电子",
+        "中证消费电子",
+        "电子"
+      ],
+      "matched_sectors": [
+        {
+          "name": "消费电子",
+          "pct": 3.61,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        },
+        {
+          "name": "电子",
+          "pct": 3.85,
+          "main_net": null,
+          "main_ratio": null,
+          "leader": ""
+        }
+      ],
+      "theme_avg_pct": 3.73,
+      "matched_main_flow_sum": null,
+      "score": 2.4,
+      "strength": "偏强",
+      "reasons": [
+        "对应主题平均涨幅较强",
+        "主要指数整体偏强"
+      ],
+      "risk_alert": "当前持仓收益率 -16.95% 已触及设定风控线 -15.00%",
+      "action_reference": "已触及设定风控线：优先复核仓位与止损纪律，不用短线反弹预期替代风控。"
+    }
+  ]
+}
