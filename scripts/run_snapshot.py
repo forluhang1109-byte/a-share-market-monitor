@@ -33,9 +33,10 @@ def wait_until(hhmm: str, max_wait_minutes: int):
     time.sleep(wait_seconds)
 
 
-def _window_guard(session: str):
+def _window_guard(session: str, now=None):
     """Fail visibly rather than backfilling a snapshot after market hours."""
-    now = datetime.now(ZoneInfo("Asia/Shanghai"))
+    now = now or datetime.now(ZoneInfo("Asia/Shanghai"))
+    now = now.astimezone(ZoneInfo("Asia/Shanghai"))
     deadline = {"noon": "11:41", "close": "14:48"}[session]
     if now.strftime("%H:%M") >= deadline:
         print(f"[expired] {session} collection deadline passed at {now:%H:%M:%S}; no overwrite")
