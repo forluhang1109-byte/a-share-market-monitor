@@ -70,6 +70,29 @@ class ScheduleWindowsTests(unittest.TestCase):
             with patch.object(monitor_main, "ROOT", Path(td)):
                 self.assertIsNone(monitor_main._previous_snapshot("noon", "2026-11-02"))
 
+    def test_late_instrumented_collection_does_not_overwrite_official_history(self):
+        """A job that starts on time but completes too late must not publish."""
+        from unittest.mock import MagicMock
+        beijing = ZoneInfo("Asia/Shanghai")
+        start = datetime(2026, 10, 30, 11, 40, 55, tzinfo=beijing)
+        end = datetime(2026, 10, 30, 11, 42, 5, tzinfo=beijing)
+        clock = iter([start, start, end, end, end])
+        keys = (
+            "fetch_a_share_spot", "fetch_indices", "fetch_sector_flow:industry",
+            "fetch_sector_flow:concept", "fetch_market_fund_flow", "fetch_limit_stats",
+        )
+        results = {k: ([], {"ok": True}) for k in keys}
+        results["fetch_market_fund_flow"] = ({}, {"ok": True})
+        with patch.object(monitor_main, "now_cn", side_effect=lambda: next(clock)), \
+             patch.object(monitor_main, "load_json", side_effect=[{}, []]), \
+             patch.object(monitor_main, "is_trading_day", return_value=(True, "exchange_calendars:XSHG")), \
+             patch.object(monitor_main, "collect", return_value=results), \
+             patch.object(monitor_main, "_previous_snapshot", return_value=None), \
+             patch.object(monitor_main, "_write_outputs") as save:
+            snap = monitor_main.run("noon", require_window=True)
+            self.assertEqual(snap["meta"]["status"], "invalid_collection_window")
+            save.assert_not_called()
+
     def test_backup_attempt_skips_only_valid_complete_existing_snapshot(self):
         today = datetime.now(ZoneInfo("Asia/Shanghai")).date().isoformat()
         with tempfile.TemporaryDirectory() as td:
