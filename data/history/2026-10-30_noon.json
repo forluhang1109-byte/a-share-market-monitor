@@ -78,7 +78,9 @@
     "collection_completed_at": "2026-10-30T17:08:25.505381+08:00",
     "collection_elapsed_seconds": 73.91,
     "quote_timestamp_verified": false,
-    "status": "ok",
+    "status": "invalid_collection_window",
+    "valid_for_intraday_comparison": false,
+    "quality_warning": "2026-10-30 noon run was delayed; collected at 17:07-17:08 Beijing, NOT a valid 11:31 noon snapshot; audit only",
     "delivery_eligible": false,
     "delivery_reason": "outside_collection_window",
     "portfolio_status": "stored_configuration_not_reconfirmed"

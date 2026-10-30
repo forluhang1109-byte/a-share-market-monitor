@@ -21,7 +21,7 @@ from .analytics import (
     analyze_portfolio,
 )
 from .report import make_markdown
-from .collection import collect, delivery_gate
+from .collection import collect, delivery_gate, session_collection_window
 import time
 
 
@@ -39,13 +39,16 @@ def _previous_snapshot(session: str, current_date: str) -> dict | None:
         try:
             snap = load_json(path, None)
             if snap and snap.get("meta", {}).get("is_trading_day"):
-                return snap
+                # Never treat a late/replayed sample as the prior trading
+                # session's intraday baseline. Do not silently skip backward
+                # to an older trading date and call it "previous session".
+                return snap if session_collection_window(snap.get("meta", {}), session) else None
         except Exception:
             continue
     return None
 
 
-def run(session: str = "noon") -> dict:
+def run(session: str = "noon", require_window: bool = False) -> dict:
     now = now_cn()
     day = now.date()
     date_str = day.isoformat()
@@ -178,6 +181,13 @@ def run(session: str = "noon") -> dict:
     snapshot["meta"]["delivery_eligible"] = eligible if session == "close" else False
     snapshot["meta"]["delivery_reason"] = reason
     snapshot["meta"]["portfolio_status"] = "stored_configuration_not_reconfirmed"
+    if require_window and not session_collection_window(snapshot["meta"], session):
+        snapshot["meta"]["status"] = "invalid_collection_window"
+        snapshot["meta"]["delivery_eligible"] = False
+        snapshot["meta"]["delivery_reason"] = "outside_collection_window"
+        # Keep existing latest/history intact: a late sample is not a
+        # 11:31 noon or 14:40 pre-close snapshot.
+        return snapshot
     _write_outputs(snapshot, session, date_str)
     return snapshot
 

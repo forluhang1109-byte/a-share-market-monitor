@@ -66,6 +66,33 @@ def collect(settings, day, budget_seconds=75, task_target=None):
     return results
 
 
+def session_collection_window(meta, session):
+    """Only comparable in-session samples may be saved or used as history.
+
+    These are collection timestamps, not exchange-verified quote timestamps.
+    """
+    windows = {"noon": ("11:31", "11:41"), "close": ("14:40", "14:49")}
+    if session not in windows:
+        return False
+    try:
+        start = datetime.fromisoformat(meta["collection_started_at"])
+        end = datetime.fromisoformat(meta["collection_completed_at"])
+        if start.tzinfo is None or end.tzinfo is None:
+            return False
+        cn = ZoneInfo("Asia/Shanghai")
+        start, end = start.astimezone(cn), end.astimezone(cn)
+        lo, hi = windows[session]
+        return (
+            start.date() == end.date()
+            and start.date().isoformat() == meta.get("date")
+            and lo <= start.strftime("%H:%M") < hi
+            and lo <= end.strftime("%H:%M") < hi
+            and 0 <= (end - start).total_seconds() <= 100
+        )
+    except (KeyError, ValueError, TypeError):
+        return False
+
+
 def delivery_gate(meta, now):
     """Collection time is not an exchange quote timestamp; never hide this distinction."""
     if meta.get("calendar_source") != "exchange_calendars:XSHG":
