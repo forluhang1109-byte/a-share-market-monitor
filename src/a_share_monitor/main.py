@@ -29,26 +29,27 @@ ROOT = Path(__file__).resolve().parents[2]
 
 
 def _previous_snapshot(session: str, current_date: str) -> dict | None:
-    hist = ROOT / "data" / "history"
-    if not hist.exists():
-        return None
-    files = sorted(hist.glob(f"*_{session}.json"), reverse=True)
-    for path in files:
-        if path.name.startswith(current_date):
-            continue
-        try:
-            snap = load_json(path, None)
-            if snap and snap.get("meta", {}).get("is_trading_day"):
-                # Never treat a late/replayed sample as the prior trading
-                # session's intraday baseline. Do not silently skip backward
-                # to an older trading date and call it "previous session".
-                return snap if session_collection_window(snap.get("meta", {}), session) else None
-        except Exception:
-            continue
+    # Resolve the actual preceding exchange session; never jump over a
+    # missing day, nor accept future files from a replay checkout.
+    try:
+        import exchange_calendars as xcals
+        import pandas as pd
+        cal = xcals.get_calendar("XSHG")
+        previous_day = cal.previous_session(pd.Timestamp(current_date)).date().isoformat()
+        path = ROOT / "data" / "history" / f"{previous_day}_{session}.json"
+        snap = load_json(path, None)
+        meta = (snap or {}).get("meta", {})
+        if (meta.get("date") == previous_day and meta.get("is_trading_day")
+                and meta.get("status") in ("ok", "partial")
+                and meta.get("source_status", {}).get("a_share_spot", {}).get("ok")
+                and session_collection_window(meta, session)):
+            return snap
+    except Exception:
+        pass
     return None
 
 
-def run(session: str = "noon", require_window: bool = False) -> dict:
+def run(session: str = "noon", require_window: bool = True, persist: bool = True) -> dict:
     now = now_cn()
     day = now.date()
     date_str = day.isoformat()
@@ -75,7 +76,6 @@ def run(session: str = "noon", require_window: bool = False) -> dict:
 
     if not trading:
         snapshot["meta"]["status"] = "skipped_non_trading_day"
-        _write_outputs(snapshot, session, date_str)
         return snapshot
 
     started = time.monotonic()
@@ -188,7 +188,16 @@ def run(session: str = "noon", require_window: bool = False) -> dict:
         # Keep existing latest/history intact: a late sample is not a
         # 11:31 noon or 14:40 pre-close snapshot.
         return snapshot
-    _write_outputs(snapshot, session, date_str)
+    core_ok = bool(stocks and indices) and all(
+        snapshot["meta"]["source_status"].get(k, {}).get("ok")
+        for k in ("a_share_spot", "indices")
+    )
+    if not core_ok:
+        snapshot["meta"]["status"] = "core_data_missing"
+        snapshot["meta"]["delivery_eligible"] = False
+        snapshot["meta"]["delivery_reason"] = "core_data_missing"
+    if persist and core_ok:
+        _write_outputs(snapshot, session, date_str)
     return snapshot
 
 

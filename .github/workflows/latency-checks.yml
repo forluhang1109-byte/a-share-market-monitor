@@ -34,7 +34,7 @@ jobs:
           python scripts/run_snapshot.py --session close --skip-wait
           python - <<'PY'
           import json
-          s = json.load(open('data/latest_close.json'))
+          s = json.load(open('diagnostics/latest_close.json'))
           m = s['meta']
           print(json.dumps(m, ensure_ascii=False, indent=2))
           assert m.get('collection_elapsed_seconds', 999) < 100

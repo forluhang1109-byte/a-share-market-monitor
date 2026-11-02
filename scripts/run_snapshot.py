@@ -76,7 +76,13 @@ def main():
             print(f"[already_done] {args.session}: valid snapshot already present")
             return
 
-    snap = run(args.session, require_window=not args.skip_wait)
+    # Diagnostic collection never replaces official latest/history files.
+    snap = run(args.session, require_window=not args.skip_wait, persist=not args.skip_wait)
+    if args.skip_wait:
+        path = ROOT / "diagnostics" / f"latest_{args.session}.json"
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(snap, ensure_ascii=False, indent=2), encoding="utf-8")
+        print(f"[diagnostic] {path}; official files unchanged")
     if snap.get("meta", {}).get("status") == "invalid_collection_window":
         print(f"[expired] {args.session} collection finished outside its window; historical files unchanged")
         sys.exit(4)
@@ -89,6 +95,8 @@ def main():
         print("[partial errors]")
         for e in snap["meta"]["errors"]:
             print(" -", e)
+    if snap.get("meta", {}).get("status") == "core_data_missing":
+        sys.exit(2)
 
 
 if __name__ == "__main__":

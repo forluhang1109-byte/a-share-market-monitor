@@ -147,20 +147,52 @@ def _normalize_indices(df: pd.DataFrame, wanted: dict[str, str]) -> list[dict]:
     return [dedup[k] for k in wanted if k in dedup]
 
 
+def _tencent_indices(wanted: dict[str, str]) -> list[dict]:
+    import requests
+    symbols = [("sh" if code.startswith("000") else "sz") + code for code in wanted]
+    response = requests.get("https://qt.gtimg.cn/q=" + ",".join(symbols), timeout=(3, 8))
+    response.raise_for_status()
+    rows = {}
+    for line in response.text.split(";"):
+        if '="' not in line:
+            continue
+        fields = line.split('="', 1)[1].strip().strip('"').split("~")
+        if len(fields) <= 32 or fields[2] not in wanted:
+            continue
+        code = fields[2]
+        price, pct = safe_float(fields[3]), safe_float(fields[32])
+        if price is not None and price > 0 and pct is not None:
+            rows[code] = {"code": code, "name": wanted[code], "price": price, "pct": pct,
+                          "provider_quote_time": fields[30]}
+    if set(rows) != set(wanted):
+        raise RuntimeError(f"incomplete Tencent indices: {sorted(rows)}")
+    return [rows[code] for code in wanted]
+
+
 def fetch_indices(wanted: dict[str, str]) -> tuple[list[dict], dict]:
     import akshare as ak
+    errors = []
+    # One bounded batch request before AKShare's potentially long paginated
+    # index endpoints; a hung first source must not starve every fallback.
+    try:
+        rows = _tencent_indices(wanted)
+        return rows, {"source": "tencent", "ok": True, "rows": len(rows), "errors": []}
+    except Exception as exc:
+        errors.append(f"tencent: {compact_error(exc)}")
     attempts = [
         ("eastmoney", lambda: ak.stock_zh_index_spot_em(symbol="沪深重要指数")),
         ("sina", lambda: ak.stock_zh_index_spot_sina()),
     ]
     if os.environ.get("ASH_FAST_MODE") == "1":
         attempts.reverse()
-    errors = []
     for name, fn in attempts:
         try:
             df = retry_call(fn, attempts=2, delay=1.2)
             rows = _normalize_indices(df, wanted)
-            if len(rows) < 3:
+            if len(rows) != len(wanted) or not all(
+                r.get("price") is not None and r["price"] > 0 and r.get("pct") is not None
+                for r in rows
+            ):
                 raise RuntimeError(f"wanted indices found: {len(rows)}")
             return rows, {"source": name, "ok": True, "rows": len(rows), "errors": errors}
         except Exception as exc:
