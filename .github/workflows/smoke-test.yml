@@ -44,3 +44,43 @@ jobs:
 
       # Diagnostic runs may execute after trading hours: never push their
       # out-of-window results into the official noon/close histories.
+      - name: Verify actual diagnostic data and official-file isolation
+        run: |
+          python - <<'PY'
+          import json
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          from pathlib import Path
+          import sys
+          sys.path.insert(0, 'src')
+          from a_share_monitor.calendar import is_trading_day
+          day = datetime.now(ZoneInfo('Asia/Shanghai')).date()
+          if not is_trading_day(day)[0]:
+              print('Non-trading day: live provider acceptance skipped explicitly')
+              sys.exit(0)
+          s = json.loads(Path('diagnostics/latest_close.json').read_text())
+          m = s['meta']
+          assert m['date'] == day.isoformat(), m
+          assert m['status'] in ('ok', 'partial'), m
+          assert all(m['source_status'][k].get('ok') for k in ('a_share_spot', 'indices')), m
+          assert m['collection_elapsed_seconds'] < 100, m
+          indices = s['market']['indices']
+          assert {r['code'] for r in indices} == {'000001', '399001', '399006', '000688'}, indices
+          assert all(r['price'] > 0 and r['pct'] is not None for r in indices), indices
+          assert s['market']['breadth']['total_valid'] >= 1000
+          assert s['market']['turnover']['current'] > 0
+          print(json.dumps({'status': m['status'], 'date': m['date'],
+              'collection_seconds': m['collection_elapsed_seconds'],
+              'sources': m['source_status'], 'indices': indices,
+              'breadth': s['market']['breadth'], 'turnover': s['market']['turnover']}, ensure_ascii=False))
+          PY
+          git diff --exit-code -- data reports
+
+      - name: Preserve diagnostic evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: market-diagnostic-${{ github.run_id }}
+          path: diagnostics/*.json
+          if-no-files-found: warn
+          retention-days: 7
