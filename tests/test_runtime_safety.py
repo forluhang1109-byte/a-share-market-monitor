@@ -36,7 +36,12 @@ class RuntimeSafetyTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as td, patch.object(monitor, 'ROOT', Path(td)):
             h = Path(td) / 'data/history'
             h.mkdir(parents=True)
-            (h / '2026-10-29_close.json').write_text(json.dumps({'meta': {'is_trading_day': True}}))
+            (h / '2026-10-29_close.json').write_text(json.dumps({'meta': {
+                'date': '2026-10-29', 'is_trading_day': True, 'status': 'ok',
+                'collection_started_at': '2026-10-29T14:40:00+08:00',
+                'collection_completed_at': '2026-10-29T14:41:00+08:00',
+                'source_status': {'a_share_spot': {'ok': True}},
+            }}))
             self.assertIsNone(monitor._previous_snapshot('close', '2026-11-02'))
 
     def test_consumer_rechecks_date_and_delivery_time(self):
