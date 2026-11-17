@@ -68,7 +68,7 @@ def _tencent_parallel_frame():
     url = "https://proxy.finance.qq.com/cgi/cgi-bin/rank/hs/getBoardRankList"
     def page(offset):
         params = {"_appver": "11.17.0", "board_code": "aStock", "sort_type": "price",
-                  "direct": "down", "offset": str(offset), "count": "200"}
+                  "direct": "down", "offset": str(offset), "count": "500"}
         # One slow/flaky page must not kill the whole spot fetch (2026-11-05:
         # a single 8s read timeout on one page cascaded into
         # core_data_missing for the entire close snapshot). Retry each page,
@@ -92,7 +92,7 @@ def _tencent_parallel_frame():
         raise ValueError("Unexpected Tencent market size")
     rows = list(first["rank_list"])
     with ThreadPoolExecutor(max_workers=4) as pool:
-        for result in pool.map(page, range(200, total, 200)):
+        for result in pool.map(page, range(500, total, 500)):
             if int(result["total"]) != total:
                 raise ValueError("Tencent market size changed during collection")
             rows.extend(result["rank_list"])
@@ -102,44 +102,85 @@ def _tencent_parallel_frame():
     return frame
 
 
-def fetch_a_share_spot() -> tuple[list[dict], dict]:
+def _spot_source_frame(source: str) -> tuple[pd.DataFrame, str]:
     import akshare as ak
 
-    candidates = [
-        ("eastmoney", lambda: ak.stock_zh_a_spot_em()),
-        ("tencent", lambda: _tencent_parallel_frame() if os.environ.get("ASH_FAST_MODE") == "1" else ak.stock_zh_a_spot_tx()),
-        ("sina", lambda: ak.stock_zh_a_spot()),
-    ]
+    if source == "eastmoney":
+        return ak.stock_zh_a_spot_em(), "eastmoney"
+    if source == "tencent":
+        if os.environ.get("ASH_FAST_MODE") == "1":
+            return _tencent_parallel_frame(), "tencent"
+        return ak.stock_zh_a_spot_tx(), "tencent"
+    return ak.stock_zh_a_spot(), "sina"
+
+
+def _spot_worker(source: str, output) -> None:
+    try:
+        df, name = _spot_source_frame(source)
+        output.put(("ok", normalize_stock_spot(df, name)))
+    except Exception as exc:
+        output.put(("err", f"{type(exc).__name__}: {str(exc)[:200]}"))
+
+
+def fetch_a_share_spot() -> tuple[list[dict], dict]:
+    # 2026-11-09: the sequential in-process chain died again — a slow first
+    # source (tencent worst case ~70s with per-page retries, sina ~70s)
+    # starved every fallback inside the 90s collection budget and the
+    # worker was killed with no per-source error at all. In-process HTTP
+    # calls cannot be hard-killed, so each source now runs in its own
+    # child process with a hard wall-clock slice (same isolation pattern
+    # collection.py uses one level up). Slices sum to ~170s, inside the
+    # 185s collection budget (start moved to 14:36 on 2026-11-09) with
+    # headroom for spawn overhead and result transfer.
+    import multiprocessing as mp
+
+    order = ["eastmoney", "tencent", "sina"]
+    slices = {"tencent": 45, "eastmoney": 45, "sina": 80}
     if os.environ.get("ASH_FAST_MODE") == "1":
-        candidates = sorted(candidates, key=lambda x: {"tencent": 0, "sina": 1, "eastmoney": 2}[x[0]])
+        order = ["tencent", "eastmoney", "sina"]
+    ctx = mp.get_context("spawn")
     errors = []
-    for name, fn in candidates:
+    for name in order:
+        q = ctx.Queue()
+        p = ctx.Process(target=_spot_worker, args=(name, q))
+        p.start()
+        p.join(slices[name])
+        if p.is_alive():
+            p.terminate()
+            p.join(timeout=1)
+            if p.is_alive():
+                p.kill()
+                p.join(timeout=1)
+            errors.append(f"{name}: exceeded {slices[name]}s slice")
+            continue
         try:
-            # One attempt per source (2026-11-05): retrying a slow source
-            # end-to-end (tencent ~38s, sina ~70s) burned the whole 75s
-            # collection budget before fallbacks could run. Flakiness is
-            # handled inside each source (tencent retries per page); across
-            # sources, fail over fast instead.
-            df = retry_call(fn, attempts=1, delay=0)
-            rows = normalize_stock_spot(df, name)
-            valid_pct = sum(1 for x in rows if x.get("pct") is not None)
-            valid_amount = sum(1 for x in rows if (x.get("amount") or 0) > 0)
-            if len(rows) < 1000:
-                raise RuntimeError(f"normalized rows too few: {len(rows)}")
-            if valid_pct < 1000:
-                raise RuntimeError(f"valid pct rows too few: {valid_pct}")
-            if valid_amount < 1000:
-                raise RuntimeError(f"valid amount rows too few: {valid_amount}")
-            return rows, {
-                "source": name,
-                "ok": True,
-                "rows": len(rows),
-                "valid_pct_rows": valid_pct,
-                "valid_amount_rows": valid_amount,
-                "errors": errors,
-            }
-        except Exception as exc:
-            errors.append(f"{name}: {compact_error(exc)}")
+            kind, payload = q.get(timeout=5)
+        except Exception:
+            errors.append(f"{name}: worker exited without result")
+            continue
+        if kind == "err":
+            errors.append(f"{name}: {payload}")
+            continue
+        rows = payload
+        valid_pct = sum(1 for x in rows if x.get("pct") is not None)
+        valid_amount = sum(1 for x in rows if (x.get("amount") or 0) > 0)
+        if len(rows) < 1000:
+            errors.append(f"{name}: normalized rows too few: {len(rows)}")
+            continue
+        if valid_pct < 1000:
+            errors.append(f"{name}: valid pct rows too few: {valid_pct}")
+            continue
+        if valid_amount < 1000:
+            errors.append(f"{name}: valid amount rows too few: {valid_amount}")
+            continue
+        return rows, {
+            "source": name,
+            "ok": True,
+            "rows": len(rows),
+            "valid_pct_rows": valid_pct,
+            "valid_amount_rows": valid_amount,
+            "errors": errors,
+        }
     raise RuntimeError("all A-share realtime providers failed | " + " | ".join(errors))
 
 
