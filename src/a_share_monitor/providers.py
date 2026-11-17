@@ -62,15 +62,30 @@ def normalize_stock_spot(df: pd.DataFrame, source: str) -> list[dict]:
 def _tencent_parallel_frame():
     """Same documented AKShare Tencent endpoint, bounded four-page concurrency."""
     import math
+    import time
     import requests
     from concurrent.futures import ThreadPoolExecutor
     url = "https://proxy.finance.qq.com/cgi/cgi-bin/rank/hs/getBoardRankList"
     def page(offset):
         params = {"_appver": "11.17.0", "board_code": "aStock", "sort_type": "price",
                   "direct": "down", "offset": str(offset), "count": "200"}
-        response = requests.get(url, params=params, timeout=(3, 8))
-        response.raise_for_status()
-        return response.json()["data"]
+        # One slow/flaky page must not kill the whole spot fetch (2026-11-05:
+        # a single 8s read timeout on one page cascaded into
+        # core_data_missing for the entire close snapshot). Retry each page,
+        # but timebox the first page hard: if the endpoint is down today,
+        # fail fast so the sina fallback still fits the collection budget.
+        tries, timeout = (2, (3, 8)) if offset == 0 else (3, (3, 12))
+        last_exc = None
+        for attempt in range(tries):
+            try:
+                response = requests.get(url, params=params, timeout=timeout)
+                response.raise_for_status()
+                return response.json()["data"]
+            except Exception as exc:
+                last_exc = exc
+                if attempt < tries - 1:
+                    time.sleep(0.6 * (attempt + 1))
+        raise last_exc
     first = page(0)
     total = int(first["total"])
     if total < 1000 or total > 20000:
@@ -100,7 +115,12 @@ def fetch_a_share_spot() -> tuple[list[dict], dict]:
     errors = []
     for name, fn in candidates:
         try:
-            df = retry_call(fn, attempts=2, delay=1.5)
+            # One attempt per source (2026-11-05): retrying a slow source
+            # end-to-end (tencent ~38s, sina ~70s) burned the whole 75s
+            # collection budget before fallbacks could run. Flakiness is
+            # handled inside each source (tencent retries per page); across
+            # sources, fail over fast instead.
+            df = retry_call(fn, attempts=1, delay=0)
             rows = normalize_stock_spot(df, name)
             valid_pct = sum(1 for x in rows if x.get("pct") is not None)
             valid_amount = sum(1 for x in rows if (x.get("amount") or 0) > 0)

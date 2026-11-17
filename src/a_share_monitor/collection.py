@@ -22,7 +22,11 @@ def _task(name, args, output):
         output.put((name, None, {"ok": False, "errors": [f"{type(exc).__name__}: {str(exc)[:240]}"]}))
 
 
-def collect(settings, day, budget_seconds=75, task_target=None):
+def collect(settings, day, budget_seconds=90, task_target=None):
+    # Budget raised 75s -> 90s on 2026-11-05: the sina spot fallback alone
+    # needs ~70s, so a tencent failure almost guaranteed a deadline kill at
+    # 75s. 90s still fits the delivery window rules (collection duration
+    # must stay <=100s and finish before 14:49 when starting at 14:40).
     specs = {
         "fetch_a_share_spot": (),
         "fetch_indices": (settings.get("index_codes", {}),),
