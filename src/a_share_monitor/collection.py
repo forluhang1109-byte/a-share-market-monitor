@@ -22,16 +22,19 @@ def _task(name, args, output):
         output.put((name, None, {"ok": False, "errors": [f"{type(exc).__name__}: {str(exc)[:240]}"]}))
 
 
-def collect(settings, day, budget_seconds=185, task_target=None):
+def collect(settings, day, budget_seconds=210, task_target=None):
     # Budget history: 75s -> 90s on 2026-11-05 (sina spot fallback alone
     # needs ~70s). Raised to 185s on 2026-11-09 and the close collection
     # start moved 14:40 -> 14:36: on a slow-source day every full-market
     # spot source (tencent / eastmoney / sina) needed minutes, not
     # seconds, and the 90s budget killed the spot worker before any
     # fallback could finish — the 14:50 report missed its slot entirely.
-    # 14:36 start + 185s budget ends by ~14:39, still inside the
-    # 14:36-14:49 close window; duration cap lives in
-    # session_collection_window / delivery_gate (220s).
+    # Raised to 210s on 2026-11-10: the spot chain is now sina-first
+    # with a 120s slice (slices sum to 200s, see providers.fetch_a_share_spot);
+    # 210s covers the slices plus spawn/transfer headroom while keeping
+    # the worst-case elapsed under the 220s duration cap in
+    # session_collection_window / delivery_gate. 14:36 start + 210s
+    # ends by ~14:40, still inside the 14:36-14:49 close window.
     specs = {
         "fetch_a_share_spot": (),
         "fetch_indices": (settings.get("index_codes", {}),),

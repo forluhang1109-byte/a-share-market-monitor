@@ -71,10 +71,13 @@ def _tencent_parallel_frame():
                   "direct": "down", "offset": str(offset), "count": "500"}
         # One slow/flaky page must not kill the whole spot fetch (2026-11-05:
         # a single 8s read timeout on one page cascaded into
-        # core_data_missing for the entire close snapshot). Retry each page,
-        # but timebox the first page hard: if the endpoint is down today,
-        # fail fast so the sina fallback still fits the collection budget.
-        tries, timeout = (2, (3, 8)) if offset == 0 else (3, (3, 12))
+        # core_data_missing for the entire close snapshot). Retry each page
+        # at most once (2026-11-10: dense retries against a struggling
+        # endpoint only deepen rate limiting; the source chain, not the
+        # page, is the fallback). The first page keeps a hard timebox: if
+        # the endpoint is down today, fail fast so the next source still
+        # fits the collection budget.
+        tries, timeout = (2, (3, 8)) if offset == 0 else (2, (3, 12))
         last_exc = None
         for attempt in range(tries):
             try:
@@ -129,35 +132,64 @@ def fetch_a_share_spot() -> tuple[list[dict], dict]:
     # worker was killed with no per-source error at all. In-process HTTP
     # calls cannot be hard-killed, so each source now runs in its own
     # child process with a hard wall-clock slice (same isolation pattern
-    # collection.py uses one level up). Slices sum to ~170s, inside the
-    # 185s collection budget (start moved to 14:36 on 2026-11-09) with
-    # headroom for spawn overhead and result transfer.
+    # collection.py uses one level up).
+    #
+    # 2026-11-10 reorder (user-approved): eastmoney push2 has rate-limited
+    # this egress IP for days (Push2RateLimitError) and tencent times out,
+    # while a post-close direct sina pull succeeded on 2026-11-09
+    # (5,578 rows in 89.2s) — it only died at 15:12 because the old 80s
+    # slice cut it. New order: sina first with a 120s slice, tencent
+    # second, eastmoney last as a rarely-reached fallback. The chain
+    # visits each source exactly once (no same-source retries; per-page
+    # retries inside tencent are capped at one). Slices sum to 200s,
+    # inside the 210s collection budget, and a 14:36 start plus the
+    # worst case still lands ~14:40, ahead of the 14:48 delivery gate;
+    # worst-case elapsed stays under the 220s duration cap in
+    # collection.session_collection_window / delivery_gate.
     import multiprocessing as mp
+    import queue
+    import time
 
-    order = ["eastmoney", "tencent", "sina"]
-    slices = {"tencent": 45, "eastmoney": 45, "sina": 80}
-    if os.environ.get("ASH_FAST_MODE") == "1":
-        order = ["tencent", "eastmoney", "sina"]
+    order = ["sina", "tencent", "eastmoney"]
+    slices = {"sina": 120, "tencent": 40, "eastmoney": 40}
     ctx = mp.get_context("spawn")
     errors = []
     for name in order:
         q = ctx.Queue()
         p = ctx.Process(target=_spot_worker, args=(name, q))
         p.start()
-        p.join(slices[name])
+        # Drain the queue while waiting instead of join-then-get: a
+        # successful payload is several MB of pickled rows, and the
+        # child's queue feeder thread cannot flush it (nor can the
+        # child exit) while nobody reads. Join-then-get deadlocked on
+        # exactly that on 2026-11-10: sina's page fetch finished in
+        # ~53s, yet the worker was still "alive" at the 120s slice and
+        # got killed with a misleading "exceeded slice" error.
+        result = None
+        deadline = time.monotonic() + slices[name]
+        while time.monotonic() < deadline:
+            try:
+                result = q.get(timeout=1)
+                break
+            except queue.Empty:
+                if not p.is_alive():
+                    break
+        if result is None:
+            if p.is_alive():
+                p.terminate()
+                p.join(timeout=1)
+                if p.is_alive():
+                    p.kill()
+                    p.join(timeout=1)
+                errors.append(f"{name}: exceeded {slices[name]}s slice")
+            else:
+                errors.append(f"{name}: worker exited without result")
+            continue
+        p.join(timeout=5)
         if p.is_alive():
             p.terminate()
             p.join(timeout=1)
-            if p.is_alive():
-                p.kill()
-                p.join(timeout=1)
-            errors.append(f"{name}: exceeded {slices[name]}s slice")
-            continue
-        try:
-            kind, payload = q.get(timeout=5)
-        except Exception:
-            errors.append(f"{name}: worker exited without result")
-            continue
+        kind, payload = result
         if kind == "err":
             errors.append(f"{name}: {payload}")
             continue
